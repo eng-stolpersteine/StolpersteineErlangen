@@ -1,0 +1,32 @@
+import 'package:StolpersteineErlangen/Data/StolpersteinData/Gallery/GalleryData.dart';
+
+List<List<String>> galleryImagesStolperstein = 
+[
+    stolper_gI_0 ,
+    stolper_gI_1 ,
+    stolper_gI_2 ,
+    stolper_gI_3 ,
+    stolper_gI_4 ,
+    stolper_gI_5 ,
+    stolper_gI_6 ,
+    stolper_gI_7 ,
+    stolper_gI_8 ,
+    stolper_gI_9 ,
+    stolper_gI_10 ,
+    stolper_gI_11 ,
+    stolper_gI_12 ,
+    stolper_gI_13 ,
+    stolper_gI_14 ,
+    stolper_gI_15 ,
+    stolper_gI_16 ,
+    stolper_gI_17 ,
+    stolper_gI_18 ,
+    stolper_gI_19 ,
+    stolper_gI_20 ,
+    stolper_gI_21 ,
+    stolper_gI_22 ,
+    stolper_gI_23 ,
+    stolper_gI_24 ,
+    stolper_gI_25 ,
+    stolper_gI_26 ,
+];
