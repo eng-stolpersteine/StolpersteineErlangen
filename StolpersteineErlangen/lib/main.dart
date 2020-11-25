@@ -5,7 +5,6 @@ import 'package:StolpersteineErlangen/Screens/FilterScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
 import 'package:StolpersteineErlangen/Screens/SettingsScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
@@ -79,17 +78,6 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
     });
   }
 
-  Widget _bottomNavigationbarTitel(String en, String dt)
-  {
-    return Consumer<SettingsProvider>
-    (
-      builder: (context, value, child) 
-      {
-        return Text(value.english ? en : dt);  
-      },
-    );
-  }
-
   BottomNavigationBar _bottomNavigationBar()
   {
     return BottomNavigationBar
@@ -97,11 +85,13 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
       currentIndex: _currentScreen,
       onTap: _onItemTapped,
       selectedItemColor: BOTTOMNAVBAR_ICON_COLOR,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
       items: 
       [
-        BottomNavigationBarItem(icon: Icon(Icons.filter_list_rounded), title: Text("Filter")),
-        BottomNavigationBarItem(icon: Icon(Icons.home),title: _bottomNavigationbarTitel("Home", "Haupt")),
-        BottomNavigationBarItem(icon: Icon(Icons.settings),title: _bottomNavigationbarTitel("Settings", "Einstellungen")),
+        BottomNavigationBarItem(icon: Icon(Icons.filter_list_rounded), title: Text("")),
+        BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("")),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("")),
       ],
     );
   }

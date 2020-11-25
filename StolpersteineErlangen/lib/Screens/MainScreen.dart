@@ -209,10 +209,10 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
       itemExtent: 90,
       children: 
       [
-          AllgemeinerText(0),
-          AllgemeinerText(1),
-          AllgemeinerText(2),
-          AllgemeinerText(3),
+          HistoryText(0),
+          HistoryText(1),
+          HistoryText(2),
+          HistoryText(3),
       ],
     );      
   }
@@ -237,7 +237,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
             if(BookMarksProvider.favSteine[i]) favItems.add(Stolperstein(i));
           
           for(int i = 0; i < BookMarksProvider.favHistory.length; i++)
-            if(BookMarksProvider.favHistory[i]) favItems.add(AllgemeinerText(i));
+            if(BookMarksProvider.favHistory[i]) favItems.add(HistoryText(i));
 
           return ListView
           (
@@ -299,7 +299,7 @@ class Stolperstein extends StatelessWidget
           (
             title: Text(_lastName, style: GoogleFonts.roboto(fontSize: 19, fontWeight: FontWeight.bold)),
             subtitle: Text(_firstName, style: GoogleFonts.roboto(),),
-            trailing: MarkButton(_index, "Stolper", Colors.grey),
+            trailing: MarkButton(_index, BookMarksProvider.stolpersteinType, Colors.grey),
             leading: Container
             (
                 width: 60,
@@ -324,14 +324,14 @@ class Stolperstein extends StatelessWidget
   }
 }
 
-class AllgemeinerText extends StatelessWidget
+class HistoryText extends StatelessWidget
 {
   int _index;
 
   String _titel;
   String _imgUrl;
 
-  AllgemeinerText(this._index)
+  HistoryText(this._index)
   {
     _titel = historieTitel[_index];
     _imgUrl = historie_imgUrls[_index];
@@ -349,7 +349,7 @@ class AllgemeinerText extends StatelessWidget
           child: ListTile
           (
             title: Text(_titel, style: GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold)),
-            trailing: MarkButton(_index, "History", Colors.grey),
+            trailing: MarkButton(_index, BookMarksProvider.historyType, Colors.grey),
             leading: Container
             (
                 width: 60,
@@ -365,7 +365,6 @@ class AllgemeinerText extends StatelessWidget
         ),
     );
   }
-
 }
 
 class MarkButton extends StatelessWidget
@@ -374,19 +373,21 @@ class MarkButton extends StatelessWidget
   bool isFavorite;
   String type;
   Color color;
-  BookMarksProvider _bookmarks = BookMarksProvider();
+
+  BookMarksProvider _bookmarks;
 
   MarkButton(this.index, this.type, this.color);
 
-  bool get getFavorite => type == "Stolper" ? BookMarksProvider.favSteine[index] : BookMarksProvider.favHistory[index];
+  bool get getFavorite => type == BookMarksProvider.stolpersteinType ? BookMarksProvider.favSteine[index] : BookMarksProvider.favHistory[index];
 
   @override
   Widget build(BuildContext context) 
   {
+    _bookmarks = Provider.of<BookMarksProvider>(context);
     // TODO: implement build
     return Selector<BookMarksProvider, bool>
     (
-      selector: (context, model) => type == "Stolper" ? BookMarksProvider.favSteine[index] : BookMarksProvider.favHistory[index],
+      selector: (context, model) => type == BookMarksProvider.stolpersteinType ? BookMarksProvider.favSteine[index] : BookMarksProvider.favHistory[index],
       builder: (context, value, child) 
       {
         isFavorite = value;
