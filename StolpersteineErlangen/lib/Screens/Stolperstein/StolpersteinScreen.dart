@@ -33,7 +33,7 @@ class StolpersteinScreen extends StatelessWidget
 
   StolpersteinScreen(this.index)
   {
-    name = names[index];
+    name = stolperstein_names[index];
 
     galleryImages = galleryImagesStolperstein[index];
     galleryTags = galleryTagsStolperstein[index];
@@ -133,7 +133,7 @@ class StolpersteinScreen extends StatelessWidget
                   value: _bookmarks,
                   builder: (context, child) 
                   {
-                    return MarkButton(index,"Stolper", Colors.black);  
+                    return MarkButton(name, Colors.black);
                   },
                 ), 
                 Text(_settings.english ? "Bookmark" : "Markieren", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)

@@ -1,4 +1,4 @@
-List<String> names = 
+List<String> stolperstein_names = 
 [
   "Amalia Bauer",
   "Ernestine Bauer",

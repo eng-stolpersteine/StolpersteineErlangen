@@ -223,27 +223,27 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     (
       builder: (context, marks, child) 
       {
-          if(!BookMarksProvider.favHistory.contains(true) && !BookMarksProvider.favSteine.contains(true))
-          {
-              return Center
-              (
-                child: Text(_settings.english ? "No Items Bookmarked" : "Keine Texte markiert", style: GoogleFonts.roboto(color: Colors.grey[400], fontSize: 16))
-              );
-          }
+        List<Widget> favItems = new List<Widget>();
 
-          List<Widget> favItems = new List<Widget>();
+        for(String name in stolperstein_names)
+          if(BookMarksProvider.isFavorite(name)) favItems.add(Stolperstein(stolperstein_names.indexOf(name)));
 
-          for(int i = 0; i < BookMarksProvider.favSteine.length; i++)
-            if(BookMarksProvider.favSteine[i]) favItems.add(Stolperstein(i));
-          
-          for(int i = 0; i < BookMarksProvider.favHistory.length; i++)
-            if(BookMarksProvider.favHistory[i]) favItems.add(HistoryText(i));
+        for(String name in historie_names)
+          if(BookMarksProvider.isFavorite(name)) favItems.add(HistoryText(historie_names.indexOf(name)));
 
-          return ListView
+        if(favItems.isEmpty)
+        {
+          return Center
           (
-              itemExtent: 90,
-              children: favItems,
+            child: Text(_settings.english ? "No Items Bookmarked" : "Keine Texte markiert", style: GoogleFonts.roboto(color: Colors.grey[400], fontSize: 16))
           );
+        }
+
+        return ListView
+        (
+            itemExtent: 90,
+            children: favItems,
+        );
       },
     );
   }
@@ -273,6 +273,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
 
 class Stolperstein extends StatelessWidget
 {
+  String _titel;
   String _firstName;
   String _lastName;
   String _imgUrl;
@@ -280,7 +281,8 @@ class Stolperstein extends StatelessWidget
 
   Stolperstein(this._index)
   {
-    List<String> name = names[_index].split(" ");
+    _titel = stolperstein_names[_index];
+    List<String> name = _titel.split(" ");
     _firstName = name[0];
     _lastName = name[1];
     _imgUrl = image_urls[_index];
@@ -299,7 +301,7 @@ class Stolperstein extends StatelessWidget
           (
             title: Text(_lastName, style: GoogleFonts.roboto(fontSize: 19, fontWeight: FontWeight.bold)),
             subtitle: Text(_firstName, style: GoogleFonts.roboto(),),
-            trailing: MarkButton(_index, BookMarksProvider.stolpersteinType, Colors.grey),
+            trailing: MarkButton(_titel, Colors.grey),
             leading: Container
             (
                 width: 60,
@@ -333,7 +335,7 @@ class HistoryText extends StatelessWidget
 
   HistoryText(this._index)
   {
-    _titel = historieTitel[_index];
+    _titel = historie_names[_index];
     _imgUrl = historie_imgUrls[_index];
   }
 
@@ -349,7 +351,7 @@ class HistoryText extends StatelessWidget
           child: ListTile
           (
             title: Text(_titel, style: GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold)),
-            trailing: MarkButton(_index, BookMarksProvider.historyType, Colors.grey),
+            trailing: MarkButton(_titel, Colors.grey),
             leading: Container
             (
                 width: 60,
@@ -369,33 +371,29 @@ class HistoryText extends StatelessWidget
 
 class MarkButton extends StatelessWidget
 {
-  int index;
   bool isFavorite;
-  String type;
   Color color;
+  String titel;
 
   BookMarksProvider _bookmarks;
 
-  MarkButton(this.index, this.type, this.color);
-
-  bool get getFavorite => type == BookMarksProvider.stolpersteinType ? BookMarksProvider.favSteine[index] : BookMarksProvider.favHistory[index];
+  MarkButton(this.titel, this.color);
 
   @override
   Widget build(BuildContext context) 
   {
     _bookmarks = Provider.of<BookMarksProvider>(context);
     // TODO: implement build
-    return Selector<BookMarksProvider, bool>
+    return Consumer<BookMarksProvider>
     (
-      selector: (context, model) => type == BookMarksProvider.stolpersteinType ? BookMarksProvider.favSteine[index] : BookMarksProvider.favHistory[index],
       builder: (context, value, child) 
       {
-        isFavorite = value;
+        isFavorite = BookMarksProvider.isFavorite(titel);
 
         return IconButton
         (
           icon: isFavorite ? Icon(Icons.bookmark, color: Colors.yellow[700], size: 30,) : Icon(Icons.bookmark_border_outlined, color: color, size: 30),
-          onPressed: () => isFavorite ? _bookmarks.remove(index, type) : _bookmarks.add(index, type)
+          onPressed: () => isFavorite ? _bookmarks.remove(titel) : _bookmarks.add(titel)
         );
       },
     );

@@ -1,4 +1,4 @@
-List<String> historieTitel = 
+List<String> historie_names = 
 [
     "Titel0",
     "Titel1",

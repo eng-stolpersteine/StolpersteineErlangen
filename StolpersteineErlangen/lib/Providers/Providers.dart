@@ -1,6 +1,6 @@
 import 'package:StolpersteineErlangen/Data/HIveBoxes.dart';
+import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
-import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
 import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +78,7 @@ class SearchProvider extends SearchDelegate<String>
   Widget buildSuggestions(BuildContext context) {
     // TODO: implement buildSuggestions
 
-    final Iterable<String> suggestions =  query.isEmpty ? names : names.where((p) => p.startsWith(query));
+    final Iterable<String> suggestions =  query.isEmpty ? stolperstein_names : stolperstein_names.where((p) => p.startsWith(query));
 
     return _WordSuggestionList
     (
@@ -92,7 +92,7 @@ class SearchProvider extends SearchDelegate<String>
             context,
             MaterialPageRoute
             (
-                builder: (context) => StolpersteinScreen(names.indexOf(this.query))
+                builder: (context) => StolpersteinScreen(stolperstein_names.indexOf(this.query))
             )
           );
         }
@@ -166,62 +166,42 @@ class BookMarksProvider extends ChangeNotifier
 
   factory BookMarksProvider() => _instance;
 
-  static Box _favStolpersteine;
-  static Box _favHistorie;
-
-  static List<bool> favSteine;
-  static List<bool> favHistory;
-
   static const  String historyType = "History";
-
   static const String stolpersteinType = "Stolper";
+
+  static Map<String,bool> favorites;
+  static Box _favoritesBox;
 
   BookMarksProvider._internal()
   {
-    _favStolpersteine = Hive.box(favoriteStolperBox);
-    _favHistorie = Hive.box(favoriteHistoryBox);
+    _favoritesBox = Hive.box(favoritesBox);
     initItems();
   }
 
   void initItems()
   {
-      favSteine = _favStolpersteine.get("favSteine", defaultValue: [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]);
-      favHistory = _favHistorie.get("favHistory", defaultValue: [false,false,false,false]);
+      favorites = Map<String,bool>();
+
+      for(String name in stolperstein_names)
+        favorites[name] = _favoritesBox.get(name, defaultValue: false);
+
+      for(String name in historie_names)
+        favorites[name] = _favoritesBox.get(name, defaultValue: false);
   }
 
-  void add(int index, String type)
+  static bool isFavorite(String name) => favorites[name]; 
+
+  void add(String name)
   {
-      switch(type)
-      {
-          case stolpersteinType:
-            favSteine[index] = true;
-            _favStolpersteine.put("favSteine", favSteine);
-            break;
-
-          case historyType:
-            favHistory[index] = true;
-            _favHistorie.put("favHistory", favHistory);
-            break;
-      }
-
+      favorites[name] = true;
+      _favoritesBox.put(name, true);
       notifyListeners();
   }
 
-  void remove(int index, String type)
+  void remove(String name)
   {
-      switch(type)
-      {
-          case stolpersteinType:
-            favSteine[index] = false;
-            _favStolpersteine.put("favSteine", favSteine);
-            break;
-
-          case historyType:
-            favHistory[index] = false;
-            _favHistorie.put("favHistory", favHistory);
-            break;
-      }
-
+      favorites[name] = false;
+      _favoritesBox.put(name, false);
       notifyListeners();
   }
 }

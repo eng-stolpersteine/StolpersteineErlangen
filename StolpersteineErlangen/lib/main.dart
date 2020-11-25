@@ -16,6 +16,7 @@ void main() async
   await Hive.initFlutter();
   await Hive.openBox(settingsBox);
   await Hive.openBox(filterBox);
+  await Hive.openBox(favoritesBox);
   await Hive.openBox(favoriteStolperBox);
   await Hive.openBox(favoriteHistoryBox);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) => runApp(StolpersteinApp()));

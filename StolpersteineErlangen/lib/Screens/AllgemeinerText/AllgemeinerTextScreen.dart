@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/material.dart';
 
@@ -6,8 +7,13 @@ class AllgemeinerTextScreen extends StatelessWidget
 {
   int index;
   BookMarksProvider _bookmarks = BookMarksProvider();
+  
+  String titel;
 
-  AllgemeinerTextScreen(this.index);
+  AllgemeinerTextScreen(this.index)
+  {
+    titel = historie_names[index];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +29,13 @@ class AllgemeinerTextScreen extends StatelessWidget
               RaisedButton
               (
                   child: Text("Add"),
-                  onPressed: () => _bookmarks.add(index, "History"),
+                  onPressed: () => _bookmarks.add(titel),
               ),
 
               RaisedButton
               (
                 child: Text("Remove"),
-                onPressed: () => _bookmarks.remove(index, "History")
+                onPressed: () => _bookmarks.remove(titel)
               )
           ],
         )
