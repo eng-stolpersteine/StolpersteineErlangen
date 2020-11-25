@@ -133,7 +133,7 @@ class StolpersteinScreen extends StatelessWidget
                   value: _bookmarks,
                   builder: (context, child) 
                   {
-                    return MarkButton(index,"Stolper");  
+                    return MarkButton(index,"Stolper", Colors.black);  
                   },
                 ), 
                 Text(_settings.english ? "Bookmark" : "Markieren", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)

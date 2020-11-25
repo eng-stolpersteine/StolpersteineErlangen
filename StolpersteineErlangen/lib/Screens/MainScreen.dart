@@ -299,7 +299,7 @@ class Stolperstein extends StatelessWidget
           (
             title: Text(_lastName, style: GoogleFonts.roboto(fontSize: 19, fontWeight: FontWeight.bold)),
             subtitle: Text(_firstName, style: GoogleFonts.roboto(),),
-            trailing: MarkButton(_index, "Stolper"),
+            trailing: MarkButton(_index, "Stolper", Colors.grey),
             leading: Container
             (
                 width: 60,
@@ -349,7 +349,7 @@ class AllgemeinerText extends StatelessWidget
           child: ListTile
           (
             title: Text(_titel, style: GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold)),
-            trailing: MarkButton(_index, "History"),
+            trailing: MarkButton(_index, "History", Colors.grey),
             leading: Container
             (
                 width: 60,
@@ -373,9 +373,10 @@ class MarkButton extends StatelessWidget
   int index;
   bool isFavorite;
   String type;
+  Color color;
   BookMarksProvider _bookmarks = BookMarksProvider();
 
-  MarkButton(this.index, this.type);
+  MarkButton(this.index, this.type, this.color);
 
   bool get getFavorite => type == "Stolper" ? BookMarksProvider.favSteine[index] : BookMarksProvider.favHistory[index];
 
@@ -392,7 +393,7 @@ class MarkButton extends StatelessWidget
 
         return IconButton
         (
-          icon: isFavorite ? Icon(Icons.bookmark, color: Colors.yellow[700], size: 30,) : Icon(Icons.bookmark_border_outlined, color: Colors.black, size: 30),
+          icon: isFavorite ? Icon(Icons.bookmark, color: Colors.yellow[700], size: 30,) : Icon(Icons.bookmark_border_outlined, color: color, size: 30),
           onPressed: () => isFavorite ? _bookmarks.remove(index, type) : _bookmarks.add(index, type)
         );
       },
