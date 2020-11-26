@@ -1,31 +1,28 @@
+import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:photo_view/photo_view_gallery.dart';
 
 class GalleryScreen extends StatefulWidget
 {
     List<String> images;
-    List<String> tags;
     bool english;
 
-    GalleryScreen(this.images, this.tags, this.english);
+    GalleryScreen(this.images, this.english);
 
     @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return GalleryScreenState(images, tags, english);
+    return GalleryScreenState(images, english);
   }
 }
 
 class GalleryScreenState extends State<GalleryScreen>
 {
     List<String> images;
-    List<String> tags;
     bool english;
     int tilestate = 0;
 
-    GalleryScreenState(this.images, this.tags, this.english);
+    GalleryScreenState(this.images, this.english);
 
   Container topBar = 
     Container
@@ -39,6 +36,10 @@ class GalleryScreenState extends State<GalleryScreen>
     @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    List<Image> imageList = List<Image>();
+    for(String url in images)
+      imageList.add(Image.asset(url, fit: BoxFit.fill));
+
     return Scaffold
     (
       backgroundColor: Colors.black,
@@ -50,55 +51,18 @@ class GalleryScreenState extends State<GalleryScreen>
       body: Center
       (
           child: images.isEmpty ? Text(english ? "No Images Available" : "Keine Bilder Verfügbar", style: GoogleFonts.roboto(color: Colors.white, fontSize: 16)) 
-          : Stack
+          : SizedBox
           (
-            children:
-            [
-              gallery(),
-              Align
-              (
-                alignment: Alignment.bottomCenter,
-                child: Padding
-                (
-                  padding: EdgeInsets.only(top: 15, bottom: 80),
-                  child: Text(tags[tilestate], style: GoogleFonts.roboto(fontSize: 18, color: Colors.white),),
-                ),
-              )
-            ],
-          )
+            height: 310,
+            width: 310,
+            child: Carousel
+            (
+              dotSize: 5,
+              autoplay: false,
+              images: imageList,
+            ),
+          ),
       ),  
-    );
-  }
-
-   Widget gallery() {
-    return Container(
-      child: PhotoViewGallery.builder(
-      scrollPhysics: const BouncingScrollPhysics(),
-      builder: (BuildContext context, int index) {
-        return PhotoViewGalleryPageOptions(
-          imageProvider: AssetImage(images.elementAt(index)),
-          initialScale: PhotoViewComputedScale.contained * 0.8,
-        );
-      },
-      itemCount: images.length,
-      loadingBuilder: (context, progress) => Center(
-           child: Container(
-             width: 20.0,
-             height: 20.0,
-             child: CircularProgressIndicator(
-               value: progress == null
-                   ? null
-                   : progress.cumulativeBytesLoaded /
-                       progress.expectedTotalBytes,
-             ),
-           ),
-         ),
-         onPageChanged: (int index){
-           setState(() {
-             tilestate = index;
-           });
-         },
-    ),
     );
   }
 }
