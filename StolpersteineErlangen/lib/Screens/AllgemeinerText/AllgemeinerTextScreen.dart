@@ -6,13 +6,25 @@ import 'package:flutter/material.dart';
 class AllgemeinerTextScreen extends StatelessWidget
 {
   int index;
-  BookMarksProvider _bookmarks = BookMarksProvider();
-  
+  BookMarksProvider _bookmarks;
+  SettingsProvider _settings;
   String titel;
+  List<String> galleryImages;
+  List<String> profilePics;
+  String text;
+  String audioUrl;
+  List<String> sources;
 
   AllgemeinerTextScreen(this.index)
   {
     titel = historie_names[index];
+    _bookmarks = BookMarksProvider();
+    _settings = SettingsProvider();
+    //galleryImages
+    //profilePics
+    //text
+    //audioUrl
+    //sources
   }
 
   @override
