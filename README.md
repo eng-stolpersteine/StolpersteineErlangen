@@ -1,5 +1,1 @@
 # StolpersteineErlangen
-
-## MM
-
-### nn
