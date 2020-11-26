@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Data/FilterData.dart';
 import 'package:StolpersteineErlangen/Data/HIveBoxes.dart';
 import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
@@ -144,18 +145,29 @@ class FilterProvider extends ChangeNotifier
   factory FilterProvider() => _instance;
 
   static Box _filter_box;
-  static List<bool> filterValues;
+  static Map<String, bool> filterValues;
 
   FilterProvider._internal()
   {
     _filter_box = Hive.box(filterBox);
-    filterValues = _filter_box.get("filters", defaultValue: [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]);
+    filterValues = Map<String,bool>();
+
+    for(String filter in deportation_filters)
+      filterValues[filter] = _filter_box.get(filter, defaultValue: false);
+
+    for(String filter in location_filters)
+      filterValues[filter] = _filter_box.get(filter, defaultValue: false);
+
+    for(String filter in family_filters)
+      filterValues[filter] = _filter_box.get(filter, defaultValue: false);
   }
 
-  void updateFilter(int id)
+  static bool getFilterValue(String name) => filterValues[name];
+
+  void updateFilter(String name)
   {
-    filterValues[id] = !filterValues[id];
-    _filter_box.put("filters", filterValues);
+    filterValues[name] = !filterValues[name];
+    _filter_box.put(name, filterValues[name]);
     notifyListeners();
   }
 }

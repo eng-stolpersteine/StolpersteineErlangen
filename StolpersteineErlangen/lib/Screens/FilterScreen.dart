@@ -1,4 +1,5 @@
 
+import 'package:StolpersteineErlangen/Data/FilterData.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,14 +8,13 @@ import 'package:provider/provider.dart';
 
 class FilterScreen extends StatelessWidget
 {
-  SettingsProvider _settings = SettingsProvider();
   FilterProvider _filter = FilterProvider();
 
-  Widget tile(String title, int id)
+  Widget tile(String title)
   {
     return Selector<FilterProvider, bool>
     (
-      selector: (context, filter) => FilterProvider.filterValues[id],
+      selector: (context, filter) => FilterProvider.getFilterValue(title),
       child: Text(title, style: GoogleFonts.roboto()),
       builder: (context, value, child) 
       {
@@ -22,7 +22,7 @@ class FilterScreen extends StatelessWidget
         (
             value: value,
             title: child,
-            onChanged: (value) => _filter.updateFilter(id),
+            onChanged: (value) => _filter.updateFilter(title),
         );  
       },
     );
@@ -45,43 +45,22 @@ class FilterScreen extends StatelessWidget
       value: _filter,
       builder: (context, child) 
       {
-        return ListView
-        (
-          children: 
-          [
-            tile("Auschwitz", 0),
-            tile("Dachau", 1),
-            tile("Erlangen", 2),
-            tile("Theresienstadt", 3),
-            tile(_settings.english ? "Other" : "Anderes", 4),
+        List<Widget> children = List<Widget>();
 
-            div(),
-            tile("Bayreuther Straße", 5),
-            tile("Calvinstraße", 6),
-            tile("Einhornstraße", 7),
-            tile("Goethestraße", 8),
-            tile("Hauptstraße", 9),
-            tile("Innere Brucker Straße", 10),
-            tile("Österreicher Straße", 11),
-            tile("Theaterplatz", 12),
+        for(String filter in deportation_filters)
+          children.add(tile(filter));
+        
+        children.add(div());
 
-            div(),
-            tile("Bauer", 13),
-            tile("Benesi", 14),
-            tile("Cohn", 15),
-            tile("Dreifuss", 16),
-            tile("Fleischhauer", 17),
-            tile("Heyer", 18),
-            tile("Katz", 19),
-            tile("Rotenstein", 20),
-            tile("Uhlfelder", 21),
-            tile("Vissing", 22),
-            tile("Wassermann", 23),
-            tile("Weglein", 24),
-            tile("Weinstock", 25),
-            tile("Wild", 26),
-          ],
-        );
+        for(String filter in location_filters)
+          children.add(tile(filter));
+        
+        children.add(div());
+
+        for(String filter in family_filters)
+          children.add(tile(filter));
+
+        return ListView(children: children);
       },
     );
   }

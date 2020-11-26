@@ -49,7 +49,8 @@ class GalleryScreenState extends State<GalleryScreen>
       ),
       body: Center
       (
-          child: Stack
+          child: images.isEmpty ? Text(english ? "No Images Available" : "Keine Bilder Verfügbar", style: GoogleFonts.roboto(color: Colors.white, fontSize: 16)) 
+          : Stack
           (
             children:
             [

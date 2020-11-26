@@ -1,8 +1,10 @@
 
+import 'package:StolpersteineErlangen/Data/FilterData.dart';
 import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
 import 'package:StolpersteineErlangen/Data/HistoryData/PBUrls.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/PBUrls.dart';
+import 'package:StolpersteineErlangen/Data/StolpersteinData/StolpersteinFilterData.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/AllgemeinerText/AllgemeinerTextScreen.dart';
 import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.dart';
@@ -49,146 +51,27 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
   void initStolpersteine()
   {
     stolpersteine = new List<Stolperstein>();
-    List<bool> filterValues = FilterProvider.filterValues;
+    
+    List<String> activeFilters = List<String>();
 
-    if(filterValues[4] || filterValues[12] || filterValues[13])
-    {
-        stolpersteine.add(Stolperstein(0));
-    }
+    for(String filter in deportation_filters)
+      if(FilterProvider.getFilterValue(filter)) activeFilters.add(filter);
 
-    if(filterValues[4] || filterValues[9] || filterValues[13])
-    {
-        stolpersteine.add(Stolperstein(1));
-    }
+    for(String filter in location_filters)
+      if(FilterProvider.getFilterValue(filter)) activeFilters.add(filter);
 
-    if(filterValues[4] || filterValues[9] || filterValues[13])
-    {
-        stolpersteine.add(Stolperstein(2));
-    }
+    for(String filter in family_filters)
+      if(FilterProvider.getFilterValue(filter)) activeFilters.add(filter);
 
-    if(filterValues[4] || filterValues[12] || filterValues[13])
+    for(int i = 0; i < stolperstein_names.length; i++)
     {
-        stolpersteine.add(Stolperstein(3));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[14])
-    {
-      stolpersteine.add(Stolperstein(4));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[14])
-    {
-      stolpersteine.add(Stolperstein(5));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[14])
-    {
-      stolpersteine.add(Stolperstein(6));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[14])
-    {
-      stolpersteine.add(Stolperstein(7));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[14])
-    {
-      stolpersteine.add(Stolperstein(8));
-    }
-
-    if(filterValues[2] || filterValues[5] || filterValues[15])
-    {
-      stolpersteine.add(Stolperstein(9));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[15])
-    {
-      stolpersteine.add(Stolperstein(10));
-    }
-
-    if(filterValues[3] || filterValues[9] || filterValues[16])
-    {
-      stolpersteine.add(Stolperstein(11));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[17])
-    {
-      stolpersteine.add(Stolperstein(12));
-    }
-
-    if(filterValues[1] || filterValues[11] || filterValues[18])
-    {
-      stolpersteine.add(Stolperstein(13));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[19])
-    {
-      stolpersteine.add(Stolperstein(14));
-    }
-
-    if(filterValues[4] ||filterValues[9] || filterValues[20])
-    {
-      stolpersteine.add(Stolperstein(15));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[20])
-    {
-      stolpersteine.add(Stolperstein(16));
-    }
-
-    if(filterValues[4] || filterValues[9] || filterValues[20])
-    {
-      stolpersteine.add(Stolperstein(17));
-    }
-
-    if(filterValues[4] || filterValues[5] ||filterValues[21])
-    {
-      stolpersteine.add(Stolperstein(18));
-    }
-
-    if(filterValues[4] ||filterValues[5] || filterValues[21])
-    {
-      stolpersteine.add(Stolperstein(19));
-    }
-
-    if(filterValues[0] || filterValues[5] ||filterValues[22])
-    {
-      stolpersteine.add(Stolperstein(20));
-    }
-
-    if(filterValues[4] ||filterValues[7] || filterValues[23])
-    {
-      stolpersteine.add(Stolperstein(21));
-    }
-
-    if(filterValues[3] ||filterValues[9] ||filterValues[24])
-    {
-      stolpersteine.add(Stolperstein(22));
-    }
-
-    if(filterValues[3] || filterValues[9] || filterValues[24])
-    {
-      stolpersteine.add(Stolperstein(23));
-    }
-
-    if(filterValues[4] || filterValues[6] || filterValues[25])
-    {
-      stolpersteine.add(Stolperstein(24));
-    }
-
-    if(filterValues[4] ||filterValues[10] || filterValues[26])
-    {
-      stolpersteine.add(Stolperstein(25));
-    }
-
-    if(filterValues[4] ||filterValues[8] ||filterValues[26])
-    {
-      stolpersteine.add(Stolperstein(26));
+      if(stolperstein_filters[i].any((element) => activeFilters.toSet().contains(element))) 
+        stolpersteine.add(Stolperstein(i));
     }
 
     if(stolpersteine.isEmpty)
     {
-      for(int i = 0; i <  27; i++)
+      for(int i = 0; i < stolperstein_names.length; i++)
         stolpersteine.add(Stolperstein(i));
     }
   }
@@ -204,17 +87,12 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
 
   Widget AllgemeineTexte()
   {
-    return ListView
+    return ListView.builder
     (
       itemExtent: 90,
-      children: 
-      [
-          HistoryText(0),
-          HistoryText(1),
-          HistoryText(2),
-          HistoryText(3),
-      ],
-    );      
+      itemCount: historie_names.length,
+      itemBuilder: (context, index) => HistoryText(index),
+    );
   }
   
   Widget BookMarks()

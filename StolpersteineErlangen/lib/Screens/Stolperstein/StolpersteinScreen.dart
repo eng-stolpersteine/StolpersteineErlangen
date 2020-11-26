@@ -194,6 +194,7 @@ class StolpersteinScreen extends StatelessWidget
       if(await canLaunch(location))
       {
         await launch(location);
+        return;
       }
   }
 
@@ -238,6 +239,8 @@ class AudioPlayState extends State<AudioPlay>
   Duration position;
   bool isPlaying;
   String audioUrl;
+  bool audioAvailable;
+  SettingsProvider settings;
 
   AudioPlayState(this.audioUrl);
 
@@ -246,34 +249,41 @@ class AudioPlayState extends State<AudioPlay>
     // TODO: implement initState
     super.initState();
 
+    settings = SettingsProvider();
     isPlaying = false;
-    audioPlayer = AudioPlayer();
-    audioCache = AudioCache(fixedPlayer: audioPlayer);
-    audioCache.load(audioUrl);
+    audioAvailable = false;
     position = Duration(seconds: 0);
     duration = Duration(seconds: 0);
-    audioPlayer.onAudioPositionChanged.listen((Duration p) {
-      setState(() {
-
-        if(position.inSeconds == duration.inSeconds)
-        {
-          isPlaying = false;
-          position = Duration(seconds: 0);
-          audioPlayer.stop();
-        }
-        else
-        {
-            position = p;
-        }
-      });
-    });
-
-    audioPlayer.onDurationChanged.listen((Duration d) 
+    
+    if(audioUrl != "")
     {
-      setState(() {
-        duration = d;
+      audioAvailable = true;
+      audioPlayer = AudioPlayer();
+      audioCache = AudioCache(fixedPlayer: audioPlayer);
+      audioCache.load(audioUrl);
+      audioPlayer.onAudioPositionChanged.listen((Duration p) {
+        setState(() {
+
+          if(position.inSeconds == duration.inSeconds)
+          {
+            isPlaying = false;
+            position = Duration(seconds: 0);
+            audioPlayer.stop();
+          }
+          else
+          {
+              position = p;
+          }
+        });
       });
-    });
+
+      audioPlayer.onDurationChanged.listen((Duration d) 
+      {
+        setState(() {
+          duration = d;
+        });
+      });
+    }
   }
 
   @override
@@ -285,6 +295,14 @@ class AudioPlayState extends State<AudioPlay>
   }
 
   void handleOnPressed() {
+
+    if(!audioAvailable)
+    {
+      final snackbar = SnackBar(content: Text(settings.english ? "No Audio Available!" : "Kein Audio Verfügbar!"), duration: Duration(seconds: 3));
+      Scaffold.of(context).showSnackBar(snackbar);
+      return;
+    }
+
     setState(() {
       if (!isPlaying) {
         audioCache.play(audioUrl);
