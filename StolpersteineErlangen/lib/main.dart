@@ -1,5 +1,4 @@
-import 'package:StolpersteineErlangen/Data/Colors.dart';
-import 'package:StolpersteineErlangen/Data/HIveBoxes.dart';
+import 'package:StolpersteineErlangen/Data/HiveBoxes.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/FilterScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
@@ -28,7 +27,7 @@ class StolpersteinApp extends StatelessWidget
     return MaterialApp
     (
       debugShowCheckedModeBanner: false,
-      color: BACKGROUND_COLOR,
+      color: Colors.grey[300],
       home: Screens(),   
     );
   }
@@ -83,7 +82,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
     (
       currentIndex: _currentScreen,
       onTap: _onItemTapped,
-      selectedItemColor: BOTTOMNAVBAR_ICON_COLOR,
+      selectedItemColor: Color(0xFFCB9B51),
       showSelectedLabels: false,
       showUnselectedLabels: false,
       items: 
@@ -95,8 +94,30 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
     );
   }
 
-  Widget appBar(int index)
+  Widget _appBar(int index)
   {
+    Container appBarGradient = 
+    Container
+    (
+      decoration: BoxDecoration
+      (
+        gradient: LinearGradient
+        (
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: 
+          [
+            Color(0xFF462523),
+            Color(0xFFCB9B51),
+            Color(0xFFF6E27A),
+            Color(0xFFF6E27A),
+            Color(0xFFCB9B51),
+            Color(0xFF462523),
+          ],
+        ),
+      ),
+    );
+
     switch(index)
     {
       case 0:
@@ -106,7 +127,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
           centerTitle: true,
           flexibleSpace: appBarGradient,
         );
-        break;
+      break;
 
       case 2: 
         return AppBar
@@ -121,7 +142,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
             },
           ),
         );
-        break;
+      break;
       
       case 1:
         return AppBar
@@ -142,7 +163,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
             ],
           ),
         );
-        break;
+      break;
     }
   }
 
@@ -156,7 +177,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
       {
         return Scaffold
         (
-          appBar: appBar(_currentScreen),
+          appBar: _appBar(_currentScreen),
           bottomNavigationBar: _bottomNavigationBar(),
           body: _bodies[_currentScreen],
         );  

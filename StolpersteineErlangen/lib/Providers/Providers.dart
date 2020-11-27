@@ -1,5 +1,5 @@
 import 'package:StolpersteineErlangen/Data/FilterData.dart';
-import 'package:StolpersteineErlangen/Data/HIveBoxes.dart';
+import 'package:StolpersteineErlangen/Data/HiveBoxes.dart';
 import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
 import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.dart';
