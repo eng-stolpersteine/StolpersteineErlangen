@@ -36,7 +36,7 @@ class GalleryScreenState extends State<GalleryScreen>
     @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    List<Image> imageList = List<Image>();
+    List<Widget> imageList = List<Widget>();
     for(String url in images)
       imageList.add(Image.asset(url, fit: BoxFit.fill));
 

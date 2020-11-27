@@ -1,7 +1,7 @@
 
 List<List<String>> galleryImagesStolperstein = 
 [
-  ["./assets/StolpersteinPB/Amalia_Bauer.jpg","./assets/StolpersteinPB/Ernestine_Bauer.jpg","./assets/StolpersteinPB/Josef_Bauer.jpg","./assets/StolpersteinPB/Simon_Bauer.jpg",],
+  ["./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg", ],
   [],
   [],
   [],

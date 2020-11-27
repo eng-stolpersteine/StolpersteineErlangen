@@ -163,7 +163,7 @@ class Stolperstein extends StatelessWidget
     List<String> name = _titel.split(" ");
     _firstName = name[0];
     _lastName = name[1];
-    _imgUrl = image_urls[_index];
+    _imgUrl = pb_image_urls[_index][0];
   }
 
   @override

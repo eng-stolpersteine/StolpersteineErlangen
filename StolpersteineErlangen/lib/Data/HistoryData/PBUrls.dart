@@ -1,7 +1,7 @@
 List<String> historie_imgUrls = 
 [
-    "./assets/StolpersteinPB/Paula_Wild.jpg",
-    "./assets/StolpersteinPB/Paula_Wild.jpg",
-    "./assets/StolpersteinPB/Paula_Wild.jpg",
-    "./assets/StolpersteinPB/Paula_Wild.jpg",
+    "./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg",
+    "./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg",
+    "./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg",
+    "./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg",
 ];
