@@ -2,8 +2,8 @@
 import 'package:StolpersteineErlangen/Data/FilterData.dart';
 import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
 import 'package:StolpersteineErlangen/Data/HistoryData/PBUrls.dart';
+import 'package:StolpersteineErlangen/Data/StolpersteinData/Gallery/GalleryImages.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/PBUrls.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/StolpersteinFilterData.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/AllgemeinerText/AllgemeinerTextScreen.dart';
@@ -11,6 +11,7 @@ import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.da
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget
@@ -163,7 +164,7 @@ class Stolperstein extends StatelessWidget
     List<String> name = _titel.split(" ");
     _firstName = name[0];
     _lastName = name[1];
-    _imgUrl = pb_image_urls[_index][0];
+    _imgUrl = galleryImagesStolperstein[_index][0];
   }
 
   @override
@@ -182,22 +183,18 @@ class Stolperstein extends StatelessWidget
             trailing: MarkButton(_titel, Colors.grey),
             leading: Container
             (
-                width: 60,
-                height: 60,
-                child: Hero
+              width: 60,
+              height: 60,
+              child: DecoratedBox
+              (
+                decoration: BoxDecoration
                 (
-                  tag: _imgUrl,
-                  child: DecoratedBox
-                  (
-                    decoration: BoxDecoration
-                    (
-                        shape: BoxShape.circle,
-                        image: DecorationImage(image: AssetImage(_imgUrl), fit: BoxFit.fill),
-                    ),
-                  )
+                    shape: BoxShape.circle,
+                    image: DecorationImage(image: AssetImage(_imgUrl), fit: BoxFit.fill),
                 ),
+              )
             ),
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => StolpersteinScreen(_index)))
+            onTap: () => Navigator.of(context).push(PageTransition(child: StolpersteinScreen(_index), type: PageTransitionType.bottomToTop))
           ),
         ),
     );
@@ -240,7 +237,7 @@ class HistoryText extends StatelessWidget
                     image: DecorationImage(image: AssetImage(_imgUrl), fit: BoxFit.fill),
                 ),
             ),
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => AllgemeinerTextScreen(_index))),
+            onTap: () => Navigator.of(context).push(PageTransition(child: AllgemeinerTextScreen(_index), type: PageTransitionType.bottomToTop)),
           ),
         ),
     );

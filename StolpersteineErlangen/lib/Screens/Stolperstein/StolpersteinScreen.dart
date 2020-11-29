@@ -1,16 +1,20 @@
 import 'package:StolpersteineErlangen/Data/StolpersteinData/Gallery/GalleryImages.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/MapsLocations.dart';
 import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/PBUrls.dart';
+import 'package:StolpersteineErlangen/Data/StolpersteinData/Sources.dart';
+import 'package:StolpersteineErlangen/Data/StolpersteinData/Texts/ShortTexts.dart';
+import 'package:StolpersteineErlangen/Data/StolpersteinData/Texts/Texts.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/GalleryScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
+import 'package:StolpersteineErlangen/Screens/SourcesScreen.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,6 +24,7 @@ class StolpersteinScreen extends StatelessWidget
 {
   BookMarksProvider _bookmarks;
   SettingsProvider _settings;
+
   String name;
   List<String> galleryImages;
   String location;
@@ -27,7 +32,7 @@ class StolpersteinScreen extends StatelessWidget
   String shortText;
   String text;
   String audioUrl;
-  List<String> sources;
+  String sources;
 
   StolpersteinScreen(int index)
   {
@@ -40,11 +45,15 @@ class StolpersteinScreen extends StatelessWidget
 
     location = mapsLocations[index];
 
-    profilePics = pb_image_urls[index]; 
+    profilePics = new List<String>();
+    profilePics.add(galleryImages[0]);
+    if(galleryImages[1] != "") profilePics.add(galleryImages[1]); 
 
-    shortText = "Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 1 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 2 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 3 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 4";
-    text = "Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim eros integer est, magna bibendum mi. Mi placerat tristique id, eu neque maecenas nullam, amet tellus sed sed, rhoncus nunc aliquet lectus. Condimentum vulputate quam proin lobortis vestibulum pede, ultrices mi fermentum metus eros mi bibendum, est massa libero. Nulla lorem, vivamus nulla nascetur. Urna torquent sapien dis pede potenti ut, velit tellus lacus, eget wisi interdum ornare gravida. Nullam enim in, sed vel vulputate justo ut venenatis, hendrerit sapien lectus, quis eget. Rutrum erat magnis. Faucibus malesuada ut augue rutrum metus duis, ipsum in duis pede sed, amet vel gravida integer litora vitae, urna mauris semper nam, magna diam id. Eget magna vestibulum mauris, wisi nisl mauris eget non, potenti aliquam sem dolor, vitae leo mattis a est mattis, facilisis etiam a metus tincidunt suscipit hac. Libero laoreet sed lectus, quam vel morbi lobortis scelerisque, feugiat venenatis sapien vestibulum tempus nunc velit, sit lacinia vitae nam volutpat. Curabitur nisl libero nunc mi per semper, non pulvinar. Viverra purus nulla sed risus sed, vehicula fermentum. \n Urna id ut odio conubia est ipsum, et in dolor eros sed vestibulum, libero sed donec ante consequat, senectus eu et sagittis vivamus sed, mauris gravida. Imperdiet in fusce pulvinar, condimentum quis, doloremque vestibulum pede in duis sagittis, ipsum et diam aliquam quis. Eget torquent egestas purus eget, velit etiam velit, et curabitur quisque, per libero, pellentesque labore lorem et tortor turpis. Arcu ut eleifend erat sit, leo nibh elementum cursus lorem, pellentesque aliquip ut voluptate, dui in odio dictum integer, pellentesque tempus pretium in sed. Purus tempor curabitur sed elit ipsum, tristique scelerisque bibendum tempus velit dolor, metus sed, duis fermentum tincidunt curabitur non, pretium amet orci velit pellentesque consequat. \n  Risus nam odio lacinia velit. Vehicula nec ut lacinia non, at a lacus elit placerat euismod, dolor mi maecenas nunc eget, morbi est tristique vitae, justo vel. Suscipit sit, ipsum etiam quis lacus duis maecenas vivamus, porttitor gravida. Urna habitasse laboriosam ut. Id semper rerum potenti libero gravida, lectus lectus, laoreet nulla duis. \n Vitae non maecenas elementum justo vel sagittis, accumsan nec diam mauris dui in. Lacus suspendisse imperdiet sapien molestie feugiat massa, quam pellentesque eu sodales turpis nisl eros. Ultricies diam tincidunt dui turpis mauris. Eget curabitur erat et gravida, accumsan aliquet, nisl aenean eros nulla. Sollicitudin parturient consequat, eleifend risus vel justo proin mi, pharetra neque lectus quis amet libero, elit metus amet elit pede mi auctor. Integer vestibulum, lacus nibh, vitae eget, ac ut adipiscing, vestibulum posuere mi mauris. Platea eros, orci consequat, eu risus et.";
-  
+    shortText = _settings.english ? shortTexts_en[index] : shortTexts_dt[index];
+    text = _settings.english ? text_stolperstein_en[index] : text_stolperstein_dt[index];
+
+    sources = stolperstein_sources[index];
+
     audioUrl = _settings.english ? "Audio/Stolperstein/John_Mayer_-_Covered_in_Rain.mp3" : "";
   }
 
@@ -58,19 +67,18 @@ class StolpersteinScreen extends StatelessWidget
       child: Scaffold
       (
         backgroundColor: Colors.white,
-        body: Stack
+        body: Center
         (
-          children: 
-          [
-            Padding
-            (
-              padding: EdgeInsets.only(bottom: 125),
-              child:MainView(context)
-            ),
-            AudioView()
-          ],
-        ),
-      ),
+          child: Stack
+          (
+            children: 
+            [
+              Padding(child:MainView(context), padding: EdgeInsets.only(bottom: 125)),
+              AudioView()
+            ],
+          )
+        )
+      )
     );
   }
 
@@ -78,7 +86,7 @@ class StolpersteinScreen extends StatelessWidget
   {
     List<Image> imageList = List<Image>();
     for(String url in profilePics)
-      if(url != "") imageList.add(Image.asset(url, fit: BoxFit.fill));
+      imageList.add(Image.asset(url, fit: BoxFit.fill));
 
     return CustomScrollView
     (
@@ -88,18 +96,15 @@ class StolpersteinScreen extends StatelessWidget
           (
               expandedHeight: 310,
               backgroundColor: Colors.white,
+              leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () => Navigator.of(context).pop(),),
               flexibleSpace: FlexibleSpaceBar
               (
-                background: Hero
+                background: Carousel
                 (
-                  tag: profilePics[0],
-                  child: Carousel
-                  (
-                    dotSize: 4,
-                    autoplay: false,
-                    images: imageList
-                  )
-                ),
+                  dotSize: 4,
+                  autoplay: false,
+                  images: imageList
+                )
               ),
           ),
 
@@ -109,7 +114,7 @@ class StolpersteinScreen extends StatelessWidget
               Padding
               (
                   padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15),
-                  child: Text(shortText, style: GoogleFonts.crimsonText(fontSize: 18, letterSpacing: 0.1,), textAlign: TextAlign.justify),
+                  child: Text(shortText, style: GoogleFonts.crimsonText(fontSize: 18,), textAlign: TextAlign.justify),
               ),
 
               IconRow(context),
@@ -129,26 +134,23 @@ class StolpersteinScreen extends StatelessWidget
       padding: EdgeInsets.only(bottom: 40),
       child: Row
       (
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: 
         [
-          Padding(
-            padding: EdgeInsets.only(left: 25),
-            child: Column
-            (
-              children: 
-              [
-                ChangeNotifierProvider.value
-                (
-                  value: _bookmarks,
-                  builder: (context, child) 
-                  {
-                    return MarkButton(name, Colors.black);
-                  },
-                ), 
-                Text(_settings.english ? "Bookmark" : "Markieren", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
-              ],
-            ),
+          Column
+          (
+            children: 
+            [
+              ChangeNotifierProvider.value
+              (
+                value: _bookmarks,
+                builder: (context, child) 
+                {
+                  return MarkButton(name, Colors.black);
+                },
+              ), 
+              Text(_settings.english ? "Bookmark" : "Markieren", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+            ],
           ),
 
           Column
@@ -172,28 +174,24 @@ class StolpersteinScreen extends StatelessWidget
               IconButton
               (
                   icon: Icon(Icons.photo_outlined, color: Colors.black, size: 30),
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => GalleryScreen(galleryImages, _settings.english)))
+                  onPressed: () => Navigator.of(context).push(PageTransition(child: GalleryScreen(galleryImages, _settings.english), type: PageTransitionType.bottomToTop))
               ),
               Text(_settings.english ? "Gallery" : "Gallerie", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
             ],
-        ),
+          ),
 
-          Padding
+          Column
           (
-            padding: EdgeInsets.only(right: 25),
-            child: Column
-            (
-              children: 
-              [
-                IconButton
-                (
-                    icon: Icon(Icons.text_snippet_outlined, color: Colors.black, size: 30),
-                    onPressed: () {}
-                ),
-                Text(_settings.english ? "Sources" : "Quellen", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
-              ],
-            ),
-          )
+            children: 
+            [
+              IconButton
+              (
+                  icon: Icon(Icons.text_snippet_outlined, color: Colors.black, size: 30),
+                  onPressed: () => Navigator.of(context).push(PageTransition(child: SourceScreen(name, sources, _settings.english), type: PageTransitionType.bottomToTop))
+              ),
+              Text(_settings.english ? "Sources" : "Quellen", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+            ],
+          ),
         ],
       ),
     );
@@ -309,7 +307,7 @@ class AudioPlayState extends State<AudioPlay>
     if(!audioAvailable)
     {
       final snackbar = SnackBar(content: Text(settings.english ? "No Audio Available!" : "Kein Audio Verfügbar!"), duration: Duration(seconds: 3));
-      ScaffoldMessenger.of(context).showSnackBar(snackbar);
+      Scaffold.of(context).showSnackBar(snackbar);
       return;
     }
 
@@ -358,35 +356,35 @@ class AudioPlayState extends State<AudioPlay>
 
         Column
         (
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: 
-            [
-                Container
-                (
-                    width: 300,
-                    child: Slider
-                    (
-                      value: position.inSeconds.toDouble(),
-                      max: duration.inSeconds.toDouble(),
-                      activeColor: Colors.black,
-                      inactiveColor: Colors.grey[300],
-                      onChanged: (double value) => setState((){seekToSecond(value.toInt());}),
-                    ),
-                ),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: 
+          [
+              Container
+              (
+                  width: 300,
+                  child: Slider
+                  (
+                    value: position.inSeconds.toDouble(),
+                    max: duration.inSeconds.toDouble(),
+                    activeColor: Colors.black,
+                    inactiveColor: Colors.grey[300],
+                    onChanged: (double value) => setState((){seekToSecond(value.toInt());}),
+                  ),
+              ),
 
-                Row
-                (
-                  children: 
-                  [
-                    Padding
-                    (
-                      padding: EdgeInsets.only(right: 180),
-                      child: Text(time(position), style: GoogleFonts.roboto(fontSize: 16),),
-                    ),
-                    Text(time(duration), style: GoogleFonts.roboto(fontSize: 16),),
-                  ],
-                ),
-            ],
+              Row
+              (
+                children: 
+                [
+                  Padding
+                  (
+                    padding: EdgeInsets.only(right: 180),
+                    child: Text(time(position), style: GoogleFonts.roboto(fontSize: 16),),
+                  ),
+                  Text(time(duration), style: GoogleFonts.roboto(fontSize: 16),),
+                ],
+              ),
+          ],
         )
 
       ],
