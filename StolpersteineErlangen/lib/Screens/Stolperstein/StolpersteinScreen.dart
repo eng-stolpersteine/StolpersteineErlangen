@@ -18,19 +18,18 @@ import 'package:url_launcher/url_launcher.dart';
 
 class StolpersteinScreen extends StatelessWidget
 {
-  int index;
   BookMarksProvider _bookmarks;
   SettingsProvider _settings;
   String name;
   List<String> galleryImages;
   String location;
   List<String> profilePics;
-  String kurzText;
+  String shortText;
   String text;
   String audioUrl;
   List<String> sources;
 
-  StolpersteinScreen(this.index)
+  StolpersteinScreen(int index)
   {
     name = stolperstein_names[index];
 
@@ -43,7 +42,7 @@ class StolpersteinScreen extends StatelessWidget
 
     profilePics = pb_image_urls[index]; 
 
-    kurzText = "Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 1 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 2 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 3 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 4";
+    shortText = "Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 1 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 2 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 3 Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim 4";
     text = "Lorem ipsum dolor sit amet, porttitor lacus magna, egestas sodales ligula, suspendisse elit natoque, sociosqu perferendis est dignissim eros integer est, magna bibendum mi. Mi placerat tristique id, eu neque maecenas nullam, amet tellus sed sed, rhoncus nunc aliquet lectus. Condimentum vulputate quam proin lobortis vestibulum pede, ultrices mi fermentum metus eros mi bibendum, est massa libero. Nulla lorem, vivamus nulla nascetur. Urna torquent sapien dis pede potenti ut, velit tellus lacus, eget wisi interdum ornare gravida. Nullam enim in, sed vel vulputate justo ut venenatis, hendrerit sapien lectus, quis eget. Rutrum erat magnis. Faucibus malesuada ut augue rutrum metus duis, ipsum in duis pede sed, amet vel gravida integer litora vitae, urna mauris semper nam, magna diam id. Eget magna vestibulum mauris, wisi nisl mauris eget non, potenti aliquam sem dolor, vitae leo mattis a est mattis, facilisis etiam a metus tincidunt suscipit hac. Libero laoreet sed lectus, quam vel morbi lobortis scelerisque, feugiat venenatis sapien vestibulum tempus nunc velit, sit lacinia vitae nam volutpat. Curabitur nisl libero nunc mi per semper, non pulvinar. Viverra purus nulla sed risus sed, vehicula fermentum. \n Urna id ut odio conubia est ipsum, et in dolor eros sed vestibulum, libero sed donec ante consequat, senectus eu et sagittis vivamus sed, mauris gravida. Imperdiet in fusce pulvinar, condimentum quis, doloremque vestibulum pede in duis sagittis, ipsum et diam aliquam quis. Eget torquent egestas purus eget, velit etiam velit, et curabitur quisque, per libero, pellentesque labore lorem et tortor turpis. Arcu ut eleifend erat sit, leo nibh elementum cursus lorem, pellentesque aliquip ut voluptate, dui in odio dictum integer, pellentesque tempus pretium in sed. Purus tempor curabitur sed elit ipsum, tristique scelerisque bibendum tempus velit dolor, metus sed, duis fermentum tincidunt curabitur non, pretium amet orci velit pellentesque consequat. \n  Risus nam odio lacinia velit. Vehicula nec ut lacinia non, at a lacus elit placerat euismod, dolor mi maecenas nunc eget, morbi est tristique vitae, justo vel. Suscipit sit, ipsum etiam quis lacus duis maecenas vivamus, porttitor gravida. Urna habitasse laboriosam ut. Id semper rerum potenti libero gravida, lectus lectus, laoreet nulla duis. \n Vitae non maecenas elementum justo vel sagittis, accumsan nec diam mauris dui in. Lacus suspendisse imperdiet sapien molestie feugiat massa, quam pellentesque eu sodales turpis nisl eros. Ultricies diam tincidunt dui turpis mauris. Eget curabitur erat et gravida, accumsan aliquet, nisl aenean eros nulla. Sollicitudin parturient consequat, eleifend risus vel justo proin mi, pharetra neque lectus quis amet libero, elit metus amet elit pede mi auctor. Integer vestibulum, lacus nibh, vitae eget, ac ut adipiscing, vestibulum posuere mi mauris. Platea eros, orci consequat, eu risus et.";
   
     audioUrl = _settings.english ? "Audio/Stolperstein/John_Mayer_-_Covered_in_Rain.mp3" : "";
@@ -96,7 +95,7 @@ class StolpersteinScreen extends StatelessWidget
                   tag: profilePics[0],
                   child: Carousel
                   (
-                    dotSize: 5,
+                    dotSize: 4,
                     autoplay: false,
                     images: imageList
                   )
@@ -110,7 +109,7 @@ class StolpersteinScreen extends StatelessWidget
               Padding
               (
                   padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15),
-                  child: Text(kurzText, style: GoogleFonts.crimsonText(fontSize: 18, letterSpacing: 0.1,), textAlign: TextAlign.justify,),
+                  child: Text(shortText, style: GoogleFonts.crimsonText(fontSize: 18, letterSpacing: 0.1,), textAlign: TextAlign.justify),
               ),
 
               IconRow(context),
@@ -302,7 +301,7 @@ class AudioPlayState extends State<AudioPlay>
     // TODO: implement dispose
     super.dispose();
 
-    audioPlayer.dispose();
+    if(audioAvailable) audioPlayer.dispose();
   }
 
   void handleOnPressed() {
@@ -310,7 +309,7 @@ class AudioPlayState extends State<AudioPlay>
     if(!audioAvailable)
     {
       final snackbar = SnackBar(content: Text(settings.english ? "No Audio Available!" : "Kein Audio Verfügbar!"), duration: Duration(seconds: 3));
-      Scaffold.of(context).showSnackBar(snackbar);
+      ScaffoldMessenger.of(context).showSnackBar(snackbar);
       return;
     }
 
@@ -369,7 +368,7 @@ class AudioPlayState extends State<AudioPlay>
                     (
                       value: position.inSeconds.toDouble(),
                       max: duration.inSeconds.toDouble(),
-                      activeColor: Colors.black,//Color(0xFF1492E6),
+                      activeColor: Colors.black,
                       inactiveColor: Colors.grey[300],
                       onChanged: (double value) => setState((){seekToSecond(value.toInt());}),
                     ),
@@ -422,7 +421,8 @@ class ExpandedTextState extends State<ExpandedText> with SingleTickerProviderSta
     super.initState();
 
     isExpanded = false;
-    preview = text.length > 50 ? text.substring(0,200) + " ..." : text + " ...";
+
+    preview = text.length > 50 ? text.substring(0,200) + " ..." : text + (text == "" ? "" : " ...");
   }
 
   @override

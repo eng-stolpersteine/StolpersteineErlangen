@@ -31,10 +31,18 @@ dependencies:
   provider: ^4.3.2+2
   url_launcher: ^5.7.10
   carousel_pro: ^1.0.0
+  animated_splash_screen: ^1.0.1+2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  flutter_launcher_icons: ^0.8.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/Images/App/App_Logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -75,6 +83,7 @@ flutter:
     - assets/Images/Stolperstein/Wild_Paula/
 
     - assets/Audio/Stolperstein/
+    - assets/Images/App/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

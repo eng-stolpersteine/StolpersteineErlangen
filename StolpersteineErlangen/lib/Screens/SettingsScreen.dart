@@ -53,12 +53,13 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
         child: TabBar
         (
             controller: _tabController,
-            labelStyle: GoogleFonts.roboto(fontWeight: FontWeight.bold),
-            unselectedLabelStyle: GoogleFonts.roboto(),
+            labelStyle: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),
+            unselectedLabelStyle: GoogleFonts.roboto(color: Colors.black),
             indicator: BoxDecoration
             (
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(15)),
+                boxShadow: kElevationToShadow[2]
             ),
             tabs: 
             [
@@ -67,7 +68,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 child: Align
                 (
                   alignment: Alignment.center,
-                  child: Text("Deutsch", style: GoogleFonts.roboto(color: Colors.black),),
+                  child: Text("Deutsch", style: GoogleFonts.roboto(color: Colors.black)),
                 ),
               ),
 
@@ -76,7 +77,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 child: Align
                 (
                   alignment: Alignment.center,
-                  child: Text("English", style: GoogleFonts.roboto(color: Colors.black),),
+                  child: Text("English", style: GoogleFonts.roboto(color: Colors.black)),
                 ),
               ),
             ],

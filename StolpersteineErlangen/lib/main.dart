@@ -3,6 +3,8 @@ import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/FilterScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
 import 'package:StolpersteineErlangen/Screens/SettingsScreen.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +30,12 @@ class StolpersteinApp extends StatelessWidget
     (
       debugShowCheckedModeBanner: false,
       color: Colors.grey[300],
-      home: Screens(),   
+      home: AnimatedSplashScreen
+      (
+        splash: "assets/Images/App/App_Logo.png",
+        splashIconSize: 150,
+        nextScreen: Screens()
+      ),   
     );
   }
 }
