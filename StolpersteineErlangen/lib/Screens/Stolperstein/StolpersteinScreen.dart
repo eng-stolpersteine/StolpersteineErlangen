@@ -106,6 +106,8 @@ class StolpersteinScreen extends StatelessWidget
           SliverList( delegate: SliverChildListDelegate
           (
             [
+              Padding(child: Divider(height: 25, thickness: 2.8, color: Colors.black,), padding: EdgeInsets.symmetric(horizontal: 25)),
+
               Padding
               (
                   padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15),

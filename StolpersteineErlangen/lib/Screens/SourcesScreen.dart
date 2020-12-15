@@ -55,7 +55,7 @@ class SourceScreen extends StatelessWidget
           (
             children: 
             [
-              Padding(padding: EdgeInsets.only(top: 25), child: Text(source, style: GoogleFonts.roboto(),))
+              Padding(padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15), child: Text(source, style: GoogleFonts.roboto(),))
             ],
           ),
         ),

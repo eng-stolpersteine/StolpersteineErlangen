@@ -58,7 +58,7 @@ List<HistoryModel> historyModels =
 
   HistoryModel
   (
-    name: "Juedisches Leben NS Zeit", 
+    name: "Juedisches Leben vor NS Zeit", 
     nameEn: "Jewish Life Then", 
     textDt: txt_JuedischesLebenNSZeit_de, 
     textEn: txt_JuedischesLebenNSZeit_en, 

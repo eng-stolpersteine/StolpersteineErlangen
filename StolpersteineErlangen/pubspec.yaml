@@ -83,8 +83,9 @@ flutter:
     - assets/Images/Stolperstein/Wild_Ignatz/
     - assets/Images/Stolperstein/Wild_Paula/
 
-    - assets/Audio/Stolperstein/
     - assets/Images/App/
+    - assets/Audio/Stolperstein/Dt/
+    - assets/Audio/Stolperstein/En/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
