@@ -1,4 +1,4 @@
-package com.example.StolpersteineErlangen
+package com.eng.stolpersteine
 
 import io.flutter.embedding.android.FlutterActivity
 
