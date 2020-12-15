@@ -197,7 +197,7 @@ class BookMarksProvider extends ChangeNotifier
       for(String name in stolperstein_names)
         favorites[name] = _favoritesBox.get(name, defaultValue: false);
 
-      for(String name in historie_names)
+      for(String name in history_names_dt)
         favorites[name] = _favoritesBox.get(name, defaultValue: false);
   }
 

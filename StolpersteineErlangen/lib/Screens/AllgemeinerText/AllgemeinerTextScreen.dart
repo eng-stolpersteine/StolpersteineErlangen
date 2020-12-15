@@ -17,7 +17,7 @@ class AllgemeinerTextScreen extends StatelessWidget
 
   AllgemeinerTextScreen(this.index)
   {
-    titel = historie_names[index];
+    titel = history_names_dt[index];
     _bookmarks = BookMarksProvider();
     _settings = SettingsProvider();
     //galleryImages

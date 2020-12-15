@@ -91,7 +91,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     return ListView.builder
     (
       itemExtent: 90,
-      itemCount: historie_names.length,
+      itemCount: history_names_dt.length,
       itemBuilder: (context, index) => HistoryText(index),
     );
   }
@@ -107,8 +107,8 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
         for(String name in stolperstein_names)
           if(BookMarksProvider.isFavorite(name)) favItems.add(Stolperstein(stolperstein_names.indexOf(name)));
 
-        for(String name in historie_names)
-          if(BookMarksProvider.isFavorite(name)) favItems.add(HistoryText(historie_names.indexOf(name)));
+        for(String name in history_names_dt)
+          if(BookMarksProvider.isFavorite(name)) favItems.add(HistoryText(history_names_dt.indexOf(name)));
 
         if(favItems.isEmpty)
         {
@@ -207,10 +207,12 @@ class HistoryText extends StatelessWidget
 
   String _titel;
   String _imgUrl;
+  SettingsProvider _settings;
 
   HistoryText(this._index)
   {
-    _titel = historie_names[_index];
+    _settings = SettingsProvider();
+    _titel = _settings.english ? history_names_en[_index] : history_names_dt[_index];
     _imgUrl = historie_imgUrls[_index];
   }
 

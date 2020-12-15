@@ -1,7 +1,19 @@
-List<String> historie_names = 
+List<String> history_names_dt = 
 [
-    "Titel0",
-    "Titel1",
-    "Titel2",
-    "Titel3",
+    "Tmp0",
+    "Tmp1",
+    "Tmp2",
+    "Tmp3",
+    "Tmp4",
+    "Tmp5"
+];
+
+List<String> history_names_en = 
+[
+    "Tmp0",
+    "Tmp1",
+    "Tmp2",
+    "Tmp3",
+    "Tmp4",
+    "Tmp5"
 ];
