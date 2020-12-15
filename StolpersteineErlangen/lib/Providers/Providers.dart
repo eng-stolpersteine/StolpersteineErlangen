@@ -1,7 +1,9 @@
 import 'package:StolpersteineErlangen/Data/FilterData.dart';
+import 'package:StolpersteineErlangen/Data/History.dart';
 import 'package:StolpersteineErlangen/Data/HiveBoxes.dart';
-import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
+import 'package:StolpersteineErlangen/Data/Stolpersteine.dart';
+import 'package:StolpersteineErlangen/Models/HistoryModel.dart';
+import 'package:StolpersteineErlangen/Models/StolpersteinModel.dart';
 import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +81,11 @@ class SearchProvider extends SearchDelegate<String>
   Widget buildSuggestions(BuildContext context) {
     // TODO: implement buildSuggestions
 
-    final Iterable<String> suggestions =  query.isEmpty ? stolperstein_names : stolperstein_names.where((p) => p.startsWith(query));
+    List<String> names = new List<String>();
+    for(StolpersteinModel model in stolpersteinModels)
+      names.add(model.name);
+
+    final Iterable<String> suggestions =  query.isEmpty ? names : names.where((p) => p.startsWith(query));
 
     return _WordSuggestionList
     (
@@ -93,7 +99,7 @@ class SearchProvider extends SearchDelegate<String>
             context,
             MaterialPageRoute
             (
-                builder: (context) => StolpersteinScreen(stolperstein_names.indexOf(this.query))
+                builder: (context) => StolpersteinScreen(stolpersteinModels[names.indexOf(this.query)])
             )
           );
         }
@@ -194,14 +200,14 @@ class BookMarksProvider extends ChangeNotifier
   {
       favorites = Map<String,bool>();
 
-      for(String name in stolperstein_names)
-        favorites[name] = _favoritesBox.get(name, defaultValue: false);
+      for(StolpersteinModel model in stolpersteinModels)
+        favorites[model.name] = _favoritesBox.get(model.name, defaultValue: false);
 
-      for(String name in history_names_dt)
-        favorites[name] = _favoritesBox.get(name, defaultValue: false);
+      for(HistoryModel model in historyModels)
+        favorites[model.name] = _favoritesBox.get(model.name, defaultValue: false);
   }
 
-  static bool isFavorite(String name) => favorites[name]; 
+  static bool isFavorite(String name) => favorites[name] ?? false; 
 
   void add(String name)
   {

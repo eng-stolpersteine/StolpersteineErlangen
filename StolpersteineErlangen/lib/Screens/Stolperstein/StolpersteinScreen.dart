@@ -1,9 +1,4 @@
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Gallery/GalleryImages.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/MapsLocations.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Sources.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Texts/ShortTexts.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Texts/Texts.dart';
+import 'package:StolpersteineErlangen/Models/StolpersteinModel.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/GalleryScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
@@ -34,27 +29,25 @@ class StolpersteinScreen extends StatelessWidget
   String audioUrl;
   String sources;
 
-  StolpersteinScreen(int index)
+  StolpersteinScreen(StolpersteinModel model)
   {
-    name = stolperstein_names[index];
+    name = model.name;
 
-    galleryImages = galleryImagesStolperstein[index];
+    galleryImages = model.galleryImages;
 
     _settings = SettingsProvider();
     _bookmarks = BookMarksProvider();
 
-    location = mapsLocations[index];
+    location = model.location;
 
-    profilePics = new List<String>();
-    profilePics.add(galleryImages[0]);
-    if(galleryImages[1] != "") profilePics.add(galleryImages[1]); 
+    profilePics = model.profilePics;
 
-    shortText = _settings.english ? shortTexts_en[index] : shortTexts_dt[index];
-    text = _settings.english ? text_stolperstein_en[index] : text_stolperstein_dt[index];
+    shortText = _settings.english ? model.shortTextEn : model.shortTextDt;
+    text = _settings.english ? model.textEn : model.textDt;
 
-    sources = stolperstein_sources[index];
+    sources = model.sources;
 
-    audioUrl = _settings.english ? "Audio/Stolperstein/John_Mayer_-_Covered_in_Rain.mp3" : "";
+    audioUrl = _settings.english ? model.audioUrlEn : model.audioUrlDt;
   }
 
 
@@ -96,10 +89,12 @@ class StolpersteinScreen extends StatelessWidget
           (
               expandedHeight: 310,
               backgroundColor: Colors.white,
-              leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () => Navigator.of(context).pop(),),
+              leading: IconButton(icon: Icon(Icons.arrow_back, color: imageList.isEmpty ? Colors.black : Colors.white), onPressed: () => Navigator.of(context).pop(),),
               flexibleSpace: FlexibleSpaceBar
               (
-                background: Carousel
+                background: imageList.isEmpty ? Center(child: Icon(Icons.person, size: 100,))
+                :
+                Carousel
                 (
                   dotSize: 4,
                   autoplay: false,

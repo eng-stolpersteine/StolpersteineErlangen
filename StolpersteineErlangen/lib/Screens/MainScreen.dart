@@ -1,10 +1,9 @@
 
 import 'package:StolpersteineErlangen/Data/FilterData.dart';
-import 'package:StolpersteineErlangen/Data/HistoryData/Names.dart';
-import 'package:StolpersteineErlangen/Data/HistoryData/PBUrls.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Gallery/GalleryImages.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/Names.dart';
-import 'package:StolpersteineErlangen/Data/StolpersteinData/StolpersteinFilterData.dart';
+import 'package:StolpersteineErlangen/Data/History.dart';
+import 'package:StolpersteineErlangen/Data/Stolpersteine.dart';
+import 'package:StolpersteineErlangen/Models/HistoryModel.dart';
+import 'package:StolpersteineErlangen/Models/StolpersteinModel.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/AllgemeinerText/AllgemeinerTextScreen.dart';
 import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.dart';
@@ -29,7 +28,6 @@ class MainScreen extends StatefulWidget
 class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin
 {
   TabController _tabController;
-  FilterProvider _filter;
   SettingsProvider _settings;
   BookMarksProvider _bookmarks;
   List<Stolperstein> stolpersteine;
@@ -41,7 +39,6 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     // TODO: implement initState
     super.initState();
 
-    _filter = FilterProvider();
     _settings = SettingsProvider();
     _bookmarks = BookMarksProvider();
     
@@ -64,16 +61,16 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     for(String filter in family_filters)
       if(FilterProvider.getFilterValue(filter)) activeFilters.add(filter);
 
-    for(int i = 0; i < stolperstein_names.length; i++)
+    for(StolpersteinModel model in stolpersteinModels)
     {
-      if(stolperstein_filters[i].any((element) => activeFilters.toSet().contains(element))) 
-        stolpersteine.add(Stolperstein(i));
+      if(model.filters.any((element) => activeFilters.toSet().contains(element))) 
+        stolpersteine.add(Stolperstein(model));
     }
 
     if(stolpersteine.isEmpty)
     {
-      for(int i = 0; i < stolperstein_names.length; i++)
-        stolpersteine.add(Stolperstein(i));
+      for(StolpersteinModel model in stolpersteinModels)
+        stolpersteine.add(Stolperstein(model));
     }
   }
 
@@ -91,8 +88,8 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     return ListView.builder
     (
       itemExtent: 90,
-      itemCount: history_names_dt.length,
-      itemBuilder: (context, index) => HistoryText(index),
+      itemCount: historyModels.length,
+      itemBuilder: (context, index) => HistoryText(historyModels[index]),
     );
   }
   
@@ -104,11 +101,11 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
       {
         List<Widget> favItems = new List<Widget>();
 
-        for(String name in stolperstein_names)
-          if(BookMarksProvider.isFavorite(name)) favItems.add(Stolperstein(stolperstein_names.indexOf(name)));
+        for(StolpersteinModel model in stolpersteinModels)
+          if(BookMarksProvider.isFavorite(model.name)) favItems.add(Stolperstein(model));
 
-        for(String name in history_names_dt)
-          if(BookMarksProvider.isFavorite(name)) favItems.add(HistoryText(history_names_dt.indexOf(name)));
+        for(HistoryModel model in historyModels)
+          if(BookMarksProvider.isFavorite(model.name)) favItems.add(HistoryText(model));
 
         if(favItems.isEmpty)
         {
@@ -152,19 +149,36 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
 
 class Stolperstein extends StatelessWidget
 {
+  StolpersteinModel model;
   String _titel;
   String _firstName;
   String _lastName;
   String _imgUrl;
-  int _index;
 
-  Stolperstein(this._index)
+  Stolperstein(this.model)
   {
-    _titel = stolperstein_names[_index];
+    _titel = model.name;
     List<String> name = _titel.split(" ");
     _firstName = name[0];
     _lastName = name[1];
-    _imgUrl = galleryImagesStolperstein[_index][0];
+    _imgUrl = model.profilePics.isEmpty ? "" : model.profilePics[0];
+  }
+
+  Widget profilePic()
+  {
+    return Container
+    (
+      width: 60,
+      height: 60,
+      child: DecoratedBox
+      (
+        decoration: BoxDecoration
+        (
+            shape: BoxShape.circle,
+            image: DecorationImage(image: AssetImage(_imgUrl), fit: BoxFit.fill),
+        ),
+      )
+    );
   }
 
   @override
@@ -181,20 +195,8 @@ class Stolperstein extends StatelessWidget
             title: Text(_lastName, style: GoogleFonts.roboto(fontSize: 19, fontWeight: FontWeight.bold)),
             subtitle: Text(_firstName, style: GoogleFonts.roboto(),),
             trailing: MarkButton(_titel, Colors.grey),
-            leading: Container
-            (
-              width: 60,
-              height: 60,
-              child: DecoratedBox
-              (
-                decoration: BoxDecoration
-                (
-                    shape: BoxShape.circle,
-                    image: DecorationImage(image: AssetImage(_imgUrl), fit: BoxFit.fill),
-                ),
-              )
-            ),
-            onTap: () => Navigator.of(context).push(PageTransition(child: StolpersteinScreen(_index), type: PageTransitionType.bottomToTop))
+            leading: _imgUrl == "" ? Icon(Icons.person, size: 35, ) : profilePic(),
+            onTap: () => Navigator.of(context).push(PageTransition(child: StolpersteinScreen(model), type: PageTransitionType.bottomToTop))
           ),
         ),
     );
@@ -203,17 +205,37 @@ class Stolperstein extends StatelessWidget
 
 class HistoryText extends StatelessWidget
 {
-  int _index;
-
+  HistoryModel model;
   String _titel;
+  String bookMarksID;
   String _imgUrl;
   SettingsProvider _settings;
 
-  HistoryText(this._index)
+  HistoryText(this.model)
   {
     _settings = SettingsProvider();
-    _titel = _settings.english ? history_names_en[_index] : history_names_dt[_index];
-    _imgUrl = historie_imgUrls[_index];
+    _titel = _settings.english ? model.nameEn : model.name;
+    bookMarksID = model.name;
+    _imgUrl = model.profilePics.isEmpty ? "" : model.profilePics[0];
+  }
+
+  Widget profilePic()
+  {
+    return Container
+    (
+      width: 60,
+      height: 60,
+      child: _imgUrl == "" ? Icon(Icons.hourglass_empty, size: 35)
+      :
+      DecoratedBox
+      (
+        decoration: BoxDecoration
+        (
+            shape: BoxShape.circle,
+            image: DecorationImage(image: AssetImage(_imgUrl), fit: BoxFit.fill),
+        ),
+      ) 
+    );
   }
 
   @override
@@ -228,18 +250,9 @@ class HistoryText extends StatelessWidget
           child: ListTile
           (
             title: Text(_titel, style: GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold)),
-            trailing: MarkButton(_titel, Colors.grey),
-            leading: Container
-            (
-                width: 60,
-                height: 60,
-                decoration: BoxDecoration
-                (
-                    shape: BoxShape.circle,
-                    image: DecorationImage(image: AssetImage(_imgUrl), fit: BoxFit.fill),
-                ),
-            ),
-            onTap: () => Navigator.of(context).push(PageTransition(child: AllgemeinerTextScreen(_index), type: PageTransitionType.bottomToTop)),
+            trailing: MarkButton(bookMarksID, Colors.grey),
+            leading: profilePic(),
+            onTap: () => Navigator.of(context).push(PageTransition(child: AllgemeinerTextScreen(model), type: PageTransitionType.bottomToTop)),
           ),
         ),
     );
@@ -276,20 +289,3 @@ class MarkButton extends StatelessWidget
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
