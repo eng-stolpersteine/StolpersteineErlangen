@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1709061370-o9a5asje86i0g2mggugab20pi0lt249t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1709061370-o9a5asje86i0g2mggugab20pi0lt249t</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1709061370-8c7pj2a3lrcs8toklahbae155ikpgnot.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDsfnBOlfpBDcAgyxYEMo7LQpIF7oIt-fA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1709061370</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.eng.stolpersteine</string>
+	<key>PROJECT_ID</key>
+	<string>stolpersteine-erlangen</string>
+	<key>STORAGE_BUCKET</key>
+	<string>stolpersteine-erlangen.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1709061370:ios:701d0b6769da59defa0543</string>
+</dict>
+</plist>
