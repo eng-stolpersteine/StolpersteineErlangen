@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1709061370",
+    "project_id": "stolpersteine-erlangen",
+    "storage_bucket": "stolpersteine-erlangen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1709061370:android:d12fb629644eda0afa0543",
+        "android_client_info": {
+          "package_name": "com.eng.stolpersteine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1709061370-8c7pj2a3lrcs8toklahbae155ikpgnot.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eng.stolpersteine",
+            "certificate_hash": "0f93adb2bb907cae552dcd5fe329cc4004d8f6b4"
+          }
+        },
+        {
+          "client_id": "1709061370-hputjeqv8vrl8tanu91c1u0snmap1i1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR1Uqiez_DsjBucCCbRe5RlbC2UKLJpfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1709061370-hputjeqv8vrl8tanu91c1u0snmap1i1c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
