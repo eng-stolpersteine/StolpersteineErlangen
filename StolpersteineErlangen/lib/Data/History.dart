@@ -13,7 +13,12 @@ List<HistoryModel> historyModels =
     audioUrlDt: "", 
     audioUrlEn: "", 
     sources: src_NationalsozialismusErlangen, 
-    galleryImages: [], 
+    galleryImages: 
+    [
+      "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_Hissung_durch_SA_1933.jpg",
+      "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_Männer_Kultusgemeinde_1937.jpg",
+      "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_SA_Marsch_1938.jpg",
+    ], 
     profilePics: [],
   ),
 
@@ -39,7 +44,7 @@ List<HistoryModel> historyModels =
     audioUrlDt: "", 
     audioUrlEn: "", 
     sources: src_IsraelitischerFriedhof, 
-    galleryImages: [], 
+    galleryImages: ["./assets/Images/History/Jüdischer_Friedhof/Friedhof_1948.jpg",], 
     profilePics: [],
   ),
 
@@ -65,7 +70,12 @@ List<HistoryModel> historyModels =
     audioUrlDt: "", 
     audioUrlEn: "", 
     sources: src_JuedischesLebenNSZeit, 
-    galleryImages: [], 
+    galleryImages: 
+    [
+      "./assets/Images/History/Jüdisches_Leben_Vor/VOR_1Zerstörung_Denkmal_1933.jpg",
+      "./assets/Images/History/Jüdisches_Leben_Vor/VOR_2Zerstörung_Denkmal_1933.jpg",
+      "./assets/Images/History/Jüdisches_Leben_Vor/VOR_Nbg_Tor_1935.jpg",
+    ], 
     profilePics: [],
   ),
 
