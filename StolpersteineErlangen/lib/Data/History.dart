@@ -7,7 +7,7 @@ List<HistoryModel> historyModels =
   HistoryModel
   (
     name: "Nationalsozialismus", 
-    nameEn: "Nationalsotialism", 
+    nameEn: "National Socialism", 
     textDt: txt_NationalsozialismusErlangen_de, 
     textEn: txt_NationalsozialismusErlangen_en, 
     audioUrlDt: "Audio/History/Dt/Nationalsozialismus.mp3", 
