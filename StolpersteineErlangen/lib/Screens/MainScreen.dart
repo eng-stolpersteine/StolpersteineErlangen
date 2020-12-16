@@ -1,5 +1,3 @@
-
-import 'package:StolpersteineErlangen/Data/FilterData.dart';
 import 'package:StolpersteineErlangen/Data/History.dart';
 import 'package:StolpersteineErlangen/Data/Stolpersteine.dart';
 import 'package:StolpersteineErlangen/Models/HistoryModel.dart';
@@ -12,6 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:StolpersteineErlangen/Models/FilterModel.dart';
+import 'package:StolpersteineErlangen/Data/Filters.dart';
 
 class MainScreen extends StatefulWidget
 {
@@ -52,14 +52,14 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     
     List<String> activeFilters = List<String>();
 
-    for(String filter in deportation_filters)
-      if(FilterProvider.getFilterValue(filter)) activeFilters.add(filter);
+    for(FilterModel filter in deportationFilters)
+      if(FilterProvider.getFilterValue(filter.nameDt)) activeFilters.add(filter.nameDt);
 
-    for(String filter in location_filters)
-      if(FilterProvider.getFilterValue(filter)) activeFilters.add(filter);
+    for(FilterModel filter in locationFilters)
+      if(FilterProvider.getFilterValue(filter.nameDt)) activeFilters.add(filter.nameDt);
 
-    for(String filter in family_filters)
-      if(FilterProvider.getFilterValue(filter)) activeFilters.add(filter);
+    for(FilterModel filter in familyFilters)
+      if(FilterProvider.getFilterValue(filter.nameDt)) activeFilters.add(filter.nameDt);
 
     for(StolpersteinModel model in stolpersteinModels)
     {
@@ -225,7 +225,7 @@ class HistoryText extends StatelessWidget
     (
       width: 60,
       height: 60,
-      child: _imgUrl == "" ? Icon(Icons.hourglass_empty, size: 35)
+      child: _imgUrl == "" ? Icon(Icons.article_outlined, size: 37)
       :
       DecoratedBox
       (

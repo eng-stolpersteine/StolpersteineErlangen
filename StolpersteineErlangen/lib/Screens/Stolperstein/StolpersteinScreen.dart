@@ -87,7 +87,7 @@ class StolpersteinScreen extends StatelessWidget
       [
           SliverAppBar
           (
-              expandedHeight: 310,
+              expandedHeight: MediaQuery.of(context).size.height * 0.40,//310,
               backgroundColor: Colors.white,
               leading: IconButton(icon: Icon(Icons.arrow_back, color: imageList.isEmpty ? Colors.black : Colors.white), onPressed: () => Navigator.of(context).pop(),),
               flexibleSpace: FlexibleSpaceBar
@@ -173,7 +173,7 @@ class StolpersteinScreen extends StatelessWidget
                   icon: Icon(Icons.photo_outlined, color: Colors.black, size: 30),
                   onPressed: () => Navigator.of(context).push(PageTransition(child: GalleryScreen(galleryImages, _settings.english), type: PageTransitionType.bottomToTop))
               ),
-              Text(_settings.english ? "Gallery" : "Gallerie", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Gallery" : "Galerie", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
             ],
           ),
 

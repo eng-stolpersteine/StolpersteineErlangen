@@ -1,4 +1,3 @@
-import 'package:StolpersteineErlangen/Data/FilterData.dart';
 import 'package:StolpersteineErlangen/Data/History.dart';
 import 'package:StolpersteineErlangen/Data/HiveBoxes.dart';
 import 'package:StolpersteineErlangen/Data/Stolpersteine.dart';
@@ -9,6 +8,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
+import 'package:StolpersteineErlangen/Models/FilterModel.dart';
+import 'package:StolpersteineErlangen/Data/Filters.dart';
 
 class SettingsProvider extends ChangeNotifier
 {
@@ -158,14 +159,14 @@ class FilterProvider extends ChangeNotifier
     _filter_box = Hive.box(filterBox);
     filterValues = Map<String,bool>();
 
-    for(String filter in deportation_filters)
-      filterValues[filter] = _filter_box.get(filter, defaultValue: false);
+    for(FilterModel filter in deportationFilters)
+      filterValues[filter.nameDt] = _filter_box.get(filter.nameDt, defaultValue: false);
 
-    for(String filter in location_filters)
-      filterValues[filter] = _filter_box.get(filter, defaultValue: false);
+    for(FilterModel filter in locationFilters)
+      filterValues[filter.nameDt] = _filter_box.get(filter.nameDt, defaultValue: false);
 
-    for(String filter in family_filters)
-      filterValues[filter] = _filter_box.get(filter, defaultValue: false);
+    for(FilterModel filter in familyFilters)
+      filterValues[filter.nameDt] = _filter_box.get(filter.nameDt, defaultValue: false);
   }
 
   static bool getFilterValue(String name) => filterValues[name];

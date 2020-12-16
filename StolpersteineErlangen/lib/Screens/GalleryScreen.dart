@@ -61,9 +61,9 @@ class GalleryScreenState extends State<GalleryScreen>
         appBar: AppBar
         (
             title: images.isEmpty ? 
-              Text(english ? "Gallery" : "Gallerie") 
+              Text(english ? "Gallery" : "Galerie") 
               :
-              Row(children: [Text(english ? "Gallery" : "Gallerie"), IndexDisplay(images.length)], mainAxisAlignment: MainAxisAlignment.spaceBetween,),
+              Row(children: [Text(english ? "Gallery" : "Galerie"), IndexDisplay(images.length)], mainAxisAlignment: MainAxisAlignment.spaceBetween,),
             flexibleSpace: topBar,
         ),
         body: Center(child: GalleryView(images, english))  
@@ -125,7 +125,7 @@ class GalleryView extends StatelessWidget
   Widget build(BuildContext context) {
     // TODO: implement build
     return image_urls.isEmpty ? 
-        Text(english ? "No Images Available" : "Keine Bilder Verfügbar", style: GoogleFonts.roboto(color: Colors.white, fontSize: 16)) 
+        Text(english ? "No Images Available" : "Keine Bilder Verfügbar", style: GoogleFonts.roboto(color: Colors.white, fontSize: 16))
         :
         View(context);
   }

@@ -84,12 +84,17 @@ flutter:
     - assets/Images/Stolperstein/Wild_Paula/
 
     - assets/Images/App/
-    - assets/Audio/Stolperstein/Dt/
-    - assets/Audio/Stolperstein/En/
 
     - assets/Images/History/Jüdischer_Friedhof/
     - assets/Images/History/Jüdisches_Leben_Vor/
     - assets/Images/History/Nationalsozialismus_In_ER/
+
+    - assets/Audio/Stolperstein/Dt/
+    - assets/Audio/Stolperstein/En/
+
+    - assets/Audio/History/Dt/
+    - assets/Audio/History/En/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

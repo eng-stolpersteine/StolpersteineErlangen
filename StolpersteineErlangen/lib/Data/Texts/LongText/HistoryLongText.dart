@@ -10,8 +10,6 @@ String txt_JuedischesLebenNSZeit_de = "Zur heutigen Zeit wird Antisemitismus und
 
 String txt_Stolpersteine_de = "Die Stolpersteine sind ein Projekt des deutschen Künstler Gunther Demnig. 1992 wurde der erste Stolperstein verlegt. Inzwischen ist es das größte dezentrale Mahnmahl der Welt mit über 75 000 verlegten Steinen (2019) in insgesamt 21 verschiedenen Ländern. Der Stein wird vor den letzten freiwillig gewählten Wohnort verlegt. Mit den Stolpersteine sollen den Opfern die Namen zurückgegeben werden, außerdem kritisierte Demnig, dass mit zentralen Gedenkstätten die NS-Opfer nicht ausreichend in der Öffentlichkeit sichtbar sind. Auch sind Gedenkstätten immer Plätze, an denen die Opfer schreckliches erlebten, während sie an Wohnort noch schöne Erfahrungen gemacht haben.\n\nZu dem Projekt gibt es auch kritische Stimmen. Am meisten kritisiert wurde, dass die Steine im Boden eingelassen sind und so auf ihnen mit den Füßen getrampelt wird. Auch können die Stolpersteine, da es keinen Zentralen Ort gibt, viel leichter beschmiert werden. Das bekannteste Beispiel dafür ist München. Dort wurde das Verlegen der Stolpersteine abgelehnt und die bereits verlegten Steine wieder entfernt. In Erlangen wurde die Initiative von Ilse Sponsel, die städtische Beauftragte für ehemalige jüdische Mitbürger*in den Stadtrat getragen. Die Steine wurden 2007 verlegt.";
 
-String txt_Danke_de = "";
-
 //-----------------//
 
 String txt_NationalsozialismusErlangen_en = "";
@@ -20,4 +18,3 @@ String txt_IsraelitischerFriedhof_en = "";
 String txt_JuedischesLebenHeute_en = "";
 String txt_JuedischesLebenNSZeit_en = "";
 String txt_Stolpersteine_en = "";
-String txt_Danke_en = "";

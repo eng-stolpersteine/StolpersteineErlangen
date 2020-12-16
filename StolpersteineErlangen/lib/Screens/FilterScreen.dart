@@ -1,28 +1,29 @@
-
-import 'package:StolpersteineErlangen/Data/FilterData.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:StolpersteineErlangen/Models/FilterModel.dart';
+import 'package:StolpersteineErlangen/Data/Filters.dart';
 
 class FilterScreen extends StatelessWidget
 {
   FilterProvider _filter = FilterProvider();
+  SettingsProvider _settings = SettingsProvider();
 
-  Widget tile(String title)
+  Widget tile(FilterModel model)
   {
     return Selector<FilterProvider, bool>
     (
-      selector: (context, filter) => FilterProvider.getFilterValue(title),
-      child: Text(title, style: GoogleFonts.roboto()),
+      selector: (context, filter) => FilterProvider.getFilterValue(model.nameDt),
+      child: Text(_settings.english ? model.nameEn : model.nameDt, style: GoogleFonts.roboto()),
       builder: (context, value, child) 
       {
         return CheckboxListTile
         (
             value: value,
             title: child,
-            onChanged: (value) => _filter.updateFilter(title),
+            onChanged: (value) => _filter.updateFilter(model.nameDt)
         );  
       },
     );
@@ -47,17 +48,17 @@ class FilterScreen extends StatelessWidget
       {
         List<Widget> children = List<Widget>();
 
-        for(String filter in deportation_filters)
+        for(FilterModel filter in deportationFilters)
           children.add(tile(filter));
         
         children.add(div());
 
-        for(String filter in location_filters)
+        for(FilterModel filter in locationFilters)
           children.add(tile(filter));
         
         children.add(div());
 
-        for(String filter in family_filters)
+        for(FilterModel filter in familyFilters)
           children.add(tile(filter));
 
         return ListView(children: children);

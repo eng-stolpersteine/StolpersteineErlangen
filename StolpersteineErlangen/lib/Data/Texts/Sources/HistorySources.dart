@@ -9,5 +9,3 @@ String src_JuedischesLebenHeute = "";
 String src_JuedischesLebenNSZeit = "[1]Cornelsen Schulverlage GmbH: \"Forum Geschichte 11 - Bayern\". Berlin, 2014\n[2]Sponsel, Ilse: \"Das Schicksal der Erlanger Juden in der NS-Zeit\". Erlangen, 1982";
 
 String src_Stolpersteine = "[1]https://www.erlangen.de/Portaldata/1/Resources/080_stadtverwaltung/Taetigkeitsbericht_2006.pdf am 12.11.2020\n\n[2] https://de.wikipedia.org/wiki/Stolpersteine am 12.11.2020\n\n[3]https://www.nordbayern.de/region/erlangen/erlanger-sollen-uber-ihre-geschichte-stolpern-1.792696 am 12.11.2020\n\n[4] http://www.stolpersteine.eu/de/ am 26.11.2020";
-
-String src_Danke = "";

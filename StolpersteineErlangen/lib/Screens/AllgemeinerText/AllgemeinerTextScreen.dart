@@ -77,12 +77,12 @@ class AllgemeinerTextScreen extends StatelessWidget
       [
           SliverAppBar
           (
-              expandedHeight: 310,
+              expandedHeight: MediaQuery.of(context).size.height * 0.40,//310,
               backgroundColor: Colors.white,
               leading: IconButton(icon: Icon(Icons.arrow_back, color: imageList.isEmpty ? Colors.black : Colors.white), onPressed: () => Navigator.of(context).pop(),),
               flexibleSpace: FlexibleSpaceBar
               (
-                background: imageList.isEmpty ? Center(child: Icon(Icons.hourglass_empty, size: 100,))
+                background: imageList.isEmpty ? Center(child: Icon(Icons.article_outlined, size: 150,))
                 :
                 Carousel
                 (
@@ -97,12 +97,6 @@ class AllgemeinerTextScreen extends StatelessWidget
           (
             [
               Padding(child: Divider(height: 25, thickness: 2.8, color: Colors.black,), padding: EdgeInsets.symmetric(horizontal: 25)),
-
-              Padding
-              (
-                  padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15),
-                  child: Text("", style: GoogleFonts.crimsonText(fontSize: 18,), textAlign: TextAlign.justify),
-              ),
 
               IconRow(context),
 
@@ -149,7 +143,7 @@ class AllgemeinerTextScreen extends StatelessWidget
                   icon: Icon(Icons.photo_outlined, color: Colors.black, size: 30),
                   onPressed: () => Navigator.of(context).push(PageTransition(child: GalleryScreen(galleryImages, _settings.english), type: PageTransitionType.bottomToTop))
               ),
-              Text(_settings.english ? "Gallery" : "Gallerie", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Gallery" : "Galerie", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
             ],
           ),
 
