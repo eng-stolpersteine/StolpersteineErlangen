@@ -4,7 +4,6 @@ import 'package:StolpersteineErlangen/Data/SettingsData/Impress.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatefulWidget
@@ -54,8 +53,8 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
         child: TabBar
         (
             controller: _tabController,
-            labelStyle: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),
-            unselectedLabelStyle: GoogleFonts.roboto(color: Colors.black),
+            labelStyle: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold),
+            unselectedLabelStyle: TextStyle(fontFamily: "Roboto", color: Colors.black),
             indicator: BoxDecoration
             (
                 color: Colors.white,
@@ -69,7 +68,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 child: Align
                 (
                   alignment: Alignment.center,
-                  child: Text("Deutsch", style: GoogleFonts.roboto(color: Colors.black)),
+                  child: Text("Deutsch", style: TextStyle(fontFamily: "Roboto", color: Colors.black)),
                 ),
               ),
 
@@ -78,7 +77,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 child: Align
                 (
                   alignment: Alignment.center,
-                  child: Text("English", style: GoogleFonts.roboto(color: Colors.black)),
+                  child: Text("English", style: TextStyle(fontFamily: "Roboto", color: Colors.black)),
                 ),
               ),
             ],
@@ -117,7 +116,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                   alignment: Alignment.centerLeft,
                   child: Consumer<SettingsProvider>
                   (
-                    builder: (context, value, child) => Text(value.english ? "Language" : "Sprache", style: GoogleFonts.roboto(fontSize: 18)),
+                    builder: (context, value, child) => Text(value.english ? "Language" : "Sprache", style: TextStyle(fontFamily: "Roboto", fontSize: 18))
                   ),
                 ),
               ),
@@ -132,7 +131,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                   alignment: Alignment.centerLeft,
                   child: Consumer<SettingsProvider>
                   (
-                    builder: (context, value, child) => Text(value.english ? "Thanks!" : "Danke!", style: GoogleFonts.roboto(fontSize: 18)),
+                    builder: (context, value, child) => Text(value.english ? "Thanks!" : "Danke!", style: TextStyle(fontFamily: "Roboto", fontSize: 18))
                   ),
                 ),
               ),
@@ -142,7 +141,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: Consumer<SettingsProvider>
                 (
-                  builder: (context, value, child) => Text(value.english ? danke_en : danke_dt, style: GoogleFonts.roboto(fontSize: 15),),
+                  builder: (context, value, child) => Text(value.english ? danke_en : danke_dt, style: TextStyle(fontFamily: "Roboto", fontSize: 15))
                 )
               ),
 
@@ -154,7 +153,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                   alignment: Alignment.centerLeft,
                   child: Consumer<SettingsProvider>
                   (
-                    builder: (context, value, child) => Text(value.english ? "Impress" : "Impressum", style: GoogleFonts.roboto(fontSize: 18)),
+                    builder: (context, value, child) => Text(value.english ? "Impress" : "Impressum", style: TextStyle(fontFamily: "Roboto", fontSize: 18))
                   ),
                 ),
               ),
@@ -164,7 +163,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: Consumer<SettingsProvider>
                 (
-                  builder: (context, value, child) => Text(value.english ? impressumEnglish : impressumGerman, style: GoogleFonts.roboto(fontSize: 15),),
+                  builder: (context, value, child) => Text(value.english ? impressumEnglish : impressumGerman, style: TextStyle(fontFamily: "Roboto", fontSize: 15))
                 )
               ),
             ],

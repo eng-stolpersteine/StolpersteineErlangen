@@ -1,6 +1,4 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import 'package:provider/provider.dart';
@@ -125,7 +123,7 @@ class GalleryView extends StatelessWidget
   Widget build(BuildContext context) {
     // TODO: implement build
     return image_urls.isEmpty ? 
-        Text(english ? "No Images Available" : "Keine Bilder Verfügbar", style: GoogleFonts.roboto(color: Colors.white, fontSize: 16))
+        Text(english ? "No Images Available" : "Keine Bilder Verfügbar", style: TextStyle(fontFamily: "Roboto", fontSize: 16, color: Colors.white))
         :
         View(context);
   }

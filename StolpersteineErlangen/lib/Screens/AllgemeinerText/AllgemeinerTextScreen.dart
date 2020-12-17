@@ -7,7 +7,6 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
@@ -130,7 +129,7 @@ class AllgemeinerTextScreen extends StatelessWidget
                   return MarkButton(bookmarksId, Colors.black);
                 },
               ), 
-              Text(_settings.english ? "Bookmark" : "Markieren", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Bookmark" : "Markieren", style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold))
             ],
           ),
   
@@ -143,7 +142,7 @@ class AllgemeinerTextScreen extends StatelessWidget
                   icon: Icon(Icons.photo_outlined, color: Colors.black, size: 30),
                   onPressed: () => Navigator.of(context).push(PageTransition(child: GalleryScreen(galleryImages, _settings.english), type: PageTransitionType.bottomToTop))
               ),
-              Text(_settings.english ? "Gallery" : "Galerie", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Gallery" : "Galerie", style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold))
             ],
           ),
 
@@ -156,7 +155,7 @@ class AllgemeinerTextScreen extends StatelessWidget
                   icon: Icon(Icons.text_snippet_outlined, color: Colors.black, size: 30),
                   onPressed: () => Navigator.of(context).push(PageTransition(child: SourceScreen(name, sources, _settings.english), type: PageTransitionType.bottomToTop))
               ),
-              Text(_settings.english ? "Sources" : "Quellen", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Sources" : "Quellen", style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold))
             ],
           ),
         ],
@@ -337,9 +336,9 @@ class AudioPlayState extends State<AudioPlay>
                   Padding
                   (
                     padding: EdgeInsets.only(right: 180),
-                    child: Text(time(position), style: GoogleFonts.roboto(fontSize: 16),),
+                    child: Text(time(position), style: TextStyle(fontFamily: "Roboto", fontSize: 16))
                   ),
-                  Text(time(duration), style: GoogleFonts.roboto(fontSize: 16),),
+                  Text(time(duration), style: TextStyle(fontFamily: "Roboto", fontSize: 16))
                 ],
               ),
           ],
@@ -408,8 +407,9 @@ class ExpandedTextState extends State<ExpandedText> with SingleTickerProviderSta
             (
               isExpanded ? text : preview,
               textAlign: TextAlign.justify,
-              style: GoogleFonts.crimsonText
+              style: TextStyle
               (
+                fontFamily: "CrimsonText",
                 fontSize: 18,
                 letterSpacing: 0.1,
                 color: Colors.black.withOpacity(isExpanded ? 1.0 : 0.4)

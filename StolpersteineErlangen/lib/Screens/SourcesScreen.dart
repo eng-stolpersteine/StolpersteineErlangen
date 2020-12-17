@@ -1,7 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SourceScreen extends StatelessWidget
 {
@@ -46,7 +45,7 @@ class SourceScreen extends StatelessWidget
         appBar: AppBar
         (
           centerTitle: true,
-          title: Text((english ? "Sources:" : "Quellen:") + " $name", style: GoogleFonts.roboto(),),
+          title: Text((english ? "Sources:" : "Quellen:") + " $name", style: TextStyle(fontFamily: "Roboto")),
           flexibleSpace: appBarGradient,
         ),
         body: Center
@@ -55,7 +54,7 @@ class SourceScreen extends StatelessWidget
           (
             children: 
             [
-              Padding(padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15), child: Text(source, style: GoogleFonts.roboto(),))
+              Padding(padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15), child: Text(source, style: TextStyle(fontFamily: "Roboto"),))
             ],
           ),
         ),

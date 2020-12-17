@@ -6,7 +6,6 @@ import 'package:StolpersteineErlangen/Screens/SettingsScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
@@ -124,7 +123,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
       case 0:
         return AppBar
         (
-          title: Text("Filter", style: GoogleFonts.roboto()),
+          title: Text("Filter", style: TextStyle(fontFamily: "Roboto")),
           centerTitle: true,
           flexibleSpace: appBarGradient,
         );
@@ -139,7 +138,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
           (
             builder: (context, value, child) 
             {
-              return Text(value.english ? "Settings" : "Einstellungen", style: GoogleFonts.roboto());
+              return Text(value.english ? "Settings" : "Einstellungen", style: TextStyle(fontFamily: "Roboto"));
             },
           ),
         );
@@ -148,7 +147,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
       case 1:
         return AppBar
         (
-          title: Text("Stolpersteine Erlangen", style: GoogleFonts.roboto(),),
+          title: Text("Stolpersteine Erlangen", style: TextStyle(fontFamily: "Roboto")),
           centerTitle: true,
           flexibleSpace: appBarGradient,
           actions: [IconButton(icon: Icon(Icons.search), onPressed: () => showSearch(context: context, delegate: SearchProvider()),),],

@@ -7,7 +7,6 @@ import 'package:StolpersteineErlangen/Screens/AllgemeinerText/AllgemeinerTextScr
 import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:StolpersteineErlangen/Models/FilterModel.dart';
@@ -111,7 +110,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
         {
           return Center
           (
-            child: Text(_settings.english ? "No Items Bookmarked" : "Keine Texte markiert", style: GoogleFonts.roboto(color: Colors.grey[400], fontSize: 16))
+            child: Text(_settings.english ? "No Items Bookmarked" : "Keine Texte markiert", style: TextStyle(fontFamily: "Roboto", fontSize: 16, color: Colors.grey[400]))
           );
         }
 
@@ -192,8 +191,8 @@ class Stolperstein extends StatelessWidget
         (
           child: ListTile
           (
-            title: Text(_lastName, style: GoogleFonts.roboto(fontSize: 19, fontWeight: FontWeight.bold)),
-            subtitle: Text(_firstName, style: GoogleFonts.roboto(),),
+            title: Text(_lastName, style: TextStyle(fontFamily: "Roboto", fontSize: 19, fontWeight: FontWeight.bold)),
+            subtitle: Text(_firstName, style: TextStyle(fontFamily: "Roboto")),
             trailing: MarkButton(_titel, Colors.grey),
             leading: _imgUrl == "" ? Icon(Icons.person, size: 35, ) : profilePic(),
             onTap: () => Navigator.of(context).push(PageTransition(child: StolpersteinScreen(model), type: PageTransitionType.bottomToTop))
@@ -249,7 +248,7 @@ class HistoryText extends StatelessWidget
         (
           child: ListTile
           (
-            title: Text(_titel, style: GoogleFonts.roboto(fontSize: 18, fontWeight: FontWeight.bold)),
+            title: Text(_titel, style: TextStyle(fontFamily: "Roboto", fontSize: 18, fontWeight: FontWeight.bold)),
             trailing: MarkButton(bookMarksID, Colors.grey),
             leading: profilePic(),
             onTap: () => Navigator.of(context).push(PageTransition(child: AllgemeinerTextScreen(model), type: PageTransitionType.bottomToTop)),

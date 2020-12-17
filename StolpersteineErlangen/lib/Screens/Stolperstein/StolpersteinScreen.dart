@@ -8,7 +8,6 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -111,7 +110,7 @@ class StolpersteinScreen extends StatelessWidget
               Padding
               (
                   padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15),
-                  child: Text(shortText, style: GoogleFonts.crimsonText(fontSize: 18,), textAlign: TextAlign.justify),
+                  child: Text(shortText, style: TextStyle(fontFamily: "CrimsonText", fontSize: 18), textAlign: TextAlign.justify),
               ),
 
               IconRow(context),
@@ -146,7 +145,7 @@ class StolpersteinScreen extends StatelessWidget
                   return MarkButton(name, Colors.black);
                 },
               ), 
-              Text(_settings.english ? "Bookmark" : "Markieren", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Bookmark" : "Markieren", style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold))
             ],
           ),
 
@@ -159,7 +158,7 @@ class StolpersteinScreen extends StatelessWidget
                 icon: Icon(Icons.location_on_outlined, color: Colors.black, size: 30,),
                 onPressed: () => launch_maps(location),
               ),
-              Text(_settings.english ? "Location" : "Ort", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold,))
+              Text(_settings.english ? "Location" : "Ort", style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold))
             ],
           ),
 
@@ -173,7 +172,7 @@ class StolpersteinScreen extends StatelessWidget
                   icon: Icon(Icons.photo_outlined, color: Colors.black, size: 30),
                   onPressed: () => Navigator.of(context).push(PageTransition(child: GalleryScreen(galleryImages, _settings.english), type: PageTransitionType.bottomToTop))
               ),
-              Text(_settings.english ? "Gallery" : "Galerie", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Gallery" : "Galerie", style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold))
             ],
           ),
 
@@ -186,7 +185,7 @@ class StolpersteinScreen extends StatelessWidget
                   icon: Icon(Icons.text_snippet_outlined, color: Colors.black, size: 30),
                   onPressed: () => Navigator.of(context).push(PageTransition(child: SourceScreen(name, sources, _settings.english), type: PageTransitionType.bottomToTop))
               ),
-              Text(_settings.english ? "Sources" : "Quellen", style: GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.bold),)
+              Text(_settings.english ? "Sources" : "Quellen", style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold))
             ],
           ),
         ],
@@ -376,9 +375,9 @@ class AudioPlayState extends State<AudioPlay>
                   Padding
                   (
                     padding: EdgeInsets.only(right: 180),
-                    child: Text(time(position), style: GoogleFonts.roboto(fontSize: 16),),
+                    child: Text(time(position), style: TextStyle(fontFamily: "Roboto", fontSize: 16))
                   ),
-                  Text(time(duration), style: GoogleFonts.roboto(fontSize: 16),),
+                  Text(time(duration), style: TextStyle(fontFamily: "Roboto", fontSize: 16))
                 ],
               ),
           ],
@@ -447,8 +446,9 @@ class ExpandedTextState extends State<ExpandedText> with SingleTickerProviderSta
             (
               isExpanded ? text : preview,
               textAlign: TextAlign.justify,
-              style: GoogleFonts.crimsonText
+              style: TextStyle
               (
+                fontFamily: "CrimsonText",
                 fontSize: 18,
                 letterSpacing: 0.1,
                 color: Colors.black.withOpacity(isExpanded ? 1.0 : 0.4)

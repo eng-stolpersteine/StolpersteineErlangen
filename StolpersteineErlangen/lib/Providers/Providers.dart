@@ -6,7 +6,6 @@ import 'package:StolpersteineErlangen/Models/StolpersteinModel.dart';
 import 'package:StolpersteineErlangen/Screens/Stolperstein/StolpersteinScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:StolpersteineErlangen/Models/FilterModel.dart';
 import 'package:StolpersteineErlangen/Data/Filters.dart';
@@ -130,12 +129,16 @@ class _WordSuggestionList extends StatelessWidget {
           title: RichText(
             text: TextSpan(
                 text: suggestion.substring(0, query.length),
-                style: GoogleFonts.roboto(
-                    color: Colors.black, fontWeight: FontWeight.bold),
+                style: TextStyle
+                (
+                  fontFamily: "Roboto",
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold
+                ),
                 children: [
                   TextSpan(
                     text: suggestions[index].substring(query.length),
-                    style: GoogleFonts.roboto(color: Colors.grey),
+                    style: TextStyle(fontFamily: "Roboto", color: Colors.grey)
                   )
                 ]),
           ),
