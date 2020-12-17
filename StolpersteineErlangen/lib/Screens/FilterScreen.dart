@@ -1,9 +1,9 @@
+import 'package:StolpersteineErlangen/Data/Filters/Filters.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:StolpersteineErlangen/Models/FilterModel.dart';
-import 'package:StolpersteineErlangen/Data/Filters.dart';
 
 class FilterScreen extends StatelessWidget
 {
@@ -14,7 +14,7 @@ class FilterScreen extends StatelessWidget
   {
     return Selector<FilterProvider, bool>
     (
-      selector: (context, filter) => FilterProvider.getFilterValue(model.nameDt),
+      selector: (context, filter) => FilterProvider.getFilterValue(model.id.toString()),
       child: Text(_settings.english ? model.nameEn : model.nameDt, style: TextStyle(fontFamily: "Roboto")),
       builder: (context, value, child) 
       {
@@ -22,7 +22,7 @@ class FilterScreen extends StatelessWidget
         (
             value: value,
             title: child,
-            onChanged: (value) => _filter.updateFilter(model.nameDt)
+            onChanged: (value) => _filter.updateFilter(model.id.toString())
         );  
       },
     );

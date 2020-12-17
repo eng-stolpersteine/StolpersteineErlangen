@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Data/Filters/FilterEnum.dart';
 import 'package:flutter/material.dart';
 
 class StolpersteinModel
@@ -13,7 +14,7 @@ class StolpersteinModel
   String audioUrlDt;
   String audioUrlEn;
   String sources;
-  List<String> filters;
+  List<Filter> filters;
 
   StolpersteinModel
   ({

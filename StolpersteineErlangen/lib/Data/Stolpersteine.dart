@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Data/Filters/FilterEnum.dart';
 import 'package:StolpersteineErlangen/Data/Texts/LongText/StolpersteinLongText.dart';
 import 'package:StolpersteineErlangen/Data/Texts/ShortText/StolpersteinShortText.dart';
 import 'package:StolpersteineErlangen/Data/Texts/Sources/StolpersteinSources.dart';
@@ -25,7 +26,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg"], 
-    filters: ["Other", "Theaterplatz", "Bauer"],
+    filters: [Filter.Other, Filter.Theaterplatz, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -48,7 +49,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Bauer_Ernestine/Bauer_Ernestine.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer_Ernestine/Bauer_Ernestine.jpg"], 
-    filters: ["Other", "Hauptstrasse", "Bauer"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -71,7 +72,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Bauer_Josef/Bauer_Josef.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer_Josef/Bauer_Josef.jpg"], 
-    filters: ["Other", "Hauptstrasse", "Bauer"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -94,7 +95,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Bauer_Simon/Bauer_Simon.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer_Simon/Bauer_Simon.jpg"], 
-    filters:  ["Other", "Theaterplatz", "Bauer"],
+    filters:  [Filter.Other, Filter.Theaterplatz, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -121,7 +122,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Benesi_Erich/Benesi_Erich_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi_Erich/Benesi_Erich.jpg", "./assets/Images/Stolperstein/Benesi_Erich/Benesi_Erich_PT.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Benesi"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -147,7 +148,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Benesi_Gottliebe/Benesi_Gottliebe.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi_Gottliebe/Benesi_Gottliebe.jpg"], 
-    filters: ["Other", "Hauptstrasse", "Benesi"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -174,7 +175,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Benesi_Hannelore/Benesi_Hannelore.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi_Hannelore/Benesi_Hannelore.jpg", "./assets/Images/Stolperstein/Benesi_Hannelore/Benesi_Hannelore _PT.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Benesi"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -201,7 +202,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Benesi_Hildegard/Hildegard Benesi.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi_Hildegard/Benesi_Hildegard.jpg", ], 
-    filters: ["Other", "Hauptstrasse", "Benesi"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -228,7 +229,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Benesi_Jakob/Benesi_Jakob_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi_Jakob/Benesi_Jakob.jpg", "./assets/Images/Stolperstein/Benesi_Jakob/Benesi_Jakob_PT.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Benesi"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -251,7 +252,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Cohn_Alfred/Cohn_Alfred.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Cohn_Alfred/Cohn_Alfred.jpg",], 
-    filters: ["Erlangen", "Bayreuther Strasse", "Cohn"],
+    filters: [Filter.Erlangen, Filter.Bayreuther_Strasse, Filter.Cohn]
   ),
 
   StolpersteinModel
@@ -273,7 +274,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Cohn_Rosa/Cohn_Rosa.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Cohn_Rosa/Cohn_Rosa.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Cohn"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Cohn]
   ),
 
   StolpersteinModel
@@ -293,7 +294,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg",
     ], 
     profilePics:  ["./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpg", "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg",], 
-    filters:  ["Theresienstadt", "Hauptstrasse", "Dreifuss"],
+    filters:  [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Dreifuss]
   ),
 
   StolpersteinModel
@@ -313,7 +314,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha.jpg", "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha_PT.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Fleischhauer"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Fleischhauer]
   ),
 
   StolpersteinModel
@@ -333,7 +334,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Heyer_Gustav/Heyer_Gustav.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Heyer_Gustav/Heyer_Gustav.jpg",], 
-    filters: ["Dachau", "Österreicher Strasse", "Heyer"],
+    filters: [Filter.Dachau, Filter.Oesterreicher_Strasse, Filter.Heyer]
   ),
 
   StolpersteinModel
@@ -360,7 +361,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpg", "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Katz"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Katz]
   ),
 
   StolpersteinModel
@@ -384,7 +385,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Rotenstein_Jenny/Rotenstein_Jenny.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Rotenstein_Jenny/Rotenstein_Jenny.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Rotenstein"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
   StolpersteinModel
@@ -408,7 +409,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Rotenstein_Simon/Rotenstein_Simon.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Rotenstein_Simon/Rotenstein_Simon.jpg",],
-    filters: ["Other", "Hauptstrasse", "Rotenstein"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
   StolpersteinModel
@@ -432,7 +433,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg",], 
-    filters: ["Other", "Hauptstrasse", "Rotenstein"],
+    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
   StolpersteinModel
@@ -456,7 +457,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Uhlfelder_Frieda/Uhlfelder_Frieda.jpg", "./assets/Images/Stolperstein/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg",], 
-    filters: ["Other", "Bayreuther Strasse", "Uhlfelder"],
+    filters: [Filter.Other, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
   ),
 
   StolpersteinModel
@@ -480,7 +481,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Uhlfelder_Josef/Uhlfelder_Josef.jpg", "./assets/Images/Stolperstein/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg",], 
-    filters: ["Other", "Bayreuther Strasse", "Uhlfelder"],
+    filters: [Filter.Other, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
   ),
 
   StolpersteinModel
@@ -504,7 +505,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard.jpg", "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard_PT.jpg",],
-    filters: ["Auschwitz", "Bayreuther Strasse", "Vissing"],
+    filters: [Filter.Auschwitz, Filter.Bayreuther_Strasse, Filter.Vissing],
   ),
 
   StolpersteinModel
@@ -525,7 +526,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpg", "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg",], 
-    filters: ["Other", "Einhornstrasse", "Wassermann"],
+    filters: [Filter.Other, Filter.Einhornstrasse, Filter.Wassermann],
   ),
 
   StolpersteinModel
@@ -547,7 +548,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Weglein_Klothilde/Weglein_Klothilde.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Weglein_Klothilde/Weglein_Klothilde.jpg",], 
-    filters: ["Theresienstadt", "Hauptstrasse", "Weglein"],
+    filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Weglein],
   ),
 
   StolpersteinModel
@@ -569,7 +570,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Weglein_Samuel/Weglein_Samuel.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Weglein_Samuel/Weglein_Samuel.jpg",],
-    filters: ["Theresienstadt", "Hauptstrasse", "Weglein"],
+    filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Weglein],
   ),
 
   StolpersteinModel
@@ -600,7 +601,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpg", "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg",], 
-    filters: ["Other", "Calvinstrasse", "Weinstock"],
+    filters: [Filter.Other, Filter.Calvinstrasse, Filter.Weinstock],
   ),
 
   StolpersteinModel
@@ -623,7 +624,7 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Wild_Ignatz/Wild_Ignatz.jpg",
     ], 
     profilePics: ["./assets/Images/Stolperstein/Wild_Ignatz/Wild_Ignatz.jpg",],
-    filters: ["Other", "Innere Brucker Strasse", "Wild"],
+    filters: [Filter.Other, Filter.Innere_Brucker_Strasse, Filter.Wild],
   ),
 
   StolpersteinModel
@@ -643,6 +644,6 @@ List<StolpersteinModel> stolpersteinModels =
       "./assets/Images/Stolperstein/Wild_Paula/Wild_Paula.jpg",
     ],
     profilePics: ["./assets/Images/Stolperstein/Wild_Paula/Wild_Paula.jpg",],
-    filters: ["Other", "Goethestrasse", "Wild"],
+    filters: [Filter.Other, Filter.Goethestrasse, Filter.Wild],
   ),
 ];

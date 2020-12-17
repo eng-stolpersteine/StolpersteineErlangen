@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Data/Filters/Filters.dart';
 import 'package:StolpersteineErlangen/Data/History.dart';
 import 'package:StolpersteineErlangen/Data/Stolpersteine.dart';
 import 'package:StolpersteineErlangen/Models/HistoryModel.dart';
@@ -10,7 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:StolpersteineErlangen/Models/FilterModel.dart';
-import 'package:StolpersteineErlangen/Data/Filters.dart';
 
 class MainScreen extends StatefulWidget
 {
@@ -52,17 +52,17 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     List<String> activeFilters = List<String>();
 
     for(FilterModel filter in deportationFilters)
-      if(FilterProvider.getFilterValue(filter.nameDt)) activeFilters.add(filter.nameDt);
+      if(FilterProvider.getFilterValue(filter.id.toString())) activeFilters.add(filter.id.toString());
 
     for(FilterModel filter in locationFilters)
-      if(FilterProvider.getFilterValue(filter.nameDt)) activeFilters.add(filter.nameDt);
+      if(FilterProvider.getFilterValue(filter.id.toString())) activeFilters.add(filter.id.toString());
 
     for(FilterModel filter in familyFilters)
-      if(FilterProvider.getFilterValue(filter.nameDt)) activeFilters.add(filter.nameDt);
+      if(FilterProvider.getFilterValue(filter.id.toString())) activeFilters.add(filter.id.toString());
 
     for(StolpersteinModel model in stolpersteinModels)
     {
-      if(model.filters.any((element) => activeFilters.toSet().contains(element))) 
+      if(model.filters.any((element) => activeFilters.toSet().contains(element.toString()))) 
         stolpersteine.add(Stolperstein(model));
     }
 
