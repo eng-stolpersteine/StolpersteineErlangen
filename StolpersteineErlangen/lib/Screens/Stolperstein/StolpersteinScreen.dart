@@ -86,20 +86,20 @@ class StolpersteinScreen extends StatelessWidget
       [
           SliverAppBar
           (
-              expandedHeight: MediaQuery.of(context).size.height * 0.40,//310,
-              backgroundColor: Colors.white,
-              leading: IconButton(icon: Icon(Icons.arrow_back, color: imageList.isEmpty ? Colors.black : Colors.white), onPressed: () => Navigator.of(context).pop(),),
-              flexibleSpace: FlexibleSpaceBar
+            expandedHeight: MediaQuery.of(context).size.height * 0.40,//310,
+            backgroundColor: Colors.white,
+            leading: IconButton(icon: Icon(Icons.arrow_back, color: imageList.isEmpty ? Colors.black : Colors.white), onPressed: () => Navigator.of(context).pop(),),
+            flexibleSpace: FlexibleSpaceBar
+            (
+              background: imageList.isEmpty ? Center(child: Icon(Icons.person, size: 100,))
+              :
+              Carousel
               (
-                background: imageList.isEmpty ? Center(child: Icon(Icons.person, size: 100,))
-                :
-                Carousel
-                (
-                  dotSize: 4,
-                  autoplay: false,
-                  images: imageList
-                )
-              ),
+                dotSize: 4,
+                autoplay: false,
+                images: imageList
+              )
+            ),
           ),
 
           SliverList( delegate: SliverChildListDelegate

@@ -1,0 +1,2 @@
+String chooseLanguageDt = "Wählen Sie die zu verwendende Sprache aus\n(kann in den Einstellungen geändert werden)";
+String chooseLanguageEn = "Choose the App's language\n(can be changed in the Settings menu)";
