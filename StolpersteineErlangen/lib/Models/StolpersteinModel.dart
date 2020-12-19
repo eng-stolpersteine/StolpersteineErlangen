@@ -1,10 +1,11 @@
 import 'package:StolpersteineErlangen/Data/Filters/FilterEnum.dart';
+import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 import 'package:flutter/material.dart';
 
 class StolpersteinModel
 {
   String name;
-  List<String> galleryImages;
+  List<PictureModel> galleryImages;
   List<String> profilePics;
   String location;
   String shortTextDt;

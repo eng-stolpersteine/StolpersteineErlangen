@@ -1,4 +1,5 @@
 import 'package:StolpersteineErlangen/Models/HistoryModel.dart';
+import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/GalleryScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
@@ -17,7 +18,7 @@ class AllgemeinerTextScreen extends StatelessWidget
 
   String name;
   String bookmarksId;
-  List<String> galleryImages;
+  List<PictureModel> galleryImages;
   List<String> profilePics;
   String text;
   String audioUrl;

@@ -1,5 +1,3 @@
-
-import 'package:StolpersteineErlangen/Data/SettingsData/Danke_Text.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/Impress.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/material.dart';
@@ -122,28 +120,6 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
               ),
               div(),
               tabChanger(),
-
-              Padding
-              (
-                padding: EdgeInsets.only(top: 30, left: 15),
-                child: Align
-                (
-                  alignment: Alignment.centerLeft,
-                  child: Consumer<SettingsProvider>
-                  (
-                    builder: (context, value, child) => Text(value.english ? "Thanks!" : "Danke!", style: TextStyle(fontFamily: "Roboto", fontSize: 18))
-                  ),
-                ),
-              ),
-              div(),
-              Padding
-              (
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: Consumer<SettingsProvider>
-                (
-                  builder: (context, value, child) => Text(value.english ? danke_en : danke_dt, style: TextStyle(fontFamily: "Roboto", fontSize: 15))
-                )
-              ),
 
               Padding
               (

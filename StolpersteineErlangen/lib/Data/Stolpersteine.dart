@@ -2,7 +2,11 @@ import 'package:StolpersteineErlangen/Data/Filters/FilterEnum.dart';
 import 'package:StolpersteineErlangen/Data/Texts/LongText/StolpersteinLongText.dart';
 import 'package:StolpersteineErlangen/Data/Texts/ShortText/StolpersteinShortText.dart';
 import 'package:StolpersteineErlangen/Data/Texts/Sources/StolpersteinSources.dart';
+import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 import 'package:StolpersteineErlangen/Models/StolpersteinModel.dart';
+
+
+String devSrc = "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl"; 
 
 List<StolpersteinModel> stolpersteinModels = 
 [
@@ -19,13 +23,13 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Bauer_Amalia, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Bauer_Amalia/1Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Amalia/2Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Amalia/3Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Amalia/4Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg",
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VIII.4.K.181/19, Josef Keller", path: "./assets/Images/Stolperstein/Bauer/Bauer_Amalia/1Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VI.MM.b.4918, Axel Dorsch", path: "./assets/Images/Stolperstein/Bauer/Bauer_Amalia/2Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VI.MM.b.1717, Axel Dorsch", path: "./assets/Images/Stolperstein/Bauer/Bauer_Amalia/3Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VI.MM.b.1717, Axel Dorsch", path: "./assets/Images/Stolperstein/Bauer/Bauer_Amalia/4Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Amalie Bauer - Stolperstein", infoEn: "Amalie Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Amalia/Bauer_Amalia.jpg"),
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Bauer_Amalia/Bauer_Amalia.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Amalia/Bauer_Amalia.jpg"], 
     filters: [Filter.Other, Filter.Theaterplatz, Filter.Bauer]
   ),
 
@@ -42,13 +46,13 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Bauer_Ernestine, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Bauer_Ernestine/1Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Ernestine/2Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Ernestine/3Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Ernestine/4Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Ernestine/Bauer_Ernestine.jpg",
+      PictureModel(infoDt:"Hauptstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.Z.b.5478, Unbekannt", path: "./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/1Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.A.b.424, Rudi Stümpel", path: "./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/2Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Haupstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/3Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.M.b.1020, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/4Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Ernestine Bauer - Stolperstein", infoEn: "Ernestine Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/Bauer_Ernestine.jpg"),
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Bauer_Ernestine/Bauer_Ernestine.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/Bauer_Ernestine.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Bauer]
   ),
 
@@ -65,13 +69,13 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Bauer_Josef, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Bauer_Josef/1Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Josef/2Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Josef/3Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Josef/4Bauer_J_E_Hauptstrasse_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Josef/Bauer_Josef.jpg",
+      PictureModel(infoDt:"Hauptstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.Z.b.5478, Unbekannt", path: "./assets/Images/Stolperstein/Bauer/Bauer_Josef/1Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.A.b.424, Rudi Stümpel", path: "./assets/Images/Stolperstein/Bauer/Bauer_Josef/2Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Bauer/Bauer_Josef/3Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 4", infoEn: "Hauptstrasse 4", source: "Stadtarchiv Erlangen, VI.M.b.1020, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Bauer/Bauer_Josef/4Bauer_J_E_Hauptstrasse_4.jpg"),
+      PictureModel(infoDt:"Josef Bauer - Stolperstein", infoEn: "Josef Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Josef/Bauer_Josef.jpg"),
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Bauer_Josef/Bauer_Josef.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Josef/Bauer_Josef.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Bauer]
   ),
 
@@ -88,13 +92,13 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Bauer_Simon, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Bauer_Simon/1Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Simon/2Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Simon/3Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Simon/4Bauer_A_S_Theaterplatz_4.jpg",
-      "./assets/Images/Stolperstein/Bauer_Simon/Bauer_Simon.jpg",
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VIII.4.K.181/19, Josef Keller", path: "./assets/Images/Stolperstein/Bauer/Bauer_Simon/1Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VI.MM.b.4918, Axel Dorsch", path: "./assets/Images/Stolperstein/Bauer/Bauer_Simon/2Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VI.MM.b.1717, Axel Dorsch", path: "./assets/Images/Stolperstein/Bauer/Bauer_Simon/3Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Theaterplatz 4", infoEn: "Theaterplatz 4", source: "Stadtarchiv Erlangen, VI.MM.b.1717, Axel Dorsch", path: "./assets/Images/Stolperstein/Bauer/Bauer_Simon/4Bauer_A_S_Theaterplatz_4.jpg"),
+      PictureModel(infoDt:"Simon Bauer - Stolperstein", infoEn: "Simon Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Simon/Bauer_Simon.jpg"),
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Bauer_Simon/Bauer_Simon.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Simon/Bauer_Simon.jpg"], 
     filters:  [Filter.Other, Filter.Theaterplatz, Filter.Bauer]
   ),
 
@@ -111,17 +115,18 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Benesi_Erich, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Benesi_Erich/1Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/2Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/3Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/4Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/5Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/6Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/7Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/Benesi_Erich.jpg",
-      "./assets/Images/Stolperstein/Benesi_Erich/Benesi_Erich_PT.jpg",
+      PictureModel(infoDt:"Erich Benesi - Stolperstein", infoEn: "Erich Benesi - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Benesi/Benesi_Erich/Benesi_Erich.jpg"),
+      PictureModel(infoDt:"Erich Benesi", infoEn: "Erich Benesi", source: "Stadtarchiv Erlangen, Stadtarchiv Erlangen, ohne Signatur, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/Benesi_Erich/Benesi_Erich_PT.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VIII.4.K.83/26, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/1Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.Z.b.5478, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/2Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.101, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/3Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.294, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/4Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Benesi/5Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/6Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Benesi/7Benesi_Hauptstrasse_2.jpg"),
+          
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Benesi_Erich/Benesi_Erich.jpg", "./assets/Images/Stolperstein/Benesi_Erich/Benesi_Erich_PT.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Erich/Benesi_Erich.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Erich/Benesi_Erich_PT.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
@@ -138,16 +143,17 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Benesi_Gottliebe, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/1Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/2Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/3Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/4Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/5Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/6Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/7Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Gottliebe/Benesi_Gottliebe.jpg",
+      PictureModel(infoDt:"Gottliebe Benesi - Stolperstein", infoEn: "Gottliebe Benesi - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Benesi/Benesi_Gottliebe/Benesi_Gottliebe.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VIII.4.K.83/26, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/1Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.Z.b.5478, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/2Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.101, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/3Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.294, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/4Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Benesi/5Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/6Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Benesi/7Benesi_Hauptstrasse_2.jpg"),
+    
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Benesi_Gottliebe/Benesi_Gottliebe.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Gottliebe/Benesi_Gottliebe.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
@@ -164,17 +170,10 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Benesi_Hannelore, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Benesi_Hannelore/1Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/2Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/3Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/4Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/5Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/6Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/7Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/Benesi_Hannelore _PT.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hannelore/Benesi_Hannelore.jpg",
+      PictureModel(infoDt:"Hannelore Benesi", infoEn: "Hannelore Benesi", source: "Stadtarchiv Erlangen, Stadtarchiv Erlangen, ohne Signatur, Jakob Benesi", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore _PT.jpg"),
+      PictureModel(infoDt:"Hannelore Benesi - Stolperstein", infoEn: "Hannelore Benesi - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore.jpg"),
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Benesi_Hannelore/Benesi_Hannelore.jpg", "./assets/Images/Stolperstein/Benesi_Hannelore/Benesi_Hannelore _PT.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore _PT.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
@@ -191,17 +190,18 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Benesi_Hildegard, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Benesi_Hildegard/1Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/2Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/3Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/4Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/5Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/6Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/7Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/Benesi_Hildegard.jpg",
-      "./assets/Images/Stolperstein/Benesi_Hildegard/Hildegard Benesi.jpg",
+      PictureModel(infoDt:"Hildegard Benesi - Stolperstein", infoEn: "Hildegard Benesi - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Benesi_Hildegard.jpg"),
+      PictureModel(infoDt:"Hildegard Benesi", infoEn: "Hildegard Benesi", source: "Stadtarchiv Erlangen, Stadtarchiv Erlangen, ohne Signatur, Jakob Benesi", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Hildegard Benesi.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VIII.4.K.83/26, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/1Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.Z.b.5478, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/2Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.101, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/3Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.294, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/4Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Benesi/5Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/6Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Benesi/7Benesi_Hauptstrasse_2.jpg"),
+    
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Benesi_Hildegard/Benesi_Hildegard.jpg", ], 
+    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Benesi_Hildegard.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Hildegard Benesi.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
@@ -218,17 +218,18 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Benesi_Jakob, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Benesi_Jakob/1Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/2Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/3Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/4Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/5Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/6Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/7Benesi_Hauptstrasse_2.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/Benesi_Jakob.jpg",
-      "./assets/Images/Stolperstein/Benesi_Jakob/Benesi_Jakob_PT.jpg",
+      PictureModel(infoDt:"Jakob Benesi - Stolperstein", infoEn: "Jakob Benesi - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob.jpg"),
+      PictureModel(infoDt:"Jakob Benesi", infoEn: "Jakob Benesi", source: "Stadtarchiv Erlangen, VI.F.b.341_2, Ausschnitt, Werner Bösel", path: "./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob_PT.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VIII.4.K.83/26, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/1Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.Z.b.5478, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/2Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.101, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/3Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.294, Josef Keller", path: "./assets/Images/Stolperstein/Benesi/4Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Benesi/5Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/6Benesi_Hauptstrasse_2.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Benesi/7Benesi_Hauptstrasse_2.jpg"),
+    
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Benesi_Jakob/Benesi_Jakob.jpg", "./assets/Images/Stolperstein/Benesi_Jakob/Benesi_Jakob_PT.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob_PT.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
@@ -245,13 +246,14 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Cohn_Alfred, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Cohn_Alfred/1Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg",
-      "./assets/Images/Stolperstein/Cohn_Alfred/2Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg",
-      "./assets/Images/Stolperstein/Cohn_Alfred/3Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg",
-      "./assets/Images/Stolperstein/Cohn_Alfred/4Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg",
-      "./assets/Images/Stolperstein/Cohn_Alfred/Cohn_Alfred.jpg",
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VIII.5.D.A.252, Axel Dorsch", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/1Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.B.b.1019, Unbekannt", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/2Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.A.b.1276, Axel Dorsch", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/3Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/4Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg"),
+      PictureModel(infoDt:"Alfred Cohn - Stolperstein", infoEn: "Alfred Cohn - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/Cohn_Alfred.jpg"),
+          
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Cohn_Alfred/Cohn_Alfred.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Cohn/Cohn_Alfred/Cohn_Alfred.jpg"], 
     filters: [Filter.Erlangen, Filter.Bayreuther_Strasse, Filter.Cohn]
   ),
 
@@ -268,12 +270,13 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Cohn_Rosa, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Cohn_Rosa/1Cohn_R_Hauptstrasse_58 Kopie.jpg",
-      "./assets/Images/Stolperstein/Cohn_Rosa/2Cohn_R_Hauptstrasse_58 Kopie.jpg",
-      "./assets/Images/Stolperstein/Cohn_Rosa/3Cohn_R_Hauptstrasse_58 Kopie.jpg",
-      "./assets/Images/Stolperstein/Cohn_Rosa/Cohn_Rosa.jpg",
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Cohn/Cohn_Rosa/1Cohn_R_Hauptstrasse_58 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.MM.b.882, Axel Dorsch", path: "./assets/Images/Stolperstein/Cohn/Cohn_Rosa/2Cohn_R_Hauptstrasse_58 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Cohn/Cohn_Rosa/3Cohn_R_Hauptstrasse_58 Kopie.jpg"),
+      PictureModel(infoDt:"Rosa Cohn - Stolperstein", infoEn: "Rosa Cohn - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Cohn/Cohn_Rosa/Cohn_Rosa.jpg"),
+          
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Cohn_Rosa/Cohn_Rosa.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Cohn/Cohn_Rosa/Cohn_Rosa.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Cohn]
   ),
 
@@ -290,10 +293,10 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Dreifuss_Adolf, 
     galleryImages:  
     [
-      "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpg",
-      "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg",
+      PictureModel(infoDt:"Adolf Dreifuss - Stolperstein", infoEn: "Adolf Dreifuss - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpg"),
+PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtarchiv Erlangen, Morgenroth 116, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg"),
     ], 
-    profilePics:  ["./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpg", "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg",], 
+    profilePics:  ["./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpg", "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg"], 
     filters:  [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Dreifuss]
   ),
 
@@ -310,8 +313,8 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Fleischhauer_Bertha, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha.jpg",
-      "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha_PT.jpg",
+      PictureModel(infoDt:"Bertha Fleischhauer - Stolperstein", infoEn: "Bertha Fleischhauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha.jpg"),
+      PictureModel(infoDt:"Bertha Fleischhauer", infoEn: "Bertha Fleischhauer", source: "Stadtarchiv Erlangen, Morgenroth 114, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha_PT.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha.jpg", "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha_PT.jpg",], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Fleischhauer]
@@ -330,8 +333,8 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Heyer_Gustav, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Heyer_Gustav/1Heyer_G_Österreicherstrasse_12A.jpg",
-      "./assets/Images/Stolperstein/Heyer_Gustav/Heyer_Gustav.jpg",
+     PictureModel(infoDt:"Oesterreicher Strasse 12A", infoEn: "Oesterreicher Strasse 12A", source: "Stadtarchiv Erlangen, VI.M.b.418, Josef Keller", path: "./assets/Images/Stolperstein/Heyer_Gustav/1Heyer_G_Österreicherstrasse_12A.jpg"),
+     PictureModel(infoDt:"Gustav Heyer - Stolperstein", infoEn: "Gustav Heyer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Heyer_Gustav/Heyer_Gustav.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Heyer_Gustav/Heyer_Gustav.jpg",], 
     filters: [Filter.Dachau, Filter.Oesterreicher_Strasse, Filter.Heyer]
@@ -350,15 +353,16 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Katz_Wilma, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Katz_Wilma/1Katz_W_Hauptstrasse_2 Kopie.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/2Katz_W_Hauptstrasse_2 Kopie.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/3Katz_W_Hauptstrasse_2 Kopie.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/4Katz_W_Hauptstrasse_2 Kopie.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/5Katz_W_Hauptstrasse_2 Kopie.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/6Katz_W_Hauptstrasse_2 Kopie.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/7Katz_W_Hauptstrasse_2 Kopie.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpg",
-      "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg",
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VIII.4.K.83/26, Josef Keller", path: "./assets/Images/Stolperstein/Katz_Wilma/1Katz_W_Hauptstrasse_2 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.Z.b.5478, Unbekannt", path: "./assets/Images/Stolperstein/Katz_Wilma/2Katz_W_Hauptstrasse_2 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.101, Unbekannt", path: "./assets/Images/Stolperstein/Katz_Wilma/3Katz_W_Hauptstrasse_2 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.294, Josef Keller", path: "./assets/Images/Stolperstein/Katz_Wilma/4Katz_W_Hauptstrasse_2 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Katz_Wilma/5Katz_W_Hauptstrasse_2 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Katz_Wilma/6Katz_W_Hauptstrasse_2 Kopie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Katz_Wilma/7Katz_W_Hauptstrasse_2 Kopie.jpg"),
+      PictureModel(infoDt:"Wilma Katz - Stolperstein", infoEn: "Wilma Katz - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpg"),
+      PictureModel(infoDt:"Wilma Katz", infoEn: "Wilma Katz", source: "Stadtarchiv Erlangen, Stadtarchiv Erlangen, ohne Signatur, Unbekannt", path: "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg"),
+          
     ], 
     profilePics: ["./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpg", "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg",], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Katz]
@@ -377,14 +381,15 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Rotenstein_Jenny,
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Rotenstein_Jenny/1Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Jenny/2Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Jenny/3Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Jenny/4Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Jenny/5Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Jenny/Rotenstein_Jenny.jpg",
+      PictureModel(infoDt:"Jenny Rotenstein - Stolperstein", infoEn: "Jenny Rotenstein - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Rotenstein/Rotenstein_Jenny/Rotenstein_Jenny.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Rotenstein/1Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VIII.7396.N.2/2, Rudi Stümpel", path: "./assets/Images/Stolperstein/Rotenstein/2Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.M.b.1045, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Rotenstein/3Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.MM.b.888, Axel Dorsch", path: "./assets/Images/Stolperstein/Rotenstein/4Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Rotenstein/5Rotenstein_Hauptstrasse_63.jpg"),
+          
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Rotenstein_Jenny/Rotenstein_Jenny.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Jenny/Rotenstein_Jenny.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
@@ -401,14 +406,15 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Rotenstein_Simon, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Rotenstein_Simon/1Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Simon/2Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Simon/3Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Simon/4Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Simon/5Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Simon/Rotenstein_Simon.jpg",
+      PictureModel(infoDt:"Simon Rotenstein - Stolperstein", infoEn: "Simon Rotenstein - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/Rotenstein_Simon.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Rotenstein/1Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VIII.7396.N.2/2, Rudi Stümpel", path: "./assets/Images/Stolperstein/Rotenstein/2Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.M.b.1045, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Rotenstein/3Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.MM.b.888, Axel Dorsch", path: "./assets/Images/Stolperstein/Rotenstein/4Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Rotenstein/5Rotenstein_Hauptstrasse_63.jpg"),
+    
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Rotenstein_Simon/Rotenstein_Simon.jpg",],
+    profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/Rotenstein_Simon.jpg"],
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
@@ -425,14 +431,15 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Rotenstein_Sophie, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Rotenstein_Sophie/1Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Sophie/2Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Sophie/3Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Sophie/4Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Sophie/5Rotenstein_Hauptstrasse_63.jpg",
-      "./assets/Images/Stolperstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg",
+      PictureModel(infoDt:"Sophie Rotenstein - Stolperstein", infoEn: "Sophie Rotenstein - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Rotenstein/1Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VIII.7396.N.2/2, Rudi Stümpel", path: "./assets/Images/Stolperstein/Rotenstein/2Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.M.b.1045, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Rotenstein/3Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.MM.b.888, Axel Dorsch", path: "./assets/Images/Stolperstein/Rotenstein/4Rotenstein_Hauptstrasse_63.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Rotenstein/5Rotenstein_Hauptstrasse_63.jpg"),
+          
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg"], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
@@ -449,14 +456,15 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Uhlfelder_Frieda, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Uhlfelder_Frieda/1Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Frieda/2Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Frieda/3Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Frieda/4Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Frieda/Uhlfelder_Frieda.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg",
+      PictureModel(infoDt:"Frieda Uhlfelder - Stolperstein", infoEn: "Frieda Uhlfelder - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda.jpg"),
+      PictureModel(infoDt:"Frieda Uhlfelder", infoEn: "Frieda Uhlfelder", source: "Stadtarchiv Erlangen, Stadtarchiv Erlangen, ohne Signatur, Jakob Benesi", path: "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VIII.5.D.A.252, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/1Uhlfelder_Bayreutherstrasse_17A.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.B.b.1019, Unbekannt", path: "./assets/Images/Stolperstein/Uhlfelder/2Uhlfelder_Bayreutherstrasse_17A.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.A.b.1276, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/3Uhlfelder_Bayreutherstrasse_17A.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/4Uhlfelder_Bayreutherstrasse_17A.jpg"),
+    
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Uhlfelder_Frieda/Uhlfelder_Frieda.jpg", "./assets/Images/Stolperstein/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda.jpg", "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg"], 
     filters: [Filter.Other, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
   ),
 
@@ -473,14 +481,15 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Uhlfelder_Josef, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Uhlfelder_Josef/1Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Josef/2Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Josef/3Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Josef/4Uhlfelder_Bayreutherstrasse_17A.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Josef/Uhlfelder_Josef.jpg",
-      "./assets/Images/Stolperstein/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg",
+      PictureModel(infoDt:"Josef Uhlfelder - Stolperstein", infoEn: "Josef Uhlfelder - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef.jpg"),
+      PictureModel(infoDt:"Josef Uhlfelder", infoEn: "Josef Uhlfelder", source: "Stadtarchiv Erlangen, VI.F.b.556_3, Ausschnitt, Werner Bösel", path: "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VIII.5.D.A.252, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/1Uhlfelder_Bayreutherstrasse_17A.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.B.b.1019, Unbekannt", path: "./assets/Images/Stolperstein/Uhlfelder/2Uhlfelder_Bayreutherstrasse_17A.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.A.b.1276, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/3Uhlfelder_Bayreutherstrasse_17A.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/4Uhlfelder_Bayreutherstrasse_17A.jpg"),
+    
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Uhlfelder_Josef/Uhlfelder_Josef.jpg", "./assets/Images/Stolperstein/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef.jpg", "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg"], 
     filters: [Filter.Other, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
   ),
 
@@ -497,12 +506,12 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Vissing_Hildegard, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Vissing_Hildegard/1Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg",
-      "./assets/Images/Stolperstein/Vissing_Hildegard/2Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg",
-      "./assets/Images/Stolperstein/Vissing_Hildegard/3Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg",
-      "./assets/Images/Stolperstein/Vissing_Hildegard/4Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg",
-      "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard.jpg",
-      "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard_PT.jpg",
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VIII.5.D.A.252, Axel Dorsch", path: "./assets/Images/Stolperstein/Vissing_Hildegard/1Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.B.b.1019, Unbekannt", path: "./assets/Images/Stolperstein/Vissing_Hildegard/2Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.A.b.1276, Axel Dorsch", path: "./assets/Images/Stolperstein/Vissing_Hildegard/3Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg"),
+      PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Vissing_Hildegard/4Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg"),
+      PictureModel(infoDt:"Hildegard Vissing - Stolperstein", infoEn: "Hildegard Vissing - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard.jpg"),
+      PictureModel(infoDt:"Hildegard Vissing", infoEn: "Hildegard Vissing", source: "Stadtarchiv Erlangen, Morgenroth 115, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard_PT.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard.jpg", "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard_PT.jpg",],
     filters: [Filter.Auschwitz, Filter.Bayreuther_Strasse, Filter.Vissing],
@@ -521,9 +530,9 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Wassermann_Thekla, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Wassermann_Thekla/1Wassermann_T_Einhornstrasse_7.jpg",
-      "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpg",
-      "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg",
+      PictureModel(infoDt:"Einhornstrasse 7", infoEn: "Einhornstrasse 7", source: "Stadtarchiv Erlangen, VI.M.b.1788, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Wassermann_Thekla/1Wassermann_T_Einhornstrasse_7.jpg"),
+      PictureModel(infoDt:"Thekla Wassermann - Stolperstein", infoEn: "Thekla Wassermann - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpg"),
+      PictureModel(infoDt:"Thekla Wassermann", infoEn: "Thekla Wassermann", source: "Stadtarchiv Erlangen, Morgenroth 114, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpg", "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg",], 
     filters: [Filter.Other, Filter.Einhornstrasse, Filter.Wassermann],
@@ -542,12 +551,13 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Weglein_Klothilde, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Weglein_Klothilde/1Weglein_Hauptstrasse_58.jpg",
-      "./assets/Images/Stolperstein/Weglein_Klothilde/2Weglein_Hauptstrasse_58.jpg",
-      "./assets/Images/Stolperstein/Weglein_Klothilde/3Weglein_Hauptstrasse_58.jpg",
-      "./assets/Images/Stolperstein/Weglein_Klothilde/Weglein_Klothilde.jpg",
+      PictureModel(infoDt:"Klothilde Weglein - Stolperstein", infoEn: "Klothilde Weglein - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Weglein/Weglein_Klothilde/Weglein_Klothilde.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Weglein/1Weglein_Hauptstrasse_58.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.MM.b.882, Axel Dorsch", path: "./assets/Images/Stolperstein/Weglein/2Weglein_Hauptstrasse_58.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Weglein/3Weglein_Hauptstrasse_58.jpg"),
+      
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Weglein_Klothilde/Weglein_Klothilde.jpg",], 
+    profilePics: ["./assets/Images/Stolperstein/Weglein/Weglein_Klothilde/Weglein_Klothilde.jpg"], 
     filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Weglein],
   ),
 
@@ -564,12 +574,13 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Weglein_Samuel, 
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Weglein_Samuel/1Weglein_Hauptstrasse_58.jpg",
-      "./assets/Images/Stolperstein/Weglein_Samuel/2Weglein_Hauptstrasse_58.jpg",
-      "./assets/Images/Stolperstein/Weglein_Samuel/3Weglein_Hauptstrasse_58.jpg",
-      "./assets/Images/Stolperstein/Weglein_Samuel/Weglein_Samuel.jpg",
+      PictureModel(infoDt:"Samuel Weglein - Stolperstein", infoEn: "Samuel Weglein - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Weglein/Weglein_Samuel/Weglein_Samuel.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Weglein/1Weglein_Hauptstrasse_58.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.MM.b.882, Axel Dorsch", path: "./assets/Images/Stolperstein/Weglein/2Weglein_Hauptstrasse_58.jpg"),
+      PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Weglein/3Weglein_Hauptstrasse_58.jpg"),
+    
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Weglein_Samuel/Weglein_Samuel.jpg",],
+    profilePics: ["./assets/Images/Stolperstein/Weglein/Weglein_Samuel/Weglein_Samuel.jpg"],
     filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Weglein],
   ),
 
@@ -586,19 +597,20 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Weinstock_Ivan,
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Weinstock_Ivan/10Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/11Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/1Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/2Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/3Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/4Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/5Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/6Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/7Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/8Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/9Weinstock_Calvinstrasse_1.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpg",
-      "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg",
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.1400, Unbekannt", path: "./assets/Images/Stolperstein/Weinstock_Ivan/10Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.1401, Unbekannt", path: "./assets/Images/Stolperstein/Weinstock_Ivan/11Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VIII.4.K.177/5, Josef Keller", path: "./assets/Images/Stolperstein/Weinstock_Ivan/1Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, DiaNr: 14071 BoxNr: 14, Eduard Rühl", path: "./assets/Images/Stolperstein/Weinstock_Ivan/2Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, DiaNr: 14072 BoxNr: 14, Eduard Rühl", path: "./assets/Images/Stolperstein/Weinstock_Ivan/3Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VIII.5.D.10.J.31, Helmut Schmidt", path: "./assets/Images/Stolperstein/Weinstock_Ivan/4Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.126, Hans Vogel", path: "./assets/Images/Stolperstein/Weinstock_Ivan/5Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.1404, Unbekannt", path: "./assets/Images/Stolperstein/Weinstock_Ivan/6Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.1402, Unbekannt", path: "./assets/Images/Stolperstein/Weinstock_Ivan/7Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.1403, Hans Vogel", path: "./assets/Images/Stolperstein/Weinstock_Ivan/8Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.513, Hildegard Klein", path: "./assets/Images/Stolperstein/Weinstock_Ivan/9Weinstock_Calvinstrasse_1.jpg"),
+      PictureModel(infoDt:"Ivan Weinstock - Stolperstein", infoEn: "Ivan Weinstock - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpg"),
+      PictureModel(infoDt:"Ivan Weinstock", infoEn: "Ivan Weinstock", source: "Stadtarchiv Erlangen, VI.F.b.356_4, Ausschnitt, Werner Bösel", path: "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg"),
+          
     ], 
     profilePics: ["./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpg", "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg",], 
     filters: [Filter.Other, Filter.Calvinstrasse, Filter.Weinstock],
@@ -617,13 +629,14 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Wild_Ignatz ,
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Wild_Ignatz/1Wild_I_Innere_Brucker_Strasse_6.jpg",
-      "./assets/Images/Stolperstein/Wild_Ignatz/2Wild_I_Innere_Brucker_Strasse_6.jpg",
-      "./assets/Images/Stolperstein/Wild_Ignatz/3Wild_I_Innere_Brucker_Strasse_6.jpg",
-      "./assets/Images/Stolperstein/Wild_Ignatz/4Wild_I_Innere_Brucker_Strasse_6.jpg",
-      "./assets/Images/Stolperstein/Wild_Ignatz/Wild_Ignatz.jpg",
+      PictureModel(infoDt:"Innere Brucker Strasse 6", infoEn: "Innere Brucker Strasse 6", source: "Stadtarchiv Erlangen, VIII.4.K.83/24, Josef Keller", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/1Wild_I_Innere_Brucker_Strasse_6.jpg"),
+      PictureModel(infoDt:"Innere Brucker Strasse 6", infoEn: "Innere Brucker Strasse 6", source: "Stadtarchiv Erlangen, VIII.4.K.125/28, Josef Keller", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/2Wild_I_Innere_Brucker_Strasse_6.jpg"),
+      PictureModel(infoDt:"Innere Brucker Strasse 6", infoEn: "Innere Brucker Strasse 6", source: "Stadtarchiv Erlangen, VI.A.b.497, Johannes Junge", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/3Wild_I_Innere_Brucker_Strasse_6.jpg"),
+      PictureModel(infoDt:"Innere Brucker Strasse 6", infoEn: "Innere Brucker Strasse 6", source: "Stadtarchiv Erlangen, VI.A.b.1146, Unbekannt", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/4Wild_I_Innere_Brucker_Strasse_6.jpg"),
+      PictureModel(infoDt:"Ignatz Wild - Stolperstein", infoEn: "Ignatz Wild - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpg"),
+   
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Wild_Ignatz/Wild_Ignatz.jpg",],
+    profilePics: ["./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpg"],
     filters: [Filter.Other, Filter.Innere_Brucker_Strasse, Filter.Wild],
   ),
 
@@ -640,10 +653,10 @@ List<StolpersteinModel> stolpersteinModels =
     sources: src_Wild_Paula,
     galleryImages: 
     [
-      "./assets/Images/Stolperstein/Wild_Paula/1Wild_P_Goethestrasse_24.jpg",
-      "./assets/Images/Stolperstein/Wild_Paula/Wild_Paula.jpg",
+      PictureModel(infoDt:"Goethestrasse 24", infoEn: "Goethestrasse 24", source: "Stadtarchiv Erlangen, VI.M.b.307, Unbekannt", path: "./assets/Images/Stolperstein/Wild/Wild_Paula/1Wild_P_Goethestrasse_24.jpg"),
+      PictureModel(infoDt:"Paula Wild - Stolperstein", infoEn: "Paula Wild - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Wild/Wild_Paula/Wild_Paula.jpg"),
     ],
-    profilePics: ["./assets/Images/Stolperstein/Wild_Paula/Wild_Paula.jpg",],
+    profilePics: ["./assets/Images/Stolperstein/Wild/Wild_Paula/Wild_Paula.jpg"],
     filters: [Filter.Other, Filter.Goethestrasse, Filter.Wild],
   ),
 ];

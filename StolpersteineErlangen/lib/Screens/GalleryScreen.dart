@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
@@ -5,7 +6,7 @@ import 'package:provider/provider.dart';
 
 class GalleryScreen extends StatefulWidget
 {
-    List<String> images;
+    List<PictureModel> images;
     bool english;
 
     GalleryScreen(this.images, this.english);
@@ -19,7 +20,7 @@ class GalleryScreen extends StatefulWidget
 
 class GalleryScreenState extends State<GalleryScreen>
 {
-    List<String> images;
+    List<PictureModel> images;
     bool english;
     int tilestate = 0;
     ImageIndexProvider indexProvider;
@@ -47,6 +48,34 @@ class GalleryScreenState extends State<GalleryScreen>
     );
   }
 
+  void dialog(int index, BuildContext context)
+  {
+    PictureModel pic = images[index];
+    Text content = Text
+    (
+      (english ? pic.infoEn : pic.infoDt) + "\n\n" + (english ? "Source: \n" : "Quelle: \n") + pic.source,
+      style: TextStyle(fontFamily: "Roboto")
+    );
+
+    showDialog
+    (
+      context: context,
+      builder: (context) => AlertDialog
+      (
+        title: Text("Info", style: TextStyle(fontFamily: "Roboto")),
+        content: content,
+        actions: 
+        [
+          FlatButton
+          (
+            child: Text(english ? "Close" : "Schließen", style: TextStyle(fontFamily: "Roboto", fontSize: 18),),
+            onPressed: () =>  Navigator.of(context).pop(),
+          )
+        ],
+      )
+    );
+  }
+  
   @override
   Widget build(BuildContext context) {
 
@@ -58,11 +87,35 @@ class GalleryScreenState extends State<GalleryScreen>
         backgroundColor: Colors.black,
         appBar: AppBar
         (
+            flexibleSpace: topBar,
             title: images.isEmpty ? 
               Text(english ? "Gallery" : "Galerie") 
               :
-              Row(children: [Text(english ? "Gallery" : "Galerie"), IndexDisplay(images.length)], mainAxisAlignment: MainAxisAlignment.spaceBetween,),
-            flexibleSpace: topBar,
+              Row
+              (
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: 
+                [
+                  Text(english ? "Gallery" : "Galerie"),
+                  Row
+                  (
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: 
+                    [
+                      IndexDisplay(images.length),
+                      Padding
+                      (
+                        padding: EdgeInsets.only(left: 10), 
+                        child: IconButton
+                        (
+                          icon: Icon(Icons.info_outline, color: Colors.white),
+                          onPressed: () => dialog(indexProvider._index, context),
+                        )
+                      )
+                    ],
+                  ),
+                ],
+              ),
         ),
         body: Center(child: GalleryView(images, english))  
       )
@@ -81,7 +134,7 @@ class ImageIndexProvider extends ChangeNotifier
 
 class GalleryView extends StatelessWidget
 {
-  List<String> image_urls;
+  List<PictureModel> image_urls;
   bool english;
   ImageIndexProvider indexProvider;
 
@@ -98,7 +151,7 @@ class GalleryView extends StatelessWidget
         {
           return PhotoViewGalleryPageOptions
           (
-            imageProvider: AssetImage(image_urls[index]),
+            imageProvider: AssetImage(image_urls[index].path),
             initialScale: PhotoViewComputedScale.contained * 0.8,
           );
         },

@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 import 'package:StolpersteineErlangen/Models/StolpersteinModel.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/GalleryScreen.dart';
@@ -20,7 +21,7 @@ class StolpersteinScreen extends StatelessWidget
   SettingsProvider _settings;
 
   String name;
-  List<String> galleryImages;
+  List<PictureModel> galleryImages;
   String location;
   List<String> profilePics;
   String shortText;

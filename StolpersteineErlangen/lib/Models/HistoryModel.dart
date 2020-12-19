@@ -1,10 +1,11 @@
+import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 import 'package:flutter/material.dart';
 
 class HistoryModel
 {
   String name;
   String nameEn;
-  List<String> galleryImages;
+  List<PictureModel> galleryImages;
   List<String> profilePics;
   String textDt;
   String textEn;

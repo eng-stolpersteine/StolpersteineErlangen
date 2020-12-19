@@ -54,33 +54,40 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/Images/Stolperstein/Bauer_Amalia/
-    - assets/Images/Stolperstein/Bauer_Ernestine/
-    - assets/Images/Stolperstein/Bauer_Josef/
-    - assets/Images/Stolperstein/Bauer_Simon/
-    - assets/Images/Stolperstein/Benesi_Erich/
-    - assets/Images/Stolperstein/Benesi_Gottliebe/
-    - assets/Images/Stolperstein/Benesi_Hannelore/
-    - assets/Images/Stolperstein/Benesi_Hildegard/
-    - assets/Images/Stolperstein/Benesi_Jakob/
-    - assets/Images/Stolperstein/Cohn_Alfred/
-    - assets/Images/Stolperstein/Cohn_Rosa/
-    - assets/Images/Stolperstein/Dreifuss_Adolf/
-    - assets/Images/Stolperstein/Fleischhauer_Bertha/
-    - assets/Images/Stolperstein/Heyer_Gustav/
-    - assets/Images/Stolperstein/Katz_Wilma/
-    - assets/Images/Stolperstein/Rotenstein_Jenny/
-    - assets/Images/Stolperstein/Rotenstein_Simon/
-    - assets/Images/Stolperstein/Rotenstein_Sophie/
-    - assets/Images/Stolperstein/Uhlfelder_Frieda/
-    - assets/Images/Stolperstein/Uhlfelder_Josef/
-    - assets/Images/Stolperstein/Vissing_Hildegard/
-    - assets/Images/Stolperstein/Wassermann_Thekla/
-    - assets/Images/Stolperstein/Weglein_Klothilde/
-    - assets/Images/Stolperstein/Weglein_Samuel/
-    - assets/Images/Stolperstein/Weinstock_Ivan/
-    - assets/Images/Stolperstein/Wild_Ignatz/
-    - assets/Images/Stolperstein/Wild_Paula/
+    - "assets/Images/Stolperstein/Bauer/"
+    - "assets/Images/Stolperstein/Benesi/"
+    - "assets/Images/Stolperstein/Cohn/"
+    - "assets/Images/Stolperstein/Dreifuss_Adolf/"
+    - "assets/Images/Stolperstein/Fleischhauer_Bertha/"
+    - "assets/Images/Stolperstein/Heyer_Gustav/"
+    - "assets/Images/Stolperstein/Katz_Wilma/"
+    - "assets/Images/Stolperstein/Rotenstein/"
+    - "assets/Images/Stolperstein/Uhlfelder/"
+    - "assets/Images/Stolperstein/Vissing_Hildegard/"
+    - "assets/Images/Stolperstein/Wassermann_Thekla/"
+    - "assets/Images/Stolperstein/Weglein/"
+    - "assets/Images/Stolperstein/Weinstock_Ivan/"
+    - "assets/Images/Stolperstein/Wild/"
+    - "assets/Images/Stolperstein/Bauer/Bauer_Amalia/"
+    - "assets/Images/Stolperstein/Bauer/Bauer_Ernestine/"
+    - "assets/Images/Stolperstein/Bauer/Bauer_Josef/"
+    - "assets/Images/Stolperstein/Bauer/Bauer_Simon/"
+    - "assets/Images/Stolperstein/Benesi/Benesi_Erich/"
+    - "assets/Images/Stolperstein/Benesi/Benesi_Gottliebe/"
+    - "assets/Images/Stolperstein/Benesi/Benesi_Hannelore/"
+    - "assets/Images/Stolperstein/Benesi/Benesi_Hildegard/"
+    - "assets/Images/Stolperstein/Benesi/Benesi_Jakob/"
+    - "assets/Images/Stolperstein/Cohn/Cohn_Alfred/"
+    - "assets/Images/Stolperstein/Cohn/Cohn_Rosa/"
+    - "assets/Images/Stolperstein/Rotenstein/Rotenstein_Jenny/"
+    - "assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/"
+    - "assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/"
+    - "assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/"
+    - "assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/"
+    - "assets/Images/Stolperstein/Weglein/Weglein_Klothilde/"
+    - "assets/Images/Stolperstein/Weglein/Weglein_Samuel/"
+    - "assets/Images/Stolperstein/Wild/Wild_Ignatz/"
+    - "assets/Images/Stolperstein/Wild/Wild_Paula/"
 
     - assets/Images/App/
 

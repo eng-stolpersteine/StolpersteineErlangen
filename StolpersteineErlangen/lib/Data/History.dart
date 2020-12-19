@@ -1,6 +1,7 @@
 import 'package:StolpersteineErlangen/Data/Texts/LongText/HistoryLongText.dart';
 import 'package:StolpersteineErlangen/Data/Texts/Sources/HistorySources.dart';
 import 'package:StolpersteineErlangen/Models/HistoryModel.dart';
+import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 
 List<HistoryModel> historyModels = 
 [
@@ -15,9 +16,29 @@ List<HistoryModel> historyModels =
     sources: src_NationalsozialismusErlangen, 
     galleryImages: 
     [
-      "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_Hissung_durch_SA_1933.jpg",
-      "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_Männer_Kultusgemeinde_1937.jpg",
-      "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_SA_Marsch_1938.jpg",
+      PictureModel
+      (
+        infoDt: "Hissung der Hakenkreuzfahne am SPD-Haus, Nürnberger Str. 10, durch die SA, 9. März 1933",
+        infoEn: "", 
+        source: "Stadtarchiv Erlangen, VI.F.b.258, Unbekannt",
+        path: "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_Hissung_durch_SA_1933.jpg",
+      ),
+      
+      PictureModel
+      (
+        infoDt: "Kampftag der SA-Standarte 24, Vorbeimarsch am Schlossplatz,15. Mai 1938",
+        infoEn: "", 
+        source: "Stadtarchiv Erlangen, VI.F.b.289, Fritz Morgenroth",
+        path: "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_SA_Marsch_1938.jpg",
+      ),
+      
+      PictureModel
+      (
+        infoDt: "Die männlichen Mitglieder der Israelitischen Kultusgemeinde Erlangen, vor 30. Dezember 1937",
+        infoEn: "", 
+        source: "Stadtarchiv Erlangen, VI.Sch.b.15, Unbekannt",
+        path: "./assets/Images/History/Nationalsozialismus_In_ER/WÄHREND_Männer_Kultusgemeinde_1937.jpg",
+      ),
     ], 
     profilePics: [],
   ),
@@ -44,7 +65,16 @@ List<HistoryModel> historyModels =
     audioUrlDt: "Audio/History/Dt/Jüdischer_Friedhof.mp3", 
     audioUrlEn: "", 
     sources: src_IsraelitischerFriedhof, 
-    galleryImages: ["./assets/Images/History/Jüdischer_Friedhof/Friedhof_1948.jpg",], 
+    galleryImages: 
+    [
+      PictureModel
+      (
+        infoDt: "Jüdischer Friedhof - 1948", 
+        infoEn: "Jewish cemetary - 1948", 
+        source: "", 
+        path: "./assets/Images/History/Jüdischer_Friedhof/Friedhof_1948.jpg",
+      )
+    ], 
     profilePics: [],
   ),
 
@@ -72,9 +102,29 @@ List<HistoryModel> historyModels =
     sources: src_JuedischesLebenNSZeit, 
     galleryImages: 
     [
-      "./assets/Images/History/Jüdisches_Leben_Vor/VOR_1Zerstörung_Denkmal_1933.jpg",
-      "./assets/Images/History/Jüdisches_Leben_Vor/VOR_2Zerstörung_Denkmal_1933.jpg",
-      "./assets/Images/History/Jüdisches_Leben_Vor/VOR_Nbg_Tor_1935.jpg",
+      PictureModel
+      (
+        infoDt: "Schändung und Zerstörung des Herz-Denkmals auf dem Luitpoldplatz (Hugenottenplatz), 15. September 1933",
+        infoEn: "",
+        source: "Stadtarchiv Erlangen, VI.N.b.271, Unbekannt",
+        path: "./assets/Images/History/Jüdisches_Leben_Vor/VOR_1Zerstörung_Denkmal_1933.jpg",
+      ),
+
+      PictureModel
+      (
+        infoDt: "Schändung und Zerstörung des Herz-Denkmals auf dem Luitpoldplatz (Hugenottenplatz), 15. September 1933",
+        infoEn: "",
+        source: "Stadtarchiv Erlangen, VI.N.b.271, Unbekannt",
+        path: "./assets/Images/History/Jüdisches_Leben_Vor/VOR_2Zerstörung_Denkmal_1933.jpg",
+      ),
+      
+      PictureModel
+      (
+        infoDt: "Das Nürnberger Tor nach Süden, mit antijüdischem Transparent",
+        infoEn: "",
+        source: "Stadtarchiv Erlangen, XIII.2.P.8, Unbekannt",
+        path: "./assets/Images/History/Jüdisches_Leben_Vor/VOR_Nbg_Tor_1935.jpg",
+      ),
     ], 
     profilePics: [],
   ),
