@@ -62,7 +62,7 @@ class GalleryScreenState extends State<GalleryScreen>
       context: context,
       builder: (context) => AlertDialog
       (
-        title: Text("Info", style: TextStyle(fontFamily: "Roboto")),
+        title: Text("Info", style: TextStyle(fontFamily: "Roboto", fontWeight: FontWeight.bold)),
         content: content,
         actions: 
         [

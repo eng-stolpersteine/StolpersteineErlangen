@@ -3,6 +3,7 @@ import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:StolpersteineErlangen/Data/SettingsData/Danke_Text.dart';
 
 class SettingsScreen extends StatefulWidget
 {
@@ -129,7 +130,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                   alignment: Alignment.centerLeft,
                   child: Consumer<SettingsProvider>
                   (
-                    builder: (context, value, child) => Text(value.english ? "Impress" : "Impressum", style: TextStyle(fontFamily: "Roboto", fontSize: 18))
+                    builder: (context, value, child) => Text(value.english ? "Thanks!" : "Danke!", style: TextStyle(fontFamily: "Roboto", fontSize: 18))
                   ),
                 ),
               ),
@@ -139,7 +140,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: Consumer<SettingsProvider>
                 (
-                  builder: (context, value, child) => Text(value.english ? impressumEnglish : impressumGerman, style: TextStyle(fontFamily: "Roboto", fontSize: 15))
+                  builder: (context, value, child) => Text(value.english ? danke_en : danke_dt, style: TextStyle(fontFamily: "Roboto", fontSize: 15))
                 )
               ),
             ],

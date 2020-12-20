@@ -4,16 +4,14 @@ import 'package:StolpersteineErlangen/Data/Texts/ShortText/StolpersteinShortText
 import 'package:StolpersteineErlangen/Data/Texts/Sources/StolpersteinSources.dart';
 import 'package:StolpersteineErlangen/Models/PictureModel.dart';
 import 'package:StolpersteineErlangen/Models/StolpersteinModel.dart';
-
-
-String devSrc = "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl"; 
+ 
 
 List<StolpersteinModel> stolpersteinModels = 
 [
   StolpersteinModel
   (
     name: "Amalie Bauer",
-    location: "https://www.google.com/maps/search/?api=1&query=Theaterplatz+4%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Theaterplatz+4%2CErlangen%2CGermany",
     shortTextDt: sh_Bauer_Amalia_dt,
     shortTextEn: sh_Bauer_Amalia_en, 
     textDt: txt_Bauer_Amalia_dt, 
@@ -36,7 +34,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Ernestine Bauer",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+4%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+4%2CErlangen%2CGermany",
     shortTextDt: sh_Bauer_Ernestine_dt,
     shortTextEn: sh_Bauer_Ernestine_en, 
     textDt: txt_Bauer_Ernestine_dt, 
@@ -59,7 +57,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Josef Bauer",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+4%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+4%2CErlangen%2CGermany",
     shortTextDt: sh_Bauer_Josef_dt,
     shortTextEn: sh_Bauer_Josef_en, 
     textDt: txt_Bauer_Josef_dt, 
@@ -82,7 +80,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Simon Bauer",
-    location: "https://www.google.com/maps/search/?api=1&query=Theaterplatz+4%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Theaterplatz+4%2CErlangen%2CGermany",
     shortTextDt: sh_Bauer_Simon_dt,
     shortTextEn: sh_Bauer_Simon_en, 
     textDt: txt_Bauer_Simon_dt, 
@@ -105,7 +103,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Erich Benesi",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Erich_dt,
     shortTextEn: sh_Benesi_Erich_en, 
     textDt: txt_Benesi_Erich_dt, 
@@ -133,7 +131,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Gottliebe Benesi",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Gottliebe_dt,
     shortTextEn: sh_Benesi_Gottliebe_en, 
     textDt: txt_Benesi_Gottliebe_dt, 
@@ -160,7 +158,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Hannelore Benesi",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Hannelore_dt,
     shortTextEn: sh_Benesi_Hannelore_en, 
     textDt: txt_Benesi_Hannelore_dt, 
@@ -173,14 +171,14 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Hannelore Benesi", infoEn: "Hannelore Benesi", source: "Stadtarchiv Erlangen, Stadtarchiv Erlangen, ohne Signatur, Jakob Benesi", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore _PT.jpg"),
       PictureModel(infoDt:"Hannelore Benesi - Stolperstein", infoEn: "Hannelore Benesi - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore.jpg"),
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore _PT.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore.jpg","./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore _PT.jpg",], 
     filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
   (
     name: "Hildegard Benesi",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Hildegard_dt,
     shortTextEn: sh_Benesi_Hildegard_en, 
     textDt: txt_Benesi_Hildegard_dt, 
@@ -208,7 +206,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Jakob Benesi",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Jakob_dt,
     shortTextEn: sh_Benesi_Jakob_en, 
     textDt: txt_Benesi_Jakob_dt, 
@@ -236,7 +234,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Alfred Cohn",
-    location: "https://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
     shortTextDt: sh_Cohn_Alfred_dt,
     shortTextEn: sh_Cohn_Alfred_en, 
     textDt: txt_Cohn_Alfred_dt, 
@@ -260,7 +258,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Rosa Cohn",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+58%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+58%2CErlangen%2CGermany",
     shortTextDt: sh_Cohn_Rosa_dt,
     shortTextEn: sh_Cohn_Rosa_en, 
     textDt: txt_Cohn_Rosa_dt, 
@@ -283,7 +281,7 @@ List<StolpersteinModel> stolpersteinModels =
   StolpersteinModel
   (
     name: "Adolf Dreifuss",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+83%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+83%2CErlangen%2CGermany",
     shortTextDt: sh_Dreifuss_Adolf_dt,
     shortTextEn: sh_Dreifuss_Adolf_en, 
     textDt: txt_Dreifuss_Adolf_dt, 
@@ -303,7 +301,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Bertha Fleischhauer",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+83%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+83%2CErlangen%2CGermany",
     shortTextDt: sh_Fleischhauer_Bertha_dt,
     shortTextEn: sh_Fleischhauer_Bertha_en, 
     textDt: txt_Fleischhauer_Bertha_dt, 
@@ -323,7 +321,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Gustav Heyer",
-    location: "https://www.google.com/maps/search/?api=1&query=Österreicher+Strasse+12+A%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Österreicher+Strasse+12+A%2CErlangen%2CGermany",
     shortTextDt: sh_Heyer_Gustav_dt,
     shortTextEn: sh_Heyer_Gustav_en, 
     textDt: txt_Heyer_Gustav_dt, 
@@ -343,7 +341,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Wilma Katz",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Katz_Wilma_dt,
     shortTextEn: sh_Katz_Wilma_en, 
     textDt: txt_Katz_Wilma_dt, 
@@ -371,7 +369,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Jenny Rotenstein",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+63%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+63%2CErlangen%2CGermany",
     shortTextDt: sh_Rotenstein_Jenny_dt,
     shortTextEn: sh_Rotenstein_Jenny_en, 
     textDt: txt_Rotenstein_Jenny_dt, 
@@ -396,7 +394,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Simon Rotenstein",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+63%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+63%2CErlangen%2CGermany",
     shortTextDt: sh_Rotenstein_Simon_dt,
     shortTextEn: sh_Rotenstein_Simon_en, 
     textDt: txt_Rotenstein_Simon_dt, 
@@ -421,7 +419,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Sophie Rotenstein",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+63%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+63%2CErlangen%2CGermany",
     shortTextDt: sh_Rotenstein_Sophie_dt,
     shortTextEn: sh_Rotenstein_Sophie_en, 
     textDt: txt_Rotenstein_Sophie_dt, 
@@ -446,7 +444,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Frieda Uhlfelder",
-    location: "https://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
     shortTextDt: sh_Uhlfelder_Frieda_dt,
     shortTextEn: sh_Uhlfelder_Frieda_en, 
     textDt: txt_Uhlfelder_Frieda_dt, 
@@ -471,7 +469,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Josef Uhlfelder",
-    location: "https://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
     shortTextDt: sh_Uhlfelder_Josef_dt,
     shortTextEn: sh_Uhlfelder_Josef_en, 
     textDt: txt_Uhlfelder_Josef_dt, 
@@ -496,7 +494,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Hildegard Vissing",
-    location: "https://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
     shortTextDt: sh_Vissing_Hildegard_dt,
     shortTextEn: sh_Vissing_Hildegard_en, 
     textDt: txt_Vissing_Hildegard_dt, 
@@ -520,7 +518,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Thekla Wassermann",
-    location: "https://www.google.com/maps/search/?api=1&query=Einhornstrasse+5%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Einhornstrasse+5%2CErlangen%2CGermany",
     shortTextDt: sh_Wassermann_Thekla_dt,
     shortTextEn: sh_Wassermann_Thekla_en, 
     textDt: txt_Wassermann_Thekla_dt, 
@@ -541,7 +539,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Klothilde Weglein",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+58%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+58%2CErlangen%2CGermany",
     shortTextDt: sh_Weglein_Klothilde_dt,
     shortTextEn: sh_Weglein_Klothilde_en, 
     textDt: txt_Weglein_Klothilde_dt, 
@@ -564,7 +562,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Samuel Weglein",
-    location: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+58%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+58%2CErlangen%2CGermany",
     shortTextDt: sh_Weglein_Samuel_dt,
     shortTextEn: sh_Weglein_Samuel_en, 
     textDt: txt_Weglein_Samuel_dt, 
@@ -587,7 +585,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Ivan Weinstock",
-    location: "https://www.google.com/maps/search/?api=1&query=Calvinstrasse+1%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Calvinstrasse+1%2CErlangen%2CGermany",
     shortTextDt: sh_Weinstock_Ivan_dt,
     shortTextEn: sh_Weinstock_Ivan_en, 
     textDt: txt_Weinstock_Ivan_dt, 
@@ -619,7 +617,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Ignatz Wild",
-    location: "https://www.google.com/maps/search/?api=1&query=Innere+Brucker+Strasse+6%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Innere+Brucker+Strasse+6%2CErlangen%2CGermany",
     shortTextDt: sh_Wild_Ignatz_dt,
     shortTextEn: sh_Wild_Ignatz_en, 
     textDt: txt_Wild_Ignatz_dt, 
@@ -643,12 +641,12 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
   StolpersteinModel
   (
     name: "Paula Wild",
-    location: "https://www.google.com/maps/search/?api=1&query=Goethestrasse+24%2CErlangen%2CGermany",
+    location: "http://www.google.com/maps/search/?api=1&query=Goethestrasse+24%2CErlangen%2CGermany",
     shortTextDt: sh_Wild_Paula_dt,
     shortTextEn: sh_Wild_Paula_en, 
     textDt: txt_Wild_Paula_dt, 
     textEn: txt_Wild_Paula_en, 
-    audioUrlDt: "", 
+    audioUrlDt: "Audio/Stolperstein/Dt/Paula_Wild.mp3", 
     audioUrlEn: "", 
     sources: src_Wild_Paula,
     galleryImages: 

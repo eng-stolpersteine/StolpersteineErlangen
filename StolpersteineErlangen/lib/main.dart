@@ -10,7 +10,7 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/ChooseLanguage.dart';
-import 'package:StolpersteineErlangen/Data/SettingsData/Danke_Text.dart';
+import 'package:StolpersteineErlangen/Data/SettingsData/Impress.dart';
 
 void main() async
 {
@@ -249,7 +249,7 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
     (
       context: context,
       applicationName: "Stolpersteine Erlangen",
-      applicationLegalese: _settings.english ? danke_en : danke_dt
+      applicationLegalese: _settings.english ? impressumEnglish : impressumGerman
     );
   }
 
