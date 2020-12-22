@@ -149,7 +149,7 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Benesi/5Benesi_Hauptstrasse_2.jpg"),
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/6Benesi_Hauptstrasse_2.jpg"),
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Benesi/7Benesi_Hauptstrasse_2.jpg"),
-    
+      PictureModel(infoDt: "Gottliebe & Jakob Benesi", infoEn: "Gottliebe & Jakob Benesi", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Benesi/Benesi_Gottliebe_Jakob.jpeg")
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Gottliebe/Benesi_Gottliebe.jpg"], 
     filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
@@ -197,9 +197,9 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Benesi/5Benesi_Hauptstrasse_2.jpg"),
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/6Benesi_Hauptstrasse_2.jpg"),
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Benesi/7Benesi_Hauptstrasse_2.jpg"),
-    
+      PictureModel(infoDt: "Hildegard Benesi", infoEn: "Hildegard Benesi", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Hildegard_Benesi_Baby.jpeg")
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Benesi_Hildegard.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Hildegard Benesi.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Benesi_Hildegard.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Hildegard_Benesi_Baby.jpeg"],
     filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
@@ -225,7 +225,8 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.A.b.705, Siegfried Leiter", path: "./assets/Images/Stolperstein/Benesi/5Benesi_Hauptstrasse_2.jpg"),
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.518, Unbekannt", path: "./assets/Images/Stolperstein/Benesi/6Benesi_Hauptstrasse_2.jpg"),
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Benesi/7Benesi_Hauptstrasse_2.jpg"),
-    
+      PictureModel(infoDt: "Gottliebe & Jakob Benesi", infoEn: "Gottliebe & Jakob Benesi", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Benesi/Benesi_Gottliebe_Jakob.jpeg"),
+      PictureModel(infoDt: "Jakob Benesi", infoEn: "Jakob Benesi", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jacob.jpeg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob_PT.jpg"], 
     filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
@@ -249,9 +250,9 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.A.b.1276, Axel Dorsch", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/3Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg"),
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/4Cohn_A_Bayreutherstrasse_17A Kopie 2.jpg"),
       PictureModel(infoDt:"Alfred Cohn - Stolperstein", infoEn: "Alfred Cohn - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/Cohn_Alfred.jpg"),
-          
+      PictureModel(infoDt: "Alfred Cohn", infoEn: "Alfred Cohn", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/Cohn_Alfred.jpeg")
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Cohn/Cohn_Alfred/Cohn_Alfred.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Cohn/Cohn_Alfred/Cohn_Alfred.jpg", "./assets/Images/Stolperstein/Cohn/Cohn_Alfred/Cohn_Alfred.jpeg"], 
     filters: [Filter.Erlangen, Filter.Bayreuther_Strasse, Filter.Cohn]
   ),
 
@@ -292,7 +293,8 @@ List<StolpersteinModel> stolpersteinModels =
     galleryImages:  
     [
       PictureModel(infoDt:"Adolf Dreifuss - Stolperstein", infoEn: "Adolf Dreifuss - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpg"),
-PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtarchiv Erlangen, Morgenroth 116, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg"),
+      PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtarchiv Erlangen, Morgenroth 116, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg"),
+      PictureModel(infoDt: "Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpeg")
     ], 
     profilePics:  ["./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf.jpg", "./assets/Images/Stolperstein/Dreifuss_Adolf/Dreifuss_Adolf_PT.jpg"], 
     filters:  [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Dreifuss]
@@ -360,7 +362,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Hauptstrasse 2", infoEn: "Hauptstrasse 2", source: "Stadtarchiv Erlangen, VI.M.b.1018, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Katz_Wilma/7Katz_W_Hauptstrasse_2 Kopie.jpg"),
       PictureModel(infoDt:"Wilma Katz - Stolperstein", infoEn: "Wilma Katz - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpg"),
       PictureModel(infoDt:"Wilma Katz", infoEn: "Wilma Katz", source: "Stadtarchiv Erlangen, Stadtarchiv Erlangen, ohne Signatur, Unbekannt", path: "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg"),
-          
+      PictureModel(infoDt: "Wilma Katz", infoEn: "Wilma Katz", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpeg")
     ], 
     profilePics: ["./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpg", "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg",], 
     filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Katz]
@@ -410,9 +412,9 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.M.b.1045, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Rotenstein/3Rotenstein_Hauptstrasse_63.jpg"),
       PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.MM.b.888, Axel Dorsch", path: "./assets/Images/Stolperstein/Rotenstein/4Rotenstein_Hauptstrasse_63.jpg"),
       PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Rotenstein/5Rotenstein_Hauptstrasse_63.jpg"),
-    
+      PictureModel(infoDt: "Simon Rotenstein", infoEn: "Simon Rotenstein", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/Rotenstein_Simon.jpeg")
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/Rotenstein_Simon.jpg"],
+    profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/Rotenstein_Simon.jpg", "./assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/Rotenstein_Simon.jpeg"],
     filters: [Filter.Erlangen, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
@@ -435,9 +437,9 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.M.b.1045, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Rotenstein/3Rotenstein_Hauptstrasse_63.jpg"),
       PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.MM.b.888, Axel Dorsch", path: "./assets/Images/Stolperstein/Rotenstein/4Rotenstein_Hauptstrasse_63.jpg"),
       PictureModel(infoDt:"Hauptstrasse 63", infoEn: "Hauptstrasse 63", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Rotenstein/5Rotenstein_Hauptstrasse_63.jpg"),
-          
+      PictureModel(infoDt: "Sophie Rotenstein", infoEn: "Sophie Rotenstein", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/Rotenstein_Sophie.jpeg"),
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg", "./assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/Rotenstein_Sophie.jpeg"], 
     filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
@@ -460,7 +462,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.B.b.1019, Unbekannt", path: "./assets/Images/Stolperstein/Uhlfelder/2Uhlfelder_Bayreutherstrasse_17A.jpg"),
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.A.b.1276, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/3Uhlfelder_Bayreutherstrasse_17A.jpg"),
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/4Uhlfelder_Bayreutherstrasse_17A.jpg"),
-    
+      PictureModel(infoDt: "Frieda Uhlfelder", infoEn: "Frieda Uhlfelder", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda.jpeg")
     ], 
     profilePics: ["./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda.jpg", "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg"], 
     filters: [Filter.Theresienstadt, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
@@ -485,7 +487,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.B.b.1019, Unbekannt", path: "./assets/Images/Stolperstein/Uhlfelder/2Uhlfelder_Bayreutherstrasse_17A.jpg"),
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.A.b.1276, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/3Uhlfelder_Bayreutherstrasse_17A.jpg"),
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Uhlfelder/4Uhlfelder_Bayreutherstrasse_17A.jpg"),
-    
+      PictureModel(infoDt: "Josef Uhlfelder", infoEn: "Josef Uhlfelder", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef.jpeg")
     ], 
     profilePics: ["./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef.jpg", "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg"], 
     filters: [Filter.Theresienstadt, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
@@ -510,6 +512,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Bayreuther Strasse 17A", infoEn: "Bayreuther Strasse 17A", source: "Stadtarchiv Erlangen, VI.MM.b.181, Axel Dorsch", path: "./assets/Images/Stolperstein/Vissing_Hildegard/4Laink-Vissing_Bayreutherstrasse_17A Kopie.jpg"),
       PictureModel(infoDt:"Hildegard Vissing - Stolperstein", infoEn: "Hildegard Vissing - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard.jpg"),
       PictureModel(infoDt:"Hildegard Vissing", infoEn: "Hildegard Vissing", source: "Stadtarchiv Erlangen, Morgenroth 115, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard_PT.jpg"),
+      PictureModel(infoDt: "Hildegard Vissing", infoEn: "Hildegard Vissing", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard.jpeg")
     ], 
     profilePics: ["./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard.jpg", "./assets/Images/Stolperstein/Vissing_Hildegard/Vissing_Hildegard_PT.jpg",],
     filters: [Filter.Auschwitz, Filter.Bayreuther_Strasse, Filter.Vissing],
@@ -531,6 +534,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Einhornstrasse 7", infoEn: "Einhornstrasse 7", source: "Stadtarchiv Erlangen, VI.M.b.1788, Ernst Deuerlein", path: "./assets/Images/Stolperstein/Wassermann_Thekla/1Wassermann_T_Einhornstrasse_7.jpg"),
       PictureModel(infoDt:"Thekla Wassermann - Stolperstein", infoEn: "Thekla Wassermann - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpg"),
       PictureModel(infoDt:"Thekla Wassermann", infoEn: "Thekla Wassermann", source: "Stadtarchiv Erlangen, Morgenroth 114, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg"),
+      PictureModel(infoDt: "Thekla Wassermann", infoEn: "Thekla Wassermann", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpeg")
     ], 
     profilePics: ["./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpg", "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg",], 
     filters: [Filter.Riga, Filter.Einhornstrasse, Filter.Wassermann],
@@ -553,9 +557,9 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Weglein/1Weglein_Hauptstrasse_58.jpg"),
       PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.MM.b.882, Axel Dorsch", path: "./assets/Images/Stolperstein/Weglein/2Weglein_Hauptstrasse_58.jpg"),
       PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Weglein/3Weglein_Hauptstrasse_58.jpg"),
-      
+      PictureModel(infoDt: "Klothilde Weglein", infoEn: "Klothilde Weglein", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Weglein/Weglein_Klothilde/Weglein_Klothilde.jpeg")
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Weglein/Weglein_Klothilde/Weglein_Klothilde.jpg"], 
+    profilePics: ["./assets/Images/Stolperstein/Weglein/Weglein_Klothilde/Weglein_Klothilde.jpg", "./assets/Images/Stolperstein/Weglein/Weglein_Klothilde/Weglein_Klothilde.jpeg"], 
     filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Weglein],
   ),
 
@@ -576,9 +580,9 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VIII.4.K.141/12, Josef Keller", path: "./assets/Images/Stolperstein/Weglein/1Weglein_Hauptstrasse_58.jpg"),
       PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.MM.b.882, Axel Dorsch", path: "./assets/Images/Stolperstein/Weglein/2Weglein_Hauptstrasse_58.jpg"),
       PictureModel(infoDt:"Hauptstrasse 58", infoEn: "Hauptstrasse 58", source: "Stadtarchiv Erlangen, VI.A.b.664, Georg Hopp", path: "./assets/Images/Stolperstein/Weglein/3Weglein_Hauptstrasse_58.jpg"),
-    
+      PictureModel(infoDt: "Samuel Weglein", infoEn: "Samuel Weglein", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Weglein/Weglein_Samuel/Weglein_Samuel.jpeg")
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Weglein/Weglein_Samuel/Weglein_Samuel.jpg"],
+    profilePics: ["./assets/Images/Stolperstein/Weglein/Weglein_Samuel/Weglein_Samuel.jpg", "./assets/Images/Stolperstein/Weglein/Weglein_Samuel/Weglein_Samuel.jpeg"],
     filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Weglein],
   ),
 
@@ -608,7 +612,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Calvinstrasse 1", infoEn: "Calvinstrasse 1", source: "Stadtarchiv Erlangen, VI.M.b.513, Hildegard Klein", path: "./assets/Images/Stolperstein/Weinstock_Ivan/9Weinstock_Calvinstrasse_1.jpg"),
       PictureModel(infoDt:"Ivan Weinstock - Stolperstein", infoEn: "Ivan Weinstock - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpg"),
       PictureModel(infoDt:"Ivan Weinstock", infoEn: "Ivan Weinstock", source: "Stadtarchiv Erlangen, VI.F.b.356_4, Ausschnitt, Werner Bösel", path: "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg"),
-          
+      PictureModel(infoDt: "Ivan Weinstock", infoEn: "Ivan Weinstock", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpeg")
     ], 
     profilePics: ["./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpg", "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg",], 
     filters: [Filter.Theresienstadt, Filter.Calvinstrasse, Filter.Weinstock],
@@ -632,9 +636,9 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Innere Brucker Strasse 6", infoEn: "Innere Brucker Strasse 6", source: "Stadtarchiv Erlangen, VI.A.b.497, Johannes Junge", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/3Wild_I_Innere_Brucker_Strasse_6.jpg"),
       PictureModel(infoDt:"Innere Brucker Strasse 6", infoEn: "Innere Brucker Strasse 6", source: "Stadtarchiv Erlangen, VI.A.b.1146, Unbekannt", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/4Wild_I_Innere_Brucker_Strasse_6.jpg"),
       PictureModel(infoDt:"Ignatz Wild - Stolperstein", infoEn: "Ignatz Wild - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpg"),
-   
+      PictureModel(infoDt: "Ignatz Wild", infoEn: "Ignatz Wild", source: "Ilse Sponsel, Gedenkbuch der Erlanger Opfer der Shoa, Erlangen 2001", path: "./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpeg")
     ], 
-    profilePics: ["./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpg"],
+    profilePics: ["./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpg", "./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpeg"],
     filters: [Filter.Izbica, Filter.Innere_Brucker_Strasse, Filter.Wild],
   ),
 

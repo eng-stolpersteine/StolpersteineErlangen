@@ -62,10 +62,7 @@ class SearchProvider extends SearchDelegate<String>
   Widget buildLeading(BuildContext context) {
     // TODO: implement buildLeading
     return IconButton(
-        icon: AnimatedIcon(
-          icon: AnimatedIcons.menu_arrow,
-          progress: transitionAnimation,
-        ),
+        icon: Icon(Icons.arrow_back),
         onPressed: () {
           close(context, null);
         });
@@ -85,7 +82,7 @@ class SearchProvider extends SearchDelegate<String>
     for(StolpersteinModel model in stolpersteinModels)
       names.add(model.name);
 
-    final Iterable<String> suggestions =  query.isEmpty ? names : names.where((p) => p.startsWith(query));
+    final Iterable<String> suggestions =  query.isEmpty ? names : names.where((p) => p.toLowerCase().startsWith(query.toLowerCase()));
 
     return _WordSuggestionList
     (
