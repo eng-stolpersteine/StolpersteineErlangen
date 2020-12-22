@@ -56,30 +56,56 @@ String sh_Wild_Paula_dt = "Paula Wild ist am 20.03.1882 geboren. Seit 1910 lebte
 //----------------------//
 
 
-String sh_Bauer_Amalia_en = "";
-String sh_Bauer_Ernestine_en = "";
-String sh_Bauer_Josef_en = "";
-String sh_Bauer_Simon_en = "";
-String sh_Benesi_Erich_en = "";
-String sh_Benesi_Gottliebe_en = "";
-String sh_Benesi_Hannelore_en = "";
-String sh_Benesi_Hildegard_en = "";
-String sh_Benesi_Jakob_en = "";
-String sh_Cohn_Alfred_en = "";
-String sh_Cohn_Rosa_en = "";
-String sh_Dreifuss_Adolf_en = "";
-String sh_Fleischhauer_Bertha_en = "";
-String sh_Heyer_Gustav_en = "";
-String sh_Katz_Wilma_en = "";
-String sh_Rotenstein_Jenny_en = "";
-String sh_Rotenstein_Simon_en = "";
-String sh_Rotenstein_Sophie_en = "";
-String sh_Uhlfelder_Frieda_en = "";
-String sh_Uhlfelder_Josef_en = "";
-String sh_Vissing_Hildegard_en = "";
-String sh_Wassermann_Thekla_en = "";
-String sh_Weglein_Klothilde_en = "";
-String sh_Weglein_Samuel_en = "";
-String sh_Weinstock_Ivan_en = "";
-String sh_Wild_Ignatz_en = "";
-String sh_Wild_Paula_en = "";
+String sh_Bauer_Amalia_en = "Amalie Neuburger was born on the 25th of July 1893. She married Simon Bauer. Her husband owned together with his brother Josef a goods and comission trade bussiness previously owned by his fathers. After they had to expierence harassment they moved to Munich to flee on the ship \“St.Louis\”. The ship had to turn back to Europe because no other country was willing to let the refugees enter. Both families moved back to Munich from where they were deported to Kowno. There he was murdered on the 25th of November 1941.";
+
+String sh_Bauer_Ernestine_en = "Ernestine Stern was born on the 5th of Febuary 1882. She married Josef Bauer. Her husband owned together with brother Simon a goods and comission trade bussiness previously owned by his fathers. After they had to expierence harassment they moved to Munich to flee on the ship \“St.Louis\”. The ship had to turn back to Europe because no other country was willing to let the refugees enter. Both families moved back to Munich from where they were deported to Kowno. There he was murdered on the 25th of November 1941.";
+
+String sh_Bauer_Josef_en = "Josef Bauer was born on the 9th of July 1880. He married Ernestine Stern. Together with his brother Simom he owned a goods and comission trade bussiness previously owned by his fathers. After they had to expierence harassment they moved to Munich to flee on the ship \“St.Louis\”. The ship had to turn back to Europe because no other country was willing to let the refugees enter. Both families moved back to Munich from where they were deported to Kowno. There he was murdered on the 25th of November 1941.";
+
+String sh_Bauer_Simon_en = "Simon Bauer was born on the 25th of April 1887. He married Amalie Neuburger. Together with his brother Josef he owned a goods and comission trade bussiness previously owned by his fathers. After they had to expierence harassment they moved to Munich to flee on the ship \“St.Louis\”. The ship had to turn back to Europe because no other country was willing to let the refugees enter. Both families moved back to Munich from where they were deported to Kowno. There he was murdered on the 25th of November 1941.";
+
+String sh_Benesi_Erich_en = "Erich Bénesi was born on the 7th of Septmeber 1931 in Erlangen. His parents were Gottliebe and Jakob Bénesi. He had two siblings: Hildegard, Hannelore. In the Night of Broken Glass the family was arrested. Their home and their father’s photography shop were destroyed. Their last documented residence was the Bahnhofstraße 9 in Fürth. On the 18th of June 1943 the whole family was deported to the concentration camp Ausschwitz where they were all murdered.";
+
+String sh_Benesi_Gottliebe_en = "Gottliebe Bénesi was born on the 30th of April 1906 in Erlangen. She married her husband Jakob Bénesi on the 22nd of January 1931. Together they had three children: Hildegard, Hannelore and Erich. In the Night of Broken Glass the family was arrested. Their home and their photography shop were destroyed. Their last documented residence was the Bahnhofstraße 9 in Fürth. On the 18th of June 1943 the whole family was deported to the concentration camp Ausschwitz where they were all murdered.";
+
+String sh_Benesi_Hannelore_en = "Hannelore Bénesi was born on the 21st of February 1935 in Erlangen. Her parents were Gottliebe and Jakob Bénesi. She had two siblings: Erich and Hildegard. In the Night of Broken Glass the family was arrested. Their home and their father’s photography shop were destroyed. Their last documented residence was the Bahnhofstraße 9 in Fürth. On the 18th of June 1943 the whole family was deported to the concentration camp Ausschwitz where they were all murdered.";
+
+String sh_Benesi_Hildegard_en = "Hildegard Bénesi was born on the 2nd of July 1933 in Erlangen. Her parents were Gottliebe and Jakob Bénesi. She had two siblings: Erich and Hannelore. In the Night of Broken Glass the family was arrested. Their home and their father’s photography shop were destroyed. Their last documented residence was the Bahnhofstraße 9 in Fürth. On the 18th of June 1943 the whole family was deported to the concentration camp Ausschwitz where they were all murdered.";
+
+String sh_Benesi_Jakob_en = "Jakob Bénesi was born on the 25th of December 1901 in Vienna. He married his wife Gottliebe Bénesi on the 22nd of January 1931. Together they had three children: Hildegard, Hannelore and Erich. In the Night of Broken Glass the family was arrested. Their home and their photography shop were destroyed. Their last documented residence was the Bahnhofstraße 9 in Fürth. On the 18th of June 1943 the whole family was deported to the concentration camp Ausschwitz where they were all murdered.";
+
+String sh_Cohn_Alfred_en = "Alfred Cohn was born on the 3rd of April 1879 in Schönlake, Poland. His parents were Siegfried und Amalia Cohn. He owned a shop for lingerie and woollen goods in the Einhornstraße 5 in Erlangen. On the 9th January 1939 Alfred Cohn comitted suicide by drowning.";
+
+String sh_Cohn_Rosa_en = "Rosa Cohn lived in Erlangen from 1922 to 1939. Afterwards she moved to Berlin from where she was deported to the concentration camp Auschwitz. There she was murdered in 1943.";
+
+String sh_Dreifuss_Adolf_en = "Adolf Dreifuß was born on February 6th 1859 in Heßloch near Worms. He worked as a businessman. In 1882 he married his fiancée Julia Laubert. The married couple had four children. His deportation to the concentration camp Theresienstadt was on September 23rd 1942. On December 4th of the same year he was declared dead.";
+
+String sh_Fleischhauer_Bertha_en = "Bertha Fleischhauer was born on July 13th 1879 in Adelsdorf. She worked as a housekeeper. Her deportation to the concentration camp Izbica was on March 24th 1942. Since then her official status is “missing”.";
+
+String sh_Heyer_Gustav_en = "Gustav Heyer moved from his hometown Halle an der Saale 1918 to Erlangen. There he owned a laundry items shop. Because he was a member of Jehovah’s Witnesses he was deported to the concentraion camp Dachau in 1939 and was later murder in a gas chamber in Austria in 1942.";
+
+String sh_Katz_Wilma_en = "Wilma Katz was born on the 14th of April in 1873 and was married to Simon Katz.After his death, she took over her husband’s photo business.She lived in Erlangen until 1942 until she was moved into a Jewish dorm in Fürth.Still in the same year she was deported to the concentration camp in Terezin. There she died from pneumonia after a stay of 2 months.";
+
+String sh_Rotenstein_Jenny_en = "Jenny Rotenstein was born on September 14th 1912 in Erlangen. Her deportation to the concentration camp Theresienstadt was on September 10th 1942. On March 25th 1943 she was declared dead.";
+
+String sh_Rotenstein_Simon_en = "Simon Rotenstein was born on March 19th 1899 in Cherson in the Ukraine. On April 24th 1933, at the age of 34, he committed suicide.";
+
+String sh_Rotenstein_Sophie_en = "Sophie Paper was born on July 28th 1871 in Borislaw in Russia. In 1893 she married her fiancé Georg Rotenstein. The married couple had six children. Her deportation to the concentration camp Theresienstadt was on September 10th 1942. On January 3rd 1945 she was declared dead.";
+
+String sh_Uhlfelder_Frieda_en = "Frieda Uhlfelder was born on the 29th of August 1883 in Altenmuhr. Her parents were Hanna and Moses Lois Flink. Frieda got married to her husband Joseph Uhlfelder on the 18th of July 1905 in Nuremberg. Together they had four children: Karolina, Martin, Fanny und Wilhelm. Joseph Uhlfelder was a cattle trader. Frieda was deported on the 11th of September in 1942 to the concentraion camp Theresienstadt. There she was murdered on the 16th of October 1942. Two year later her husband was deported to the same concentration camp where he was murdered on the 31st of March 1944.";
+
+String sh_Uhlfelder_Josef_en = "Joseph Uhlfelder was born on the 21st of June 1881 in Dormitz. His parents were Karoline und Wolf Uhlfelder. Joseph got marrierd to his wife Frieda on the 18th of July in 1905 in Nuremberg. Together they had four children: Karolina, Martin, Fanny und Wilhelm.  Joseph Uhlfelder was a cattle trader. He was deported to the concentration camp Theresienstadt on the 3rd of March 1944 two years after his wife. There, he was murdered on the 31st of March in 1944.";
+
+String sh_Vissing_Hildegard_en = "Hildegard Cäcilie Laink-Vissing was born on the 9th of Dezember 1896 in Erlangen. Her parents were Simon and Wilma Katz. She worked in her fathers photography shop. On the 30th of March 1916 Hildegard marrierd Paul Kornelius Johannes Laink-Vissing, with whom she had her daughter Clara Gottliebe Wilma. Hildegard Laink-Vissing was deported on the 18th of September 1943 to Ausschwitz where she was murdered on the 4th of December 1943.";
+
+String sh_Wassermann_Thekla_en = "Thekla Wassermann was born on the 11th of August 1895 in Erlangen and lived there until 1941.Then she was moved toa Jewish dorm in Fürth.In the same year she was transported to Riga, where she was presumably murdered.";
+
+String sh_Weglein_Klothilde_en = "Klothilde Weglein was born in Maßbach near Bad Kissingen. She then moved to her husband’s hometown Geldersheim because of their marriage. Shortly after, they moved to Erlangen together. She was unemployed. After moving to Nuremberg with her husband in 1934 they both got deported to the concentration camp Theresienstad where she was murdered on the 7th of December 1942.";
+
+String sh_Weglein_Samuel_en = "Samuel Weglein was born in Geldersheim. In 1985 he moved to Schweinfurt and shortly after to Erlangen. Samuel owned a shoe shop located in the Hauptstraße. In 1934 he lost his shop due to the national socialist. He moved to Nuremberg in the same year. He and his wife were deported from there to the concentration camp Theresienstadt where he was murdered on the 2nd of November 1942.";
+
+String sh_Weinstock_Ivan_en = "Isaak, called Iwan, Weinstock was born on the 11th of March 1859 in Rödelmaier. His parents were David and Sarah Weinstock. He got married to Amalie Grubel on the 22th of April 1859 with whom he had five children: Ida, Frieda, Cornelie, Sigmund und Luise Lilli. Isaak Weinstock owned a fashion bussiness called “Tuch-, Seiden-, Modewaren-, Leinen- und Teppichhandlung”. He was deported on the 24th of September 1942 to the concentration camp Theresienstadt where he was murdered on the  9th of December 1942.";
+
+String sh_Wild_Ignatz_en = "Ignatz Wild was born on the 5th of February 1879. He lived in the “Inneren-Brucker Straße” in Erlangen. He got married twice and had three children. He was deported to Izbica in Poland on the 22nd of March 1942.";
+
+String sh_Wild_Paula_en = "Paula Wild was born on the 20th of March 1882. She lived with her husband Ignatz Wild since 1910. With him she had one daughter. She was deported to the concentration camp Riga on the 22nd of March 1942.";
