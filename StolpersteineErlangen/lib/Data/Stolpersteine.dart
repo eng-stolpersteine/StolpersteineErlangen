@@ -28,7 +28,7 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Amalie Bauer - Stolperstein", infoEn: "Amalie Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Amalia/Bauer_Amalia.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Amalia/Bauer_Amalia.jpg"], 
-    filters: [Filter.Other, Filter.Theaterplatz, Filter.Bauer]
+    filters: [Filter.Kowno, Filter.Theaterplatz, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -51,7 +51,7 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Ernestine Bauer - Stolperstein", infoEn: "Ernestine Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/Bauer_Ernestine.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Ernestine/Bauer_Ernestine.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Bauer]
+    filters: [Filter.Kowno, Filter.Hauptstrasse, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -74,7 +74,7 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Josef Bauer - Stolperstein", infoEn: "Josef Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Josef/Bauer_Josef.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Josef/Bauer_Josef.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Bauer]
+    filters: [Filter.Kowno, Filter.Hauptstrasse, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -97,7 +97,7 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Simon Bauer - Stolperstein", infoEn: "Simon Bauer - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Bauer/Bauer_Simon/Bauer_Simon.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Bauer/Bauer_Simon/Bauer_Simon.jpg"], 
-    filters:  [Filter.Other, Filter.Theaterplatz, Filter.Bauer]
+    filters:  [Filter.Kowno, Filter.Theaterplatz, Filter.Bauer]
   ),
 
   StolpersteinModel
@@ -125,7 +125,7 @@ List<StolpersteinModel> stolpersteinModels =
           
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Erich/Benesi_Erich.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Erich/Benesi_Erich_PT.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
+    filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -152,7 +152,7 @@ List<StolpersteinModel> stolpersteinModels =
     
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Gottliebe/Benesi_Gottliebe.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
+    filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -172,7 +172,7 @@ List<StolpersteinModel> stolpersteinModels =
       PictureModel(infoDt:"Hannelore Benesi - Stolperstein", infoEn: "Hannelore Benesi - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore.jpg","./assets/Images/Stolperstein/Benesi/Benesi_Hannelore/Benesi_Hannelore _PT.jpg",], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
+    filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -200,7 +200,7 @@ List<StolpersteinModel> stolpersteinModels =
     
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Benesi_Hildegard.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Hildegard/Hildegard Benesi.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
+    filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -228,7 +228,7 @@ List<StolpersteinModel> stolpersteinModels =
     
     ], 
     profilePics: ["./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob.jpg", "./assets/Images/Stolperstein/Benesi/Benesi_Jakob/Benesi_Jakob_PT.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Benesi]
+    filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Benesi]
   ),
 
   StolpersteinModel
@@ -275,7 +275,7 @@ List<StolpersteinModel> stolpersteinModels =
           
     ], 
     profilePics: ["./assets/Images/Stolperstein/Cohn/Cohn_Rosa/Cohn_Rosa.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Cohn]
+    filters: [Filter.Auschwitz, Filter.Hauptstrasse, Filter.Cohn]
   ),
 
   StolpersteinModel
@@ -315,7 +315,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Bertha Fleischhauer", infoEn: "Bertha Fleischhauer", source: "Stadtarchiv Erlangen, Morgenroth 114, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha_PT.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha.jpg", "./assets/Images/Stolperstein/Fleischhauer_Bertha/Fleischhauer_Bertha_PT.jpg",], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Fleischhauer]
+    filters: [Filter.Izbica, Filter.Hauptstrasse, Filter.Fleischhauer]
   ),
 
   StolpersteinModel
@@ -363,7 +363,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
           
     ], 
     profilePics: ["./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma.jpg", "./assets/Images/Stolperstein/Katz_Wilma/Katz_Wilma_PT.jpg",], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Katz]
+    filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Katz]
   ),
 
   StolpersteinModel
@@ -388,7 +388,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
           
     ], 
     profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Jenny/Rotenstein_Jenny.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
+    filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
   StolpersteinModel
@@ -413,7 +413,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
     
     ], 
     profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Simon/Rotenstein_Simon.jpg"],
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
+    filters: [Filter.Erlangen, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
   StolpersteinModel
@@ -438,7 +438,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
           
     ], 
     profilePics: ["./assets/Images/Stolperstein/Rotenstein/Rotenstein_Sophie/Rotenstein_Sophie.jpg"], 
-    filters: [Filter.Other, Filter.Hauptstrasse, Filter.Rotenstein],
+    filters: [Filter.Theresienstadt, Filter.Hauptstrasse, Filter.Rotenstein],
   ),
 
   StolpersteinModel
@@ -463,7 +463,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
     
     ], 
     profilePics: ["./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda.jpg", "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Frieda/Uhlfelder_Frieda_PT.jpg"], 
-    filters: [Filter.Other, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
+    filters: [Filter.Theresienstadt, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
   ),
 
   StolpersteinModel
@@ -488,7 +488,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
     
     ], 
     profilePics: ["./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef.jpg", "./assets/Images/Stolperstein/Uhlfelder/Uhlfelder_Josef/Uhlfelder_Josef_PT.jpg"], 
-    filters: [Filter.Other, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
+    filters: [Filter.Theresienstadt, Filter.Bayreuther_Strasse, Filter.Uhlfelder],
   ),
 
   StolpersteinModel
@@ -533,7 +533,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Thekla Wassermann", infoEn: "Thekla Wassermann", source: "Stadtarchiv Erlangen, Morgenroth 114, Ausschnitt, Fritz Morgenroth", path: "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg"),
     ], 
     profilePics: ["./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla.jpg", "./assets/Images/Stolperstein/Wassermann_Thekla/Wassermann_Thekla_PT.jpg",], 
-    filters: [Filter.Other, Filter.Einhornstrasse, Filter.Wassermann],
+    filters: [Filter.Riga, Filter.Einhornstrasse, Filter.Wassermann],
   ),
 
   StolpersteinModel
@@ -611,7 +611,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
           
     ], 
     profilePics: ["./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Ivan.jpg", "./assets/Images/Stolperstein/Weinstock_Ivan/Weinstock_Iwan_PT.jpg",], 
-    filters: [Filter.Other, Filter.Calvinstrasse, Filter.Weinstock],
+    filters: [Filter.Theresienstadt, Filter.Calvinstrasse, Filter.Weinstock],
   ),
 
   StolpersteinModel
@@ -635,7 +635,7 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
    
     ], 
     profilePics: ["./assets/Images/Stolperstein/Wild/Wild_Ignatz/Wild_Ignatz.jpg"],
-    filters: [Filter.Other, Filter.Innere_Brucker_Strasse, Filter.Wild],
+    filters: [Filter.Izbica, Filter.Innere_Brucker_Strasse, Filter.Wild],
   ),
 
   StolpersteinModel
@@ -655,6 +655,6 @@ PictureModel(infoDt:"Adolf Dreifuss", infoEn: "Adolf Dreifuss", source: "Stadtar
       PictureModel(infoDt:"Paula Wild - Stolperstein", infoEn: "Paula Wild - Stolperstein", source: "Emmy-Noether Gymnasium Erlangen, Tobias Baumgartl", path: "./assets/Images/Stolperstein/Wild/Wild_Paula/Wild_Paula.jpg"),
     ],
     profilePics: ["./assets/Images/Stolperstein/Wild/Wild_Paula/Wild_Paula.jpg"],
-    filters: [Filter.Other, Filter.Goethestrasse, Filter.Wild],
+    filters: [Filter.Riga, Filter.Goethestrasse, Filter.Wild],
   ),
 ];

@@ -7,6 +7,9 @@ List<FilterModel> deportationFilters =
   FilterModel(nameDt: "Dachau", nameEn: "Dachau", id: Filter.Dachau),
   FilterModel(nameDt: "Erlangen", nameEn: "Erlangen", id: Filter.Erlangen),
   FilterModel(nameDt: "Theresienstadt", nameEn: "Theresienstadt", id: Filter.Theresienstadt),
+  FilterModel(nameDt: "Kowno", nameEn: "Kowno", id: Filter.Kowno),
+  FilterModel(nameDt: "Izbica", nameEn: "Izbica", id: Filter.Izbica),
+  FilterModel(nameDt: "Riga", nameEn: "Riga", id: Filter.Riga),
   FilterModel(nameDt: "Anderes", nameEn: "Other", id: Filter.Other),
 ];
 

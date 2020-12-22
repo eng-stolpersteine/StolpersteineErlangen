@@ -5,6 +5,9 @@ enum Filter
   Dachau,
   Erlangen,
   Theresienstadt,
+  Kowno,
+  Izbica,
+  Riga,
   Other,
 
   //Location
