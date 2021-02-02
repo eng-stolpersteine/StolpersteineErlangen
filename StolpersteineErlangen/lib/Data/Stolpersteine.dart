@@ -17,7 +17,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Bauer_Amalia_dt, 
     textEn: txt_Bauer_Amalia_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Familie_Bauer.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Familie_Bauer.mp3", 
     sources: src_Bauer_Amalia, 
     galleryImages: 
     [
@@ -40,7 +40,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Bauer_Ernestine_dt, 
     textEn: txt_Bauer_Ernestine_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Familie_Bauer.mp3",
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Familie_Bauer.mp3", 
     sources: src_Bauer_Ernestine, 
     galleryImages: 
     [
@@ -63,7 +63,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Bauer_Josef_dt, 
     textEn: txt_Bauer_Josef_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Familie_Bauer.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Familie_Bauer.mp3", 
     sources: src_Bauer_Josef, 
     galleryImages: 
     [
@@ -86,7 +86,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Bauer_Simon_dt, 
     textEn: txt_Bauer_Simon_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Familie_Bauer.mp3",  
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Familie_Bauer.mp3", 
     sources: src_Bauer_Simon, 
     galleryImages: 
     [
@@ -106,7 +106,7 @@ List<StolpersteinModel> stolpersteinModels =
     location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Erich_dt,
     shortTextEn: sh_Benesi_Erich_en, 
-    textDt: txt_Benesi_Erich_dt, 
+    textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Erich_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
     audioUrlEn: "", 
@@ -134,7 +134,7 @@ List<StolpersteinModel> stolpersteinModels =
     location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Gottliebe_dt,
     shortTextEn: sh_Benesi_Gottliebe_en, 
-    textDt: txt_Benesi_Gottliebe_dt, 
+    textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Gottliebe_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
     audioUrlEn: "", 
@@ -161,7 +161,7 @@ List<StolpersteinModel> stolpersteinModels =
     location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Hannelore_dt,
     shortTextEn: sh_Benesi_Hannelore_en, 
-    textDt: txt_Benesi_Hannelore_dt, 
+    textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Hannelore_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
     audioUrlEn: "", 
@@ -181,7 +181,7 @@ List<StolpersteinModel> stolpersteinModels =
     location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Hildegard_dt,
     shortTextEn: sh_Benesi_Hildegard_en, 
-    textDt: txt_Benesi_Hildegard_dt, 
+    textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Hildegard_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
     audioUrlEn: "", 
@@ -209,7 +209,7 @@ List<StolpersteinModel> stolpersteinModels =
     location: "http://www.google.com/maps/search/?api=1&query=Hauptstrasse+2%2CErlangen%2CGermany",
     shortTextDt: sh_Benesi_Jakob_dt,
     shortTextEn: sh_Benesi_Jakob_en, 
-    textDt: txt_Benesi_Jakob_dt, 
+    textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Jakob_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
     audioUrlEn: "", 
@@ -241,7 +241,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Cohn_Alfred_dt, 
     textEn: txt_Cohn_Alfred_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Alfred_Cohn.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Alfred_Cohn.mp3", 
     sources: src_Cohn_Alfred, 
     galleryImages: 
     [
@@ -265,7 +265,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Cohn_Rosa_dt, 
     textEn: txt_Cohn_Rosa_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Rosa_Cohn.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Rosa_Cohn.mp3",  
     sources: src_Cohn_Rosa, 
     galleryImages: 
     [
@@ -288,7 +288,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Dreifuss_Adolf_dt, 
     textEn: txt_Dreifuss_Adolf_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Adolf_Dreifuß.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Adolf_Dreifuß.mp3", 
     sources: src_Dreifuss_Adolf, 
     galleryImages:  
     [
@@ -309,7 +309,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Fleischhauer_Bertha_dt, 
     textEn: txt_Fleischhauer_Bertha_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Bertha_Fleischhauer.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Bertha_Fleischhauer.mp3", 
     sources: src_Fleischhauer_Bertha, 
     galleryImages: 
     [
@@ -329,7 +329,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Heyer_Gustav_dt, 
     textEn: txt_Heyer_Gustav_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Gustav_Heyer.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Gustav_Heyer.mp3", 
     sources: src_Heyer_Gustav, 
     galleryImages: 
     [
@@ -377,7 +377,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Rotenstein_Jenny_dt, 
     textEn: txt_Rotenstein_Jenny_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Jenny_Rothenstein.mp3",
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Jenny_Rothenstein.mp3", 
     sources: src_Rotenstein_Jenny,
     galleryImages: 
     [
@@ -402,7 +402,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Rotenstein_Simon_dt, 
     textEn: txt_Rotenstein_Simon_en ,
     audioUrlDt: "Audio/Stolperstein/Dt/Simon_Rothenstein.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Simon_Rothenstein.mp3", 
     sources: src_Rotenstein_Simon, 
     galleryImages: 
     [
@@ -427,7 +427,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Rotenstein_Sophie_dt, 
     textEn: txt_Rotenstein_Sophie_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Sophie_Rothenstein.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Sophie_Rothenstein.mp3", 
     sources: src_Rotenstein_Sophie, 
     galleryImages: 
     [
@@ -449,8 +449,8 @@ List<StolpersteinModel> stolpersteinModels =
     location: "http://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
     shortTextDt: sh_Uhlfelder_Frieda_dt,
     shortTextEn: sh_Uhlfelder_Frieda_en, 
-    textDt: txt_Uhlfelder_Frieda_dt, 
-    textEn: txt_Uhlfelder_Frieda_en, 
+    textDt: txt_Uhlfelder_dt, 
+    textEn: txt_Uhlfelder_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Uhlfelder.mp3", 
     audioUrlEn: "", 
     sources: src_Uhlfelder_Frieda, 
@@ -474,8 +474,8 @@ List<StolpersteinModel> stolpersteinModels =
     location: "http://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
     shortTextDt: sh_Uhlfelder_Josef_dt,
     shortTextEn: sh_Uhlfelder_Josef_en, 
-    textDt: txt_Uhlfelder_Josef_dt, 
-    textEn: txt_Uhlfelder_Josef_en, 
+    textDt: txt_Uhlfelder_dt, 
+    textEn: txt_Uhlfelder_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Uhlfelder.mp3",  
     audioUrlEn: "", 
     sources: src_Uhlfelder_Josef, 
@@ -495,14 +495,14 @@ List<StolpersteinModel> stolpersteinModels =
 
   StolpersteinModel
   (
-    name: "Hildegard Vissing",
+    name: "Hildegard Laink-Vissing",
     location: "http://www.google.com/maps/search/?api=1&query=Bayreuther+Strasse+17+A%2CErlangen%2CGermany",
     shortTextDt: sh_Vissing_Hildegard_dt,
     shortTextEn: sh_Vissing_Hildegard_en, 
     textDt: txt_Vissing_Hildegard_dt, 
     textEn: txt_Vissing_Hildegard_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Hildegard_Vissing.mp3",  
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Hildegard_Vissing.mp3",  
     sources: src_Vissing_Hildegard, 
     galleryImages: 
     [
@@ -549,7 +549,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Weglein_Klothilde_dt, 
     textEn: txt_Weglein_Klothilde_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Klothilde_Weglein.mp3",  
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Klothilde_Weglein.mp3", 
     sources: src_Weglein_Klothilde, 
     galleryImages: 
     [
@@ -572,7 +572,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Weglein_Samuel_dt, 
     textEn: txt_Weglein_Samuel_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Samuel_Weglein.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Samuel_Weglein.mp3", 
     sources: src_Weglein_Samuel, 
     galleryImages: 
     [
@@ -595,7 +595,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Weinstock_Ivan_dt, 
     textEn: txt_Weinstock_Ivan_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Iwan_Weinstock.mp3",
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Iwan_Weinstock.mp3", 
     sources: src_Weinstock_Ivan,
     galleryImages: 
     [
@@ -627,7 +627,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Wild_Ignatz_dt, 
     textEn: txt_Wild_Ignatz_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Ignatz_Wild.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Ignatz_Wild.mp3", 
     sources: src_Wild_Ignatz ,
     galleryImages: 
     [
@@ -651,7 +651,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Wild_Paula_dt, 
     textEn: txt_Wild_Paula_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Paula_Wild.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Paula_Wild.mp3", 
     sources: src_Wild_Paula,
     galleryImages: 
     [
