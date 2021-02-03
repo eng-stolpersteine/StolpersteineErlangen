@@ -2,7 +2,7 @@ import 'package:StolpersteineErlangen/Data/HiveBoxes.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/FilterScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
-import 'package:StolpersteineErlangen/Screens/SettingsScreen.dart';
+import 'package:StolpersteineErlangen/Screens/Settings/SettingsScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -294,14 +294,6 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
           centerTitle: true,
           flexibleSpace: appBarGradient,
           title: Consumer<SettingsProvider>(builder: (context, value, child) => Text(value.english ? "Settings" : "Einstellungen", style: TextStyle(fontFamily: "Roboto"))),
-          actions: 
-          [
-            FlatButton
-            (
-              child: Consumer<SettingsProvider>(builder: (context,value,child) => Text(value.english ? "About" : "Über", style: TextStyle(fontFamily: "Roboto", color: Colors.white, fontSize: 18))),
-              onPressed: () => aboutDialog(context),
-            )
-          ],
         );
       break;
       

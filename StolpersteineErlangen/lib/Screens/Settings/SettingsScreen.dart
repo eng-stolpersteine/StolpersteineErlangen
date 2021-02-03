@@ -1,3 +1,4 @@
+import 'package:StolpersteineErlangen/Data/SettingsData/AboutUs.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/Impress.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/material.dart';
@@ -94,6 +95,43 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
     );
   }
 
+  Widget MiscContainer(String titleDt, String titleEn, Icon leading, String contentDt, String contentEn, TextAlign txtAl,)
+  {
+    return Padding
+    (
+      padding: EdgeInsets.symmetric(horizontal: 15),
+      child: Card
+      (
+        elevation: 6,
+        child: Center
+        (
+          child: Consumer<SettingsProvider>
+          (
+            builder: (context, prov, child) => ExpansionTile
+            (
+              title: Text
+              (
+                prov.english ? titleEn : titleDt, 
+                style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold, fontSize: 22),
+              ),
+              leading: leading,
+              childrenPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              children: 
+              [
+                Text
+                (
+                  prov.english ? contentEn : contentDt,
+                  style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontSize: 15,),
+                  textAlign: txtAl,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -122,26 +160,38 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
               div(),
               tabChanger(),
 
-              Padding
-              (
-                padding: EdgeInsets.only(top: 30, left: 15),
-                child: Align
-                (
-                  alignment: Alignment.centerLeft,
-                  child: Consumer<SettingsProvider>
-                  (
-                    builder: (context, value, child) => Text(value.english ? "Thanks!" : "Danke!", style: TextStyle(fontFamily: "Roboto", fontSize: 18))
-                  ),
-                ),
-              ),
+              Padding(padding: EdgeInsets.only(top: 30), child: div()),
+              
+              MiscContainer("Über Uns", "About Us", Icon(Icons.info, size: 30, color: Colors.blue,), aboutUs_dt, aboutUs_en, null,),
+              MiscContainer("Meilensteine", "Achievements", Icon(Icons.star, size: 30, color: Colors.yellow[600]), "", "", TextAlign.left,),
+              MiscContainer("Danke!", "Thanks!", Icon(Icons.favorite, size: 30, color: Colors.red), danke_dt, danke_en, TextAlign.left,),
+              
               div(),
+              
+              MiscContainer("Impressum", "Impress",null, impressumGerman, impressumEnglish,null,),
+              
               Padding
               (
                 padding: EdgeInsets.symmetric(horizontal: 15),
-                child: Consumer<SettingsProvider>
+                child: Card
                 (
-                  builder: (context, value, child) => Text(value.english ? danke_en : danke_dt, style: TextStyle(fontFamily: "Roboto", fontSize: 15))
-                )
+                    elevation: 6,
+                    child: Center
+                    (
+                      child: ListTile
+                      (
+                        title: Consumer<SettingsProvider>
+                        (
+                          builder: (context, prov, ch) => Text
+                          (
+                            prov.english ? "Licenses" : "Lizenzen",
+                            style: TextStyle(fontFamily: "Roboto", fontSize: 22, fontWeight: FontWeight.bold)
+                          ),
+                        ),
+                        onTap: () => showLicensePage(context: context, applicationName: "Stolpersteine Erlangen")
+                      ),
+                    ),
+                ),
               ),
             ],
         ),
