@@ -112,7 +112,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
               title: Text
               (
                 prov.english ? titleEn : titleDt, 
-                style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold, fontSize: 22),
+                style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
               ),
               leading: leading,
               childrenPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -121,7 +121,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                 Text
                 (
                   prov.english ? contentEn : contentDt,
-                  style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontSize: 15,),
+                  style: TextStyle(fontFamily: "Roboto", color: Colors.black, fontSize: 16,),
                   textAlign: txtAl,
                 ),
               ],
@@ -185,7 +185,7 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                           builder: (context, prov, ch) => Text
                           (
                             prov.english ? "Licenses" : "Lizenzen",
-                            style: TextStyle(fontFamily: "Roboto", fontSize: 22, fontWeight: FontWeight.bold)
+                            style: TextStyle(fontFamily: "Roboto", fontSize: 18, fontWeight: FontWeight.bold)
                           ),
                         ),
                         onTap: () => showLicensePage(context: context, applicationName: "Stolpersteine Erlangen")

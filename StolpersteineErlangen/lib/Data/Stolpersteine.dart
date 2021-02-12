@@ -109,7 +109,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Erich_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Benesi.mp3", 
     sources: src_Benesi_Erich, 
     galleryImages: 
     [
@@ -137,7 +137,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Gottliebe_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Benesi.mp3", 
     sources: src_Benesi_Gottliebe, 
     galleryImages: 
     [
@@ -164,7 +164,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Hannelore_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Benesi.mp3", 
     sources: src_Benesi_Hannelore, 
     galleryImages: 
     [
@@ -184,7 +184,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Hildegard_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Benesi.mp3", 
     sources: src_Benesi_Hildegard, 
     galleryImages: 
     [
@@ -212,7 +212,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Benesi_dt, 
     textEn: txt_Benesi_Jakob_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Benesi.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Benesi.mp3", 
     sources: src_Benesi_Jakob, 
     galleryImages: 
     [
@@ -349,7 +349,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Katz_Wilma_dt, 
     textEn: txt_Katz_Wilma_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Wilma_Katz.mp3",
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Wilma_Katz.mp3", 
     sources: src_Katz_Wilma, 
     galleryImages: 
     [
@@ -452,7 +452,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Uhlfelder_dt, 
     textEn: txt_Uhlfelder_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Uhlfelder.mp3", 
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Uhlfelder.mp3", 
     sources: src_Uhlfelder_Frieda, 
     galleryImages: 
     [
@@ -477,7 +477,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Uhlfelder_dt, 
     textEn: txt_Uhlfelder_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Uhlfelder.mp3",  
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Uhlfelder.mp3", 
     sources: src_Uhlfelder_Josef, 
     galleryImages: 
     [
@@ -527,7 +527,7 @@ List<StolpersteinModel> stolpersteinModels =
     textDt: txt_Wassermann_Thekla_dt, 
     textEn: txt_Wassermann_Thekla_en, 
     audioUrlDt: "Audio/Stolperstein/Dt/Thekla_Wassermann.mp3",  
-    audioUrlEn: "", 
+    audioUrlEn: "Audio/Stolperstein/En/Thekla_Wassermann.mp3", 
     sources: src_Wassermann_Thekla, 
     galleryImages: 
     [

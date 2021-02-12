@@ -45,7 +45,7 @@ List<HistoryModel> historyModels =
 
   HistoryModel
   (
-    name: "Reichsprogromnacht", 
+    name: "Reichspogromnacht", 
     nameEn: "Night of Broken Glass", 
     textDt: txt_Reichsprogromnacht_de, 
     textEn: txt_Reichsprogromnacht_en, 

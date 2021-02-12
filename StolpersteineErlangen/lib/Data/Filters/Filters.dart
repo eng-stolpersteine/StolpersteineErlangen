@@ -36,7 +36,7 @@ List<FilterModel> familyFilters =
   FilterModel(nameDt: "Katz", nameEn: "Katz", id: Filter.Katz),
   FilterModel(nameDt: "Rotenstein", nameEn: "Rotenstein", id: Filter.Rotenstein),
   FilterModel(nameDt: "Uhlfelder", nameEn: "Uhlfelder", id: Filter.Uhlfelder),
-  FilterModel(nameDt: "Vissing", nameEn: "Vissing", id: Filter.Vissing),
+  FilterModel(nameDt: "Laink-Vissing", nameEn: "Laink-Vissing", id: Filter.Vissing),
   FilterModel(nameDt: "Wassermann", nameEn: "Wassermann", id: Filter.Wassermann),
   FilterModel(nameDt: "Weglein", nameEn: "Weglein", id: Filter.Weglein),
   FilterModel(nameDt: "Weinstock", nameEn: "Weinstock", id: Filter.Weinstock),
