@@ -163,7 +163,6 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
               Padding(padding: EdgeInsets.only(top: 30), child: div()),
               
               MiscContainer("Über Uns", "About Us", Icon(Icons.info, size: 30, color: Colors.blue,), aboutUs_dt, aboutUs_en, null,),
-              MiscContainer("Meilensteine", "Achievements", Icon(Icons.star, size: 30, color: Colors.yellow[600]), "", "", TextAlign.left,),
               MiscContainer("Danke!", "Thanks!", Icon(Icons.favorite, size: 30, color: Colors.red), danke_dt, danke_en, TextAlign.left,),
               
               div(),

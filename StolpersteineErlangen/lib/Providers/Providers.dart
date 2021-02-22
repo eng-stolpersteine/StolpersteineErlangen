@@ -82,7 +82,7 @@ class SearchProvider extends SearchDelegate<String>
     for(StolpersteinModel model in stolpersteinModels)
       names.add(model.name);
 
-    final Iterable<String> suggestions =  query.isEmpty ? names : names.where((p) => p.toLowerCase().startsWith(query.toLowerCase()));
+    final Iterable<String> suggestions =  query.isEmpty ? names : names.where((p) => p.toLowerCase().contains(query.toLowerCase()));
 
     return _WordSuggestionList
     (
@@ -123,22 +123,7 @@ class _WordSuggestionList extends StatelessWidget {
             onSelected(suggestion);
           },
           leading: Icon(Icons.person),
-          title: RichText(
-            text: TextSpan(
-                text: suggestion.substring(0, query.length),
-                style: TextStyle
-                (
-                  fontFamily: "Roboto",
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold
-                ),
-                children: [
-                  TextSpan(
-                    text: suggestions[index].substring(query.length),
-                    style: TextStyle(fontFamily: "Roboto", color: Colors.grey)
-                  )
-                ]),
-          ),
+          title: Text(suggestion, style: TextStyle(fontFamily: "Roboto", color: Colors.grey),)
         );
       },
     );
