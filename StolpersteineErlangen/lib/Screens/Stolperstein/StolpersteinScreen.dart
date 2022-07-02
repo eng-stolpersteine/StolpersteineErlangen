@@ -4,7 +4,7 @@ import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/GalleryScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
 import 'package:StolpersteineErlangen/Screens/SourcesScreen.dart';
-import 'package:audioplayers/audio_cache.dart';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/cupertino.dart';

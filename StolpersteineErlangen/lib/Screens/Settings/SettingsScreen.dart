@@ -1,16 +1,16 @@
+import 'package:StolpersteineErlangen/Data/PrivacyNotice.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/AboutUs.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/Impress.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/Danke_Text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SettingsScreen extends StatefulWidget
 {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return SettingsScreenState();
   }
 }
@@ -188,6 +188,30 @@ class SettingsScreenState extends State<SettingsScreen> with SingleTickerProvide
                           ),
                         ),
                         onTap: () => showLicensePage(context: context, applicationName: "Stolpersteine Erlangen")
+                      ),
+                    ),
+                ),
+              ),
+
+              Padding
+              (
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Card
+                (
+                    elevation: 6,
+                    child: Center
+                    (
+                      child: ListTile
+                      (
+                        title: Consumer<SettingsProvider>
+                        (
+                          builder: (context, prov, ch) => Text
+                          (
+                            prov.english ? "Privacy Notice" : "Datenschutzerklärung",
+                            style: TextStyle(fontFamily: "Roboto", fontSize: 18, fontWeight: FontWeight.bold)
+                          ),
+                        ),
+                        onTap: () => launch(privacyNoticeUrl)
                       ),
                     ),
                 ),

@@ -1,9 +1,9 @@
 import 'package:StolpersteineErlangen/Data/HiveBoxes.dart';
+import 'package:StolpersteineErlangen/Data/PrivacyNotice.dart';
 import 'package:StolpersteineErlangen/Providers/Providers.dart';
 import 'package:StolpersteineErlangen/Screens/FilterScreen.dart';
 import 'package:StolpersteineErlangen/Screens/MainScreen.dart';
 import 'package:StolpersteineErlangen/Screens/Settings/SettingsScreen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
@@ -11,6 +11,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/ChooseLanguage.dart';
 import 'package:StolpersteineErlangen/Data/SettingsData/Impress.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() async
 {
@@ -30,14 +31,10 @@ class StolpersteinApp extends StatelessWidget
   {
     _settingsBox = Hive.box(settingsBox);
     _isFirstStart = _settingsBox.get("FirstStart", defaultValue: true);
-
-    if(_isFirstStart)
-      _settingsBox.put("FirstStart", false);
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp
     (
       debugShowCheckedModeBanner: false,
@@ -51,7 +48,6 @@ class ChooseLanguage extends StatefulWidget
 {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ChooseLanguageState();
   }
 }
@@ -63,7 +59,6 @@ class ChooseLanguageState extends State<ChooseLanguage> with SingleTickerProvide
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _settings = SettingsProvider();
@@ -130,7 +125,6 @@ class ChooseLanguageState extends State<ChooseLanguage> with SingleTickerProvide
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold
     (
       body: ChangeNotifierProvider.value
@@ -164,11 +158,10 @@ class ChooseLanguageState extends State<ChooseLanguage> with SingleTickerProvide
                     Padding
                     (
                       padding: EdgeInsets.only(top: 25),
-                      child: RaisedButton
+                      child: DialogButton
                       (
-                        child: Text(_settings.english ? "Continue" : "Weiter", style: TextStyle(fontFamily: "Roboto", fontSize: 16)),
-                        color: Colors.white,
-                        onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => Screens())),
+                        text: _settings.english ? "Continue" : "Weiter",
+                        callback: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => PrivacyNotice())),
                       ),
                     )
                   ],
@@ -182,11 +175,100 @@ class ChooseLanguageState extends State<ChooseLanguage> with SingleTickerProvide
   }
 }
 
+class PrivacyNotice extends StatelessWidget {
+
+  final SettingsProvider _settings = SettingsProvider();
+
+  void _acceptPrivacyNotice() {
+    Hive.box(settingsBox).put("FirstStart", false);
+  }
+
+  void _viewPrivacyNotice() async {
+    await launch(privacyNoticeUrl);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(_settings.english ? "Privacy Notice" : "Datenschutzerklärung", style: TextStyle(fontFamily: "Roboto", fontSize: 28, fontWeight: FontWeight.bold),),
+
+            Padding
+            (
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: Text(
+                _settings.english ? privacyNoticeInfo_en : privacyNoticeInfo_dt,
+                textAlign: TextAlign.center, 
+                style: TextStyle(
+                  fontFamily: "Roboto", fontSize: 15,
+                )
+              ),
+            ),
+
+            Padding
+            (
+              padding: EdgeInsets.only(top: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+
+                  DialogButton(
+                    text: _settings.english ? "Privacy Notice" : "Datenschutzerklärung",
+                    callback: () {
+                      _viewPrivacyNotice();
+                    },
+                  ),
+
+                  Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
+
+                  DialogButton(
+                    text: _settings.english ? "Continue" : "Weiter", 
+                    callback: () {
+                      _acceptPrivacyNotice();
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => Screens()));
+                    }
+                  )
+                ],
+              )
+            )
+          ],
+        )
+      ),
+    );
+  }
+
+}
+
+class DialogButton extends StatelessWidget {
+
+  final void Function() callback;
+  final String text;
+
+  DialogButton({this.text, this.callback}){}
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50,
+      width: 140,
+      child: ElevatedButton(
+        child: Text(text, style: TextStyle(fontFamily: "Roboto", fontSize: 16)),
+        onPressed: () => callback()
+      ),
+    );
+  }
+
+}
+
 class Screens extends StatefulWidget
 {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ScreensState();
   }
 }
@@ -201,7 +283,6 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _currentScreen = 1;
@@ -236,9 +317,9 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
       showUnselectedLabels: false,
       items: 
       [
-        BottomNavigationBarItem(icon: Icon(Icons.filter_list_rounded), title: Text("")),
-        BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("")),
-        BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("")),
+        BottomNavigationBarItem(icon: Icon(Icons.filter_list_rounded), label: ""),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), label: ""),
       ],
     );
   }
@@ -322,7 +403,6 @@ class ScreensState extends State<Screens> with SingleTickerProviderStateMixin
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ChangeNotifierProvider.value
     (
       value: _settings,

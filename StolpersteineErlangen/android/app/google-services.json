@@ -37,6 +37,13 @@
             {
               "client_id": "1709061370-hputjeqv8vrl8tanu91c1u0snmap1i1c.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1709061370-o9a5asje86i0g2mggugab20pi0lt249t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eng.stolpersteine"
+              }
             }
           ]
         }
